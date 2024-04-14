@@ -1,0 +1,73 @@
+
+body {
+    font-family:sans-serif;
+    background-color: #f3f1f1;
+    /* margenes 0 para que el backgorund del header no tenga espacion en blanco*/
+    margin: 0%;
+    padding: 0%;
+    
+}
+header {
+    font-family: Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif, sans-serif;
+    background-color: #007bff;
+    color: white;
+    /* le agrego pading(relleno) para que el background no tenga espacios en blanco*/
+    padding: 1px;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    /* el maxwidth le da el ancho maximo que puede tener el contendido dentro del main*/
+    max-width: 800px;
+    /* utilizo el  auto margin para centrarlo y el 20px para alejarlo un poco del header*/
+    margin:  20px auto ;
+    /* utilizo el pading para dar espacio entre los elementos dentro del main*/
+    padding: 20px;
+    /*el color del contenedor*/
+    background-color:white;
+}
+footer{
+    background-color: #007bff;
+    text-align: center;
+    padding: 20px; /* Espaciado interno del pie de página */
+}
+footer ul{
+    color: white;
+}
+
+h3{
+    color: #007bff;
+}
+
+label {
+    /*segun chatgpt la carecteristica display define el compartimiento de visualizacion y al darle block se muestra como bloque, es decir,
+     uno abajo del otro*/
+    display: block;
+    margin: 5px;
+    
+    
+}
+.opcion-cupon label{
+    display: inline-block; /* Mostrar los labels en línea */
+}
+
+a{
+    color: white; /* Color de los enlaces en blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Fuente en negrita */
+    transition: color 0.3s; /* Transición de color */
+}
+.boton-confirmar button {
+    background-color: #007bff; /* Color de fondo celestito */
+    color: white; /* Color del texto blanco */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+}
+.boton-cancelar button{
+    background-color: #e80000; /* Color de fondo celestito */
+    color: white; /* Color del texto blanco */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    margin: 5px;
+}

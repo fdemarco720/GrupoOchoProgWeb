@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registrar-usuario.css">
+    <title>Registro Usuario</title>
+</head>
+<body>
+    <header>
+        <h1>Registrarse</h1>
+    </header>
+    <main>
+        <form action="./index.html"method="get">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="email" id="email" placeholder="Ingrese su correo electrónico" required>
+            
+            <label for="nombre_usuario">Nombre de usuario:</label>
+            <input type="text" name="nombre_usuario" id="nombre_usuario" placeholder="Ingrese un nombre de usuario" required>
+            
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" name="contrasena" id="contraseña" placeholder="Ingrese una contraseña" required>
+            
+            <label for="contraseña_repetida">Repetir contraseña:</label>
+            <input type="password" name="contrasena_repetida" id="contraseña_repetida" placeholder="Repita la contraseña" required>
+            
+
+                <div class="metodos-de-pago">
+                <h3>Método de pago</h3>
+
+                <div class="opcion-tarjeta">
+           
+                <label for="tarjeta_credito">
+                <input type="radio" name="metodo_pago" id="tarjeta_credito" value="tarjeta_credito">Tarjeta de crédito</label>
+                <br>
+                <label for="numero_tarjeta">Número de tarjeta:</label>
+                <input type="number" name="numero_tarjeta" id="numero_tarjeta" required>
+                
+                <label for="codigo_cvv">Código CVV:</label>
+                <input type="number" name="codigo_cvv" id="codigo_cvv" required>
+                  <br> </div>
+
+                <div class="opcion-cupon">
+
+                    <label for="cupon_pago">
+                        <input type="radio" name="metodo_pago" id="cupon_pago" value="cupon_pago">
+                        Cupón de pago
+                    </label>
+                    <br>
+
+                    <label for="pago_facil">
+                        <input type="radio" name="pago_facil" id="pago_facil"> Rapi pago </label>
+                        <label for="rapi_pago">
+                            <input type="radio" name="pago_facil" id="pago_facil">Pago facil </label>
+
+                        </div>
+            
+            
+            
+            
+            <div class="opcion-bancaria">
+                <label for="Transferencia_bancaria">
+                    <input type="radio" name="metodo_pago" id="Transferencia_bancaria">
+                    Transferencia bancaria
+                </label> <br>
+               <label for="CBU">CBU:14312414141512151</label>
+
+            </div>
+            
+            </div>
+
+            <div class="boton-confirmar">
+               <button type="button"><a href="./login.html">Confirmar</a></button> 
+
+            </div>
+
+
+            <div class="boton-cancelar">
+                <button type="button"><a href="./login.html">Cancelar</a></button> 
+
+        </div>
+        </form>
+    </main>
+    <footer>
+        <ul>
+            <li>Datos de Contacto</li>
+            <li>Redes sociales</li>
+            <li>Copyright</li>
+        </ul>
+    </footer>
+</body>
+</html>
