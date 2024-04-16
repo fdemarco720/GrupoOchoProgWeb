@@ -44,12 +44,13 @@ label {
     /*segun chatgpt la carecteristica display define el compartimiento de visualizacion y al darle block se muestra como bloque, es decir,
      uno abajo del otro*/
     display: block;
+    /*margen entre label y label*/
     margin: 5px;
     
     
 }
 .opcion-cupon label{
-    display: inline-block; /* Mostrar los labels en línea */
+    display: inline-block; /* Muestra rapipago y pago facil en LINEA */
 }
 
 a{
@@ -63,6 +64,7 @@ a{
     color: white; /* Color del texto blanco */
     padding: 10px 20px; /* Espaciado interno del botón */
     border: none; /* Sin borde */
+    
 }
 .boton-cancelar button{
     background-color: #e80000; /* Color de fondo celestito */
