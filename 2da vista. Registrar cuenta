@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <a href="./index.html"> <button>←</button>Volver</a>
+    <br>
+    <img src="../Imagen de WhatsApp 2024-04-15 a las 22.47.06_159d8924.jpg" alt="Logo de la marca" height="70">
+    <title>Recuperar contraseña</title>
+</head>
+<body>
+<h2><strong>Restablecer contraseña</strong></h2>
+<main>
+    <label for= "Vista de recuperación de contraseña">
+        Contraseña actual
+        <input type="text" name = "Recuperación de contraseña" id ="Contraseña actual" placeholder="Contaseña actual" required>
+    </label>
+    <br>
+    <label>
+        Nueva contraseña
+        <input type="text" name = "Recuperación de contraseña" id ="Nueva contraseña" placeholder="Nueva contraseña" required>
+    </label>
+    <br>
+    <label>
+        Nueva contraseña (Confirmación)
+        <input type="text" name = "Recuperación de contraseña" id ="Cofirmación de nueva contraseña"placeholder="Confirmar nueva contraseña" required>
+    </label>
+    <br>
+    <button><a href="./indexMuchachos.html">Confirmar</a></button>
+    
+</main>
+</body>
+
+</html>
