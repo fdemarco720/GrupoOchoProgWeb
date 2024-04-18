@@ -48,6 +48,10 @@ label {
     margin: 5px;
     
     
+    
+}
+input{
+    cursor: pointer; /* Cursor cambia al puntero */
 }
 .opcion-cupon label{
     display: inline-block; /* Muestra rapipago y pago facil en LINEA */
@@ -59,17 +63,22 @@ a{
     font-weight: bold; /* Fuente en negrita */
     transition: color 0.3s; /* Transición de color */
 }
-.boton-confirmar button {
-    background-color: #007bff; /* Color de fondo celestito */
+.botones button{
     color: white; /* Color del texto blanco */
     padding: 10px 20px; /* Espaciado interno del botón */
     border: none; /* Sin borde */
+    border-radius: 5px;
+    cursor: pointer; /* Cursor cambia al puntero */
+    margin: 5px;
+}
+.boton-confirmar{
+    background-color: #007bff; /* Color de fondo celestito */
+    
+    
     
 }
-.boton-cancelar button{
+.boton-cancelar{
     background-color: #e80000; /* Color de fondo celestito */
-    color: white; /* Color del texto blanco */
-    padding: 10px 20px; /* Espaciado interno del botón */
-    border: none; /* Sin borde */
-    margin: 5px;
+    
+    
 }
