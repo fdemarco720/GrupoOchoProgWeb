@@ -47,12 +47,15 @@ label {
     /*margen entre label y label*/
     margin: 5px;
     
-    
-    
 }
+
 input{
     cursor: pointer; /* Cursor cambia al puntero */
+    border-radius: 1px  #ccc;
+  
+    
 }
+
 .opcion-cupon label{
     display: inline-block; /* Muestra rapipago y pago facil en LINEA */
 }
