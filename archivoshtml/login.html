@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./login.css">
     <title>LOGIN</title>
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="login-header">
+        <nav class="login-nav">
             <h1>BOMFLIX</h1>
             <H3>Las mejores series y películas</H3>
         </nav>
     </header>
-    <main>
-       <form action="#">
-        <label for="">Nombre de usuario
+    <main class="login-main">
+        <section class="login-main-section">
+       <form action="#" class="login-main-ubicacion">
+        <label for="">Nombre de usuario <br>
             <input type="text" placeholder="Nombre de usuario">
         </label>
-        <label for="">Contraseña
+        <label for="">Contraseña <br>
             <input type="password" placeholder="*****************" >
         </label>
         <button type="submit"><a href="./principal.html">Iniciar sesión</a></button>
        </form>
-       <div>
+       <div class="login-main-ubicacion">
         <a href="./recuperar-contrasenia.html">Recuperar contraseña</a>
         <a href="./registrar-usuario.html">Registrarse</a>
        </div> 
+    </section>
     </main>
 </body>
 </html>
