@@ -61,7 +61,7 @@ a{
     color: white; /* Color de los enlaces en blanco */
     text-decoration: none; /* Sin subrayado */
     font-weight: bold; /* Fuente en negrita */
-    transition: color 0.3s; /* Transición de color */
+    
 }
 .botones button{
     color: white; /* Color del texto blanco */
