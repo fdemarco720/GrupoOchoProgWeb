@@ -1,4 +1,44 @@
 
+/*body {
+    font-family:sans-serif;
+    color: white;
+    /* margenes 0 para que el backgorund del header no tenga espacion en blanco
+    background: linear-gradient(150deg, rgba(134, 133, 219, 0.8), rgba(44, 101, 232, 0.8), rgba(170, 192, 241, 0.8));
+    margin: 0%;
+    padding: 0%;
+    
+}
+header {
+    font-family: Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif, sans-serif;
+    /*background-color: #007bff;*/
+    /*background:rgb( #8685DB, #2C65E8, #AAC0F1);
+    background: linear-gradient(150deg, rgba(134, 133, 219, 0.8), rgba(44, 101, 232, 0.8), rgba(170, 192, 241, 0.8));
+    color: white;
+    /* le agrego pading(relleno) para que el background no tenga espacios en blanco
+    padding: 1px;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    /* el maxwidth le da el ancho maximo que puede tener el contendido dentro del main
+    max-width: 800px;
+    /* utilizo el  auto margin para centrarlo y el 20px para alejarlo un poco del header
+    margin:  20px auto ;
+    /* utilizo el pading para dar espacio entre los elementos dentro del main
+    padding: 20px;
+    /*el color del contenedor*/
+   /* background-color: white;
+   background: linear-gradient(150deg, rgba(134, 133, 219, 0.8), rgba(44, 101, 232, 0.8), rgba(170, 192, 241, 0.8));
+
+    
+
+}
+footer{
+    background: linear-gradient(150deg, rgba(134, 133, 219, 0.8), rgba(44, 101, 232, 0.8), rgba(170, 192, 241, 0.8));
+    text-align: center;
+    padding: 20px; /* Espaciado interno del pie de página */
+
 body {
     font-family:sans-serif;
     background-color: #f3f1f1;
