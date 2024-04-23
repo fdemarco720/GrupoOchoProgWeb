@@ -110,7 +110,8 @@ body{
 }
 
 .login-main div a{
-    text-decoration:underline;
+    text-decoration: none; /* Sin subrayado */
+    
     color:#c1d2fa;
 }
 
@@ -123,4 +124,7 @@ body{
 
     color: #ffff;
     text-decoration: wavy;
+}
+.a a:hover{
+   text-decoration: underline;
 }
