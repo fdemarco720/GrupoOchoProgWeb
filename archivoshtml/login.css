@@ -21,7 +21,7 @@ body{
     align-items: center;
     justify-content: center;
     color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); /* SOMBREADO TEXTO */
+    text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); /*SOMBREADO TEXTO */
 }
 
 .login-header h1 {
@@ -81,7 +81,8 @@ body{
         background: transparent; /* Fondo transparente */
         border-bottom: 1px solid #ffffff; /* Añade un subrayado */
         padding: 5%;
-    }
+        color:rgb(211, 211, 20);
+}
 
 .login-main button{
     margin: 5% 0;
