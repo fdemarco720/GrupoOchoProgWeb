@@ -1,83 +1,76 @@
 
-/*body {
-    font-family:sans-serif;
-    color: white;
-    /* margenes 0 para que el backgorund del header no tenga espacion en blanco
-    background: linear-gradient(150deg, rgba(134, 133, 219, 0.8), rgba(44, 101, 232, 0.8), rgba(170, 192, 241, 0.8));
-    margin: 0%;
-    padding: 0%;
-    
-}
-header {
-    font-family: Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif, sans-serif;
-    /*background-color: #007bff;*/
-    /*background:rgb( #8685DB, #2C65E8, #AAC0F1);
-    background: linear-gradient(150deg, rgba(134, 133, 219, 0.8), rgba(44, 101, 232, 0.8), rgba(170, 192, 241, 0.8));
-    color: white;
-    /* le agrego pading(relleno) para que el background no tenga espacios en blanco
-    padding: 1px;
-    text-align: center;
-}
 
-main {
-    text-align: center;
-    /* el maxwidth le da el ancho maximo que puede tener el contendido dentro del main
-    max-width: 800px;
-    /* utilizo el  auto margin para centrarlo y el 20px para alejarlo un poco del header
-    margin:  20px auto ;
-    /* utilizo el pading para dar espacio entre los elementos dentro del main
-    padding: 20px;
-    /*el color del contenedor*/
-   /* background-color: white;
-   background: linear-gradient(150deg, rgba(134, 133, 219, 0.8), rgba(44, 101, 232, 0.8), rgba(170, 192, 241, 0.8));
-
-    
-
-}
-footer{
-    background: linear-gradient(150deg, rgba(134, 133, 219, 0.8), rgba(44, 101, 232, 0.8), rgba(170, 192, 241, 0.8));
-    text-align: center;
-    padding: 20px; /* Espaciado interno del pie de página */
+    @import url('https://fonts.googleapis.com/css2?family=Livvic&display=swap');
 
 body {
     font-family:sans-serif;
+    background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
     background-color: #f3f1f1;
     /* margenes 0 para que el backgorund del header no tenga espacion en blanco*/
     margin: 0%;
     padding: 0%;
     
 }
-header {
-    font-family: Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif, sans-serif;
-    background-color: #007bff;
-    color: white;
-    /* le agrego pading(relleno) para que el background no tenga espacios en blanco*/
-    padding: 1px;
-    text-align: center;
-}
 
-main {
-    text-align: center;
-    /* el maxwidth le da el ancho maximo que puede tener el contendido dentro del main*/
-    max-width: 800px;
-    /* utilizo el  auto margin para centrarlo y el 20px para alejarlo un poco del header*/
-    margin:  20px auto ;
-    /* utilizo el pading para dar espacio entre los elementos dentro del main*/
-    padding: 20px;
-    /*el color del contenedor*/
-    background-color:white;
-}
-footer{
-    background-color: #007bff;
-    text-align: center;
-    padding: 20px; /* Espaciado interno del pie de página */
-}
-footer ul{
-    color: white;
+h1,h3{  
+    margin: 0;
 }
 
 h3{
-    color: #007bff;
+    color: white;
+    font-weight: normal;
+}
+
+h2{
+    margin-top: 6%;
+    
+}
+h4{
+    color: white;
+    font-size: 120%;
+    font-family: "Acme", sans-serif;
+    font-weight: normal;
+}
+header {
+    
+    height: 10em;
+    color: white;
+    /* le agrego pading(relleno) para que el background no tenga espacios en blanco*/
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); /*SOMBREADO TEXTO */
+    font-family: "Acme", sans-serif;
+    font-size: 1em;
+   
+    
+    
+}
+
+main {
+        text-align: center;
+        /* el maxwidth le da el ancho maximo que puede tener el contendido dentro del main*/
+        max-width: 50%;
+        /* utilizo el  auto margin para centrarlo y el 20px para alejarlo un poco del header*/
+        margin:  20px auto ;
+        /* utilizo el pading para dar espacio entre los elementos dentro del main*/
+        padding: 20px;
+        /*el color del contenedor*/
+        background-color: rgba(25, 25, 25, 0.5);
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
+        
+        
+    
+            
+          
+           }
+    
+footer{
+   
+    text-align: center;
+    padding: 1em; /* Espaciado interno del pie de página */
+}
+footer ul{
+    color: white;
 }
 
 label {
@@ -85,14 +78,23 @@ label {
      uno abajo del otro*/
     display: block;
     /*margen entre label y label*/
-    margin: 5px;
+    color:#ffffff;
+    margin: 2% ;
+    font-family: 'Livvic';
     
 }
 
 input{
+    font-family: 'Livvic';
+    border: none; /* Elimina el borde predeterminado */
+    background: transparent; /* Fondo transparente */
+    border-bottom: 1px solid #ffffff; /* Añade un subrayado */
     cursor: pointer; /* Cursor cambia al puntero */
     border-radius: 1px  #ccc;
-  
+    padding: 1%;
+    color:rgb(211, 211, 20);
+    outline: none; /* Elimina el contorno predeterminado cuando lo seleccionas */
+    
     
 }
 
@@ -101,9 +103,10 @@ input{
 }
 
 a{
-    color: white; /* Color de los enlaces en blanco */
+    font-family: 'Livvic';
+    color:black ; /* Color de los enlaces en blanco */
     text-decoration: none; /* Sin subrayado */
-    font-weight: bold; /* Fuente en negrita */
+    font-weight: bold;
     
 }
 .botones button{
@@ -115,7 +118,7 @@ a{
     margin: 5px;
 }
 .boton-confirmar{
-    background-color: #007bff; /* Color de fondo celestito */
+    background-color:rgb(211, 211, 20);
     
     
     
