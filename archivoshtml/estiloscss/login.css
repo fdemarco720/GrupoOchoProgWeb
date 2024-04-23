@@ -10,7 +10,7 @@ body{
     height: 100vh;
     width: 100%;
     background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
-
+    background-attachment: fixed;
 }
 
 /* NAV */
@@ -112,4 +112,15 @@ body{
 .login-main div a{
     text-decoration:underline;
     color:#c1d2fa;
+}
+
+.login-main button:hover{
+    background-color:rgb(211, 211, 20, 0.7);
+    cursor: pointer;
+}
+
+.login-main button a:hover{
+
+    color: #ffff;
+    text-decoration: wavy;
 }

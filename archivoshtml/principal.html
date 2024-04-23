@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="./estiloscss/principal.css">
     <title>BOMFLIX/MENU</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div>
+    <header class="principal-header">
+        <nav class="principal-nav">
+            <div class="titulo">
                 <h1>Bomflix</h1>
             </div>
-            
-            <ul>
-                <li>Home</li>
-                <li>Series</li>
-                <li>Peliculas</li>
-                <li>Perfil</li>
-            </ul>
-
-            <div>
+            <div class="barra">
+                <ul>
+                    <li>Home</li>
+                    <li>Series</li>
+                    <li>Peliculas</li>
+                    <li>Perfil</li>
+                </ul>
+            </div>
+            <div class="miCuenta">
                 <a href="">Mi cuenta</a>
             </div>
         </nav>
+    </header>
         <main>
             <section>
-            <article>
+            <div>
                 <form action="#" method="post">
                     <label for="categorias">Categorias</label>
                     <select id="categorias" name="categorias">
-                        <option value="1">Ultimos lanzamientos</option>
+                        <option value="1">Disney</option>
                         <option value="2">Hechos reales</option>
                         <option value="3">Terror</option>
                         <option value="4">Drama</option>
@@ -37,18 +39,28 @@
                         <option value="6">Ciencia ficcion</option>
                         <option value="7">Accion</option>
                         <option value="8">Fantasia</option>
-                        <option value="9">Disney</option>
                     </select>
                 </form>
-            </article>
+            </div>
             <div>
                 <input type="text" placeholder="Buscar">
                 <button type="submit">Buscar genero</button>
               </div>
-            <article>
             </section>
+            <section>
+                <img src="./img/coco.jpeg" alt="imgCoco">
+                <img src="./img/enredados.jpg" alt="imgEnrerados">
+                <img src="./img/encanto.jpeg" alt="imgEncanto">
 
+                <img src="./img/toystory2.webp" alt="imgTS2">
+                <img src="./img/toystory4.webp" alt="imgTS4">
+                <img src="./img/bossLightYear.jpeg" alt="imgBLY">
+
+                <img src="./img/cars.jpg" alt="imgCars">
+                <img src="./img/elemental.jpeg" alt="imgElemental">
+                <img src="./img/losIncreibles.jpg" alt="imgLosInc">
+                
+            </section>
         </main>
-    </header>
 </body>
 </html>
