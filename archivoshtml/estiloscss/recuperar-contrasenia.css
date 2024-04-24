@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic&display=swap');
+
 .logotipo{
     text-align: center;
     font-weight: bolder;
@@ -13,6 +15,7 @@
 
 .nombreDeUsuario{
     color: white;
+    text-align: justify;
     font-weight: bolder;
     font-size: 1em;
     font-family:  "Acme", sans-serif;
@@ -20,6 +23,7 @@
 
 .correoElectronico{
     color: white;
+    text-align: justify;
     font-weight: bolder;
     font-size: 1em;
     font-family:  "Acme", sans-serif;
@@ -36,7 +40,7 @@ main{
     display: inline-block;
     border: 1.2px solid;
     border-color: black;
-    height: 300px;
+    height: 420px;
     width: 400px;
     border-radius: 25px;
 }
@@ -48,19 +52,23 @@ section{
 
 
 .cancelar{
-    color:red;
-    width: 20%;
-    height: 10%;
-    font-size: 1em;
-  text-decoration:none;
+    text-decoration:none;
+    background-color: #ff0000;
+    color:rgb(255, 255, 255);
+    width:auto;
+    height: auto;
+    font-size: 1.5em;
 }
 
 .confirmar{
-    color: blue;
-    width: 20%;
-    height: 10%;
-    font-size: 1em;
+    text-decoration:none;
+    background-color: #210068;
+    color: white;
+    width:auto;
+    height: auto;
+    font-size: 1.5em;
 }
+
 /*
 div{
     width: auto;
