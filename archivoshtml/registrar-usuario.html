@@ -16,7 +16,14 @@
         <h2>REGISTRARSE</h2>
     </header>
     <main>
-        <form action="./index.html"method="get">
+        <form action="./login.html"method="get" class="formulario-registro">
+
+
+            <div class="form-mitad">
+
+        
+
+            
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required>
             
@@ -25,7 +32,9 @@
             
             <label for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="Ingrese su correo electrónico" required>
-            
+        </div>
+
+        <div class="form-otramitad">
             <label for="nombre_usuario">Nombre de usuario</label>
             <input type="text" name="nombre_usuario" id="nombre_usuario" placeholder="Ingrese un nombre de usuario" required>
             
@@ -34,8 +43,12 @@
             
             <label for="contraseña_repetida">Repetir contraseña</label>
             <input type="password" name="contrasena_repetida" id="contraseña_repetida" placeholder="Repita la contraseña" required>
-            
+        </div>
+    </form>
 
+    <form action="./login.html"method="get" class="formulario-metodopago">
+
+   
                 <div class="metodos-de-pago">
                 <h4>Método de pago</h4>
 
@@ -76,8 +89,8 @@
             </div>
 
             <div class="botones">
-            <button class="boton-confirmar" type="button"><a href="./login.html">Confirmar</a></button> 
-             <button class="boton-cancelar" type="button"><a href="./login.html">Cancelar</a></button> 
+                <button class="boton-confirmar" type="button"><a href="./login.html">Confirmar</a></button> 
+             <button class="boton-cancelar" type="submit"><a href="./login.html">Cancelar</a></button> 
 
           </div>
             
