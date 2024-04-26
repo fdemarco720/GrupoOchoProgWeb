@@ -3,35 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BomFliX-Recuperar Contraseña</title>
     <link rel="stylesheet" href="./estiloscss/recuperar-contrasenia.css">
+    <title>Pruebas</title>
 </head>
-
-
-
-    <body>
-            <header> 
-                <h1 class="logotipo">BOMSITE</h1>
-            </header>
-        <main>
-            <h1 class="titulo">Recuperar Contraseña</h1>
-            <section class="central">
-                <form action="recuperaciónDeContraseñaExitosa.html" method="post">
-                    <label for="usuario"><h1>Usuario</h1></label> 
-                    <input class="nombreDeUsuario" type="text" name="usuario" id="usuario" placeholder="Ingrese su nombre de usuario" required>
-                    <br><br>
-                    <label for="correoElectronico"><h1>Correo Eléctronico</h1></label>
-                    <input class="correoElectronico" type="email" name="correoElectronicoo" id="correoElectronicoo" placeholder="Ingrese su Correo Eléctronico" required>
-                    <br><br><br><br>
-                    <button class="cancelar" type="submit"><a href="./recuperaciónDeContraseñaExitosa.html">Cancelar</a></button>
-                    <button class="confirmar" type="submit"><a href="./login.html">Confirmar</button>
+<body class="body">
+    <header><h1 class="header-titulo">B O M F L I X</h1></header>
+    
+        <main class="body-principal">
+            <h2>Recuperar Contraseña</h2>
+            <form action="../archivoshtml/recuperar-contrasenia.html">
+                <label for="nombreDeUsuario">
+                    Nombre De Usuario
+                    <input type="text" id="nombreDeUsuario" placeholder="Usurio1462" required>
+                </label>
+                <br>
+                <label for="email"> 
+                    Correo Electronico
+                    <input type="text" id="email" placeholder="ejemplo@gmail.com" required>
+                </label>
+                <button type="submit" class="boton-confirmar">Confirmar</button>
+                <button class="boton-cancelar"><a href="../archivoshtml/login.html"></a>Cancelar</button> 
             </form>
-        </section>
+           
         </main>
-     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
-   
-    </body>
-
+</body>
 </html>
 
-<!--button id="atras"><a href=""></a>←</!--button--> 
+
+
