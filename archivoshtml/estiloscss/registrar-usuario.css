@@ -153,7 +153,9 @@ a{
 }
 
 .botones button{
-    color: white; /* Color del texto blanco */
+    font-family: 'Livvic';
+    color:black ; /* Color de los enlaces en blanco */
+    font-weight: bold;
     padding: 10px 20px; /* Espaciado interno del botón */
     border: none; /* Sin borde */
     border-radius: 5px;
@@ -162,6 +164,7 @@ a{
 }
 .boton-confirmar{
     background-color:rgb(211, 211, 20);
+    
     
     
     

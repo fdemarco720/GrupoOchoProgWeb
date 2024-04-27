@@ -16,7 +16,9 @@
         <h2>REGISTRARSE</h2>
     </header>
     <main>
-        <form action="./login.html"method="get" class="formulario-registro">
+        <form action="./login.html"method="get" >
+        
+        <div class="formulario-registro">
 
 
             <div class="form-mitad">
@@ -44,24 +46,24 @@
             <label for="contraseña_repetida">Repetir contraseña</label>
             <input type="password" name="contrasena_repetida" id="contraseña_repetida" placeholder="Repita la contraseña" required>
         </div>
-    </form>
-
-    <form action="./login.html"method="get" class="formulario-metodopago">
+    
+    </div>
+    <div class="formulario-metodopago">
 
    
-                <div class="metodos-de-pago">
+                <div class="metodos-de-pago" >
                 <h4>Método de pago</h4>
 
                 <div class="opcion-tarjeta">
            
                 <label for="tarjeta_credito">
-                <input type="radio" name="metodo_pago" id="tarjeta_credito" value="tarjeta_credito">Tarjeta de crédito</label>
+                <input type="radio" name="metodo_pago" id="tarjeta_credito" value="tarjeta_credito" required>Tarjeta de crédito</label >
                 <br>
                 <label for="numero_tarjeta">Número de tarjeta</label>
-                <input type="number" name="metodo_pago" id="numero_tarjeta" value="numero_tarjeta" required>
+                <input type="number" name="metodo_pago" id="numero_tarjeta" value="numero_tarjeta">
                 
                 <label for="codigo_cvv">Código CVV</label>
-                <input type="number" name="metodo_pago" id="codigo_cvv" value="CVV" required>
+                <input type="number" name="metodo_pago" id="codigo_cvv" value="CVV" >
                   <br> </div>
 
                 <div class="opcion-cupon">
@@ -89,12 +91,13 @@
             </div>
 
             <div class="botones">
-                <button class="boton-confirmar" type="button"><a href="./login.html">Confirmar</a></button> 
-             <button class="boton-cancelar" type="submit"><a href="./login.html">Cancelar</a></button> 
+            <button class="boton-confirmar" type="submit">Confirmar</button> 
+             <button class="boton-cancelar" type="button"><a href="./login.html">Cancelar</a></button> 
 
           </div>
-            
-        </form>
+        </div>
+       
+       </form>
     </main>
     <footer>
         <ul>
