@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body{
+    background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65)); 
+}
+
+.tituloMarca {
+    text-align: center;
+    font-family: "Acme", sans-serif;
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+}
+nav .marca-Nav{
+    display: inline;
+    text-align: left;
+    color: white;
+    background: linear-gradient(1500deg,rgb(9,45,65)); 
+    padding: 1em;
+}
+
+nav .barraDeBusqueda{
+    display: inline;
+    text-align: center;
+    color: white;
+    
+}
+
+.fa-solid{
+    color: white;
+}
