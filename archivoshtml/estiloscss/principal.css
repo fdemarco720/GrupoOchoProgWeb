@@ -13,6 +13,7 @@ body{
     background-attachment: fixed;
 }
 
+/* _________NAV_____________________ */
 .principal-nav{
     display: inline-flex;
     width: 100%;
@@ -63,4 +64,35 @@ body{
     justify-content: right;
     margin-right: 5%;
     color: #ffffff;
+}
+
+
+/* _____MAIN______ */
+
+.main-flex{
+    display: flex;
+    flex-direction: row;
+    padding: 1% 2%;
+}
+
+.barra-lateral{
+    padding-right: 2%;
+    font-family: 'Livvic';
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+
+.grid-img{
+    border-radius: 5px;
+    overflow: hidden;
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.grid-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
 }
