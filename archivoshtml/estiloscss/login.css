@@ -1,130 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Livvic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Livvic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
-    background-attachment: fixed;
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
+  background-attachment: fixed;
 }
 
 /* NAV */
-.login-header{ 
-    height: 10em;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); /*SOMBREADO TEXTO */
+.login-header {
+  height: 10em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); /*SOMBREADO TEXTO */
 }
 
 .login-header h1 {
-    text-align: center;
-    font-weight: bolder;
-    font-size: 3em;
-    font-family: "Acme", sans-serif;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 3em;
+  font-family: "Acme", sans-serif;
 }
 
-.login-header h3{
-    font-family: "Acme", sans-serif;
-    font-weight: normal;
-    text-align: center;
+.login-header h3 {
+  font-family: "Acme", sans-serif;
+  font-weight: normal;
+  text-align: center;
 }
 
-.login-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Livvic';
-    height: 300px;
-
+.login-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Livvic";
+  height: 300px;
 }
 
-.login-main-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0% 5%;
-    background-color: rgba(25, 25, 25, 0.5);
-    border-radius: 15px;
-    height: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
+.login-main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0% 5%;
+  background-color: rgba(25, 25, 25, 0.5);
+  border-radius: 15px;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
 }
 
-.login-main-section form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+.login-main-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-
-.login-main label{
-    color:#ffffff;
-    margin: 5% 0;
-    font-family: 'Livvic';
+.login-main label {
+  color: #ffffff;
+  margin: 5% 0;
+  font-family: "Livvic";
 }
 
-.login-main input{
-    font-family: 'Livvic';
-        border: none; /* Elimina el borde predeterminado */
-        outline: none; /* Elimina el contorno predeterminado */
-        background: transparent; /* Fondo transparente */
-        border-bottom: 1px solid #ffffff; /* Añade un subrayado */
-        padding: 5%;
-        color:rgb(211, 211, 20);
+.login-main input {
+  font-family: "Livvic";
+  border: none; /* Elimina el borde predeterminado */
+  outline: none; /* Elimina el contorno predeterminado */
+  background: transparent; /* Fondo transparente */
+  border-bottom: 1px solid #ffffff; /* Añade un subrayado */
+  padding: 5%;
+  color: rgb(211, 211, 20);
 }
 
-.login-main button{
-    margin: 5% 0;
-    padding: 10% 20%;
-    background-color:rgb(211, 211, 20);
-    border: none;
-    border-radius: 5px;
+.login-main button {
+  margin: 5% 0;
+  padding: 10% 20%;
+  background-color: rgb(211, 211, 20);
+  border: none;
+  border-radius: 5px;
 }
 
-.login-main button a{
-    font-family: 'Livvic';
-    color:#0b0a43;
-    text-decoration: none;
-    font-weight: bold;
+.login-main button a {
+  font-family: "Livvic";
+  color: #0b0a43;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.login-main div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-
+.login-main div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
-.login-main div a{
-    text-decoration: none; /* Sin subrayado */
-    
-    color:#c1d2fa;
+.login-main div a {
+  text-decoration: none; /* Sin subrayado */
+
+  color: #c1d2fa;
 }
 
-.login-main button:hover{
-    background-color:rgb(211, 211, 20, 0.7);
-    cursor: pointer;
+.login-main button:hover {
+  background-color: rgb(211, 211, 20, 0.7);
+  cursor: pointer;
 }
 
-.login-main button a:hover{
-
-    color: #ffff;
-    text-decoration: wavy;
+.login-main button a:hover {
+  color: #ffff;
+  text-decoration: wavy;
 }
-.a a:hover{
-   text-decoration: underline;
+.a a:hover {
+  text-decoration: underline;
 }
