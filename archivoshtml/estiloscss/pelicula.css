@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Livvic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* _____MAIN______ */
+main h2 {
+  text-align: center;
+  font-family: "Livvic";
+  font-weight: bolder;
+  color: yellow;
+  text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); /*SOMBREADO TEXTO */
+  font-size: 2em;
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+}
+
+.peliculas-flex {
+  display: flex;
+  flex-direction: row;
+  padding: 1% 2%;
+}
+
+.barra-lateral {
+  margin-right: 2%;
+  font-family: "Livvic";
+  font-weight: bolder;
+  color: #ffffff;
+}
+
+.barra-lateral div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.barra-lateral input {
+  margin-top: 10px;
+  border: none; /* Elimina el borde predeterminado */
+  border-radius: 20px;
+  outline: none; /* Elimina el contorno predeterminado */
+  background: transparent; /* Fondo transparente */
+  background-color: rgba(25, 25, 25, 0.5);
+  padding: 5%;
+  color: rgb(211, 211, 20);
+  justify-content: center;
+}
+
+.barra-lateral button {
+  font-family: "Livvic";
+  margin-bottom: 20px;
+  margin-top: 5px;
+  padding: 2%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.barra-lateral button:hover {
+  background-color: rgb(211, 211, 20);
+  border: solid 1px;
+  border-color: #ffffff;
+}
+
+.barra-lateral form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 5px;
+  font-family: "Livvic";
+}
+
+.barra-lateral select {
+  border: none; /* Elimina el borde predeterminado */
+  border-radius: 20px;
+  outline: none; /* Elimina el contorno predeterminado */
+  background: transparent; /* Fondo transparente */
+  background-color: rgba(25, 25, 25, 0.5);
+  padding: 5%;
+  color: rgb(211, 211, 20);
+  font-family: "Livvic";
+  font-weight: bolder;
+}
+
+.barra-lateral option {
+  background-color: #0b0a43;
+  font-family: "Livvic";
+  font-weight: bolder;
+  border-radius: 10px;
+}
+
+.grid-peliculas {
+  border-radius: 5px;
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+}
+
+.grid-peliculas img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.grid-peliculas img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}

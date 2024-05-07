@@ -1,98 +1,182 @@
-@import url('https://fonts.googleapis.com/css2?family=Livvic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Livvic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
-    background-attachment: fixed;
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
+  background-attachment: fixed;
 }
 
 /* _________NAV_____________________ */
-.principal-nav{
-    display: inline-flex;
-    width: 100%;
-    background-color: rgba(25, 25, 25, 0.5);
+.principal-nav {
+  display: inline-flex;
+  width: 100%;
+  background-color: rgba(25, 25, 25, 0.5);
 }
 
-.principal-nav div{
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.principal-nav div {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.titulo{
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); /*SOMBREADO TEXTO */
-    font-size: 2em;
-    font-family: "Acme", sans-serif;
-    text-align:left;
+.titulo {
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); /*SOMBREADO TEXTO */
+  font-size: 2em;
+  font-family: "Acme", sans-serif;
+  text-align: left;
 }
 
-.barra{
-    display: inline-flex;
+.barra {
+  display: inline-flex;
 }
 
-.barra ul{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+.barra ul {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.barra ul li{
-    list-style: none;
-    padding: 0 10%;
-    font-family: 'Livvic';
-    font-weight: bolder;
-    color: #ffffff;
+.barra ul li {
+  list-style: none;
+  margin: 0 10%;
+  font-family: "Livvic";
+  font-weight: bolder;
+  color: #ffffff;
+  padding: 3%;
 }
 
-.miCuenta{
-    width: 100%;
-    display: inline-flex;
-    font-family: "Acme", sans-serif;
+.barra ul a {
+  text-decoration: none;
+  font-family: "Livvic";
+  font-weight: bolder;
+  color: #ffffff;
 }
 
-.miCuenta a{
-    width: 100%;
-    display: inline-flex;
-    justify-content: right;
-    margin-right: 5%;
-    color: #ffffff;
+.miCuenta {
+  width: 100%;
+  display: inline-flex;
+  font-family: "Acme", sans-serif;
 }
 
+.miCuenta a {
+  width: 100%;
+  display: inline-flex;
+  justify-content: right;
+  margin-right: 5%;
+  color: #ffffff;
+}
+
+/* ___________AJUSTE NAV________________ */
+.barra ul li:hover {
+  background-color: rgba(250, 250, 250, 0.5);
+  color: yellow;
+  border-radius: 10px;
+  transform: scale(1.2);
+}
+
+.barra ul li a:hover {
+  color: yellow;
+}
 
 /* _____MAIN______ */
 
-.main-flex{
-    display: flex;
-    flex-direction: row;
-    padding: 1% 2%;
+.main-flex {
+  display: flex;
+  flex-direction: column;
+  padding: 1% 2%;
 }
 
-.barra-lateral{
-    padding-right: 2%;
-    font-family: 'Livvic';
-    font-weight: bolder;
-    color: #ffffff;
+.barra-horizontal {
+  display: inline-flex;
+  font-family: "Livvic";
+  font-weight: bolder;
+  color: #ffffff;
 }
 
+.barra-horizontal div {
+  margin: 1% 0;
+  width: 50%;
+  text-align: center;
+}
 
-.grid-img{
-    border-radius: 5px;
-    overflow: hidden;
-    grid-gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+.barra-horizontal input {
+  border: none; /* Elimina el borde predeterminado */
+  border-radius: 20px;
+  outline: none; /* Elimina el contorno predeterminado */
+  background: transparent; /* Fondo transparente */
+  background-color: rgba(25, 25, 25, 0.5);
+  color: rgb(211, 211, 20);
+  padding: 1%;
+}
+
+.barra-horizontal button {
+  font-family: "Livvic";
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 1%;
+}
+
+.barra-horizontal button:hover {
+  background-color: rgb(211, 211, 20);
+  border: solid 1px;
+  border-color: #ffffff;
+}
+
+.barra-horizontal form {
+  font-family: "Livvic";
+}
+
+.barra-horizontal select {
+  border: none; /* Elimina el borde predeterminado */
+  border-radius: 20px;
+  outline: none; /* Elimina el contorno predeterminado */
+  background: transparent; /* Fondo transparente */
+  background-color: rgba(25, 25, 25, 0.5);
+  color: rgb(211, 211, 20);
+  font-family: "Livvic";
+  font-weight: bolder;
+  padding: 1%;
+}
+
+.barra-horizontal option {
+  background-color: #0b0a43;
+  font-family: "Livvic";
+  font-weight: bolder;
+  border-radius: 10px;
+}
+
+article h3 {
+  font-family: "Livvic";
+  font-weight: bolder;
+  color: #ffffff;
+}
+
+.grid-img {
+  border-radius: 5px;
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  margin-bottom: 2%;
 }
 
 .grid-img img {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.grid-img img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+  position: static;
 }
