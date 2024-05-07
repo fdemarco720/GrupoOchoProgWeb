@@ -1,76 +1,47 @@
-body{
-    margin: 1px;
-    padding: 0;
-    border: 1px solid black;
+.central{
+    background-color: grey;
+    border: 1px solid rgb(0, 0, 0);
+    margin: 1em;
+
 }
 
 header{
-    border-bottom: 1px black solid;
+    padding: 0.5em;
+    border-bottom: 1px solid rgb(0, 0, 0);
     
-}
-h1{
-    margin: 2px;
-   font-family:Arial, Helvetica, sans-serif;
-   font-weight: normal;
-}
-
-article{
-    border: 1px black solid;
-    display: inline-block;
-    margin: 5px;
-    
-}
-
-footer{
-    border-top: 1px black solid;
 }
 
 main{
-   margin: 100px;
-    
-   text-align: center;
+    background-color: aqua;
+    height: 450px;
+    width: auto;
 }
 
-#facultad p{
-    margin: 100px;
-}
-
-
-.Universidad label{
-   display: block;
-  margin-right: 170px;
-  margin-bottom: 5px;
- margin-top: 5px;
-}
-
-.Universidad input{
-  width: 90%;
- 
-}
-
-.color label{
-display: block;
-margin-right: 170px;
-margin-left: 5px;
-margin-top: 5px;
+.universidad{
+    display: inline-flex;
+    background-color: blue;
+    padding: 10em;
+    margin: 1em 0em 0em 1.2em;
+    padding-bottom: 3em;
 
 }
 
-.color input{
-    margin-top: 5px;
-    width: 90%;
+.ingresoDeDatos{
+    display: inline-flex;
+    background-color: red;
+    padding: 10em;
+    padding-right: 15em;
+    margin: 1em 0.5em 15em 1em;
 }
 
-.cambiar p{
-    margin-right: 170px;
-    margin-left: 5px;
+footer{
+    background-color: rgb(33, 179, 64);
+    text-align: center;
+    padding: 1em;
+    border-top: 1px black solid;
 }
 
-.cambiar input{
-    margin-bottom: 40px;
-   
-}
-.xd{
-    margin-right: 130px;
-    margin-left: 5px;
-}
+
+/*
+padding: 1em, 0.5, 10em, 1em;
+margin: 1em, 0.5, 10em, 1em;*/
