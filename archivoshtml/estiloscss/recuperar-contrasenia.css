@@ -59,6 +59,7 @@
     border-style: none; /*Saco el subrayado y los estilos que tiene el tipo sub*/
     margin: 9% 1% 1% 1%; 
     margin-left: 21%;/*Doy un margen a la izquierda del 40%*/
+    cursor: pointer; /* Cursor cambia al puntero */
 }
     
 
@@ -69,7 +70,7 @@
     padding: 4% 6.5%;
     border-radius: 30px;
     border-style: none;
-
+    cursor: pointer; /* Cursor cambia al puntero */
     margin-left: 2%; /*Margen de separación con el boton de confirmar*/
 }
     

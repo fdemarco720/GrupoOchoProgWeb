@@ -104,11 +104,7 @@ footer ul{
 }
 
 label {
-    /*segun chatgpt la carecteristica display define el compartimiento de visualizacion y al darle block se muestra como bloque, es decir,
-     uno abajo del otro*/
-     /*display: block;*/
     
-    /*margen entre label y label*/
    
     color:#ffffff;
     margin: 2% ;
@@ -174,3 +170,30 @@ a{
     
     
 }
+
+@media screen and (max-width: 640px) {
+    /* Estilos para pantallas con un ancho máximo de 640px */
+    body {
+        font-size: 14px;  /* Reducir el tamaño de fuente para pantallas más pequeñas */
+    }
+    header {
+        height: 8em; /* Reducir la altura del encabezado */
+        font-size: 0.8em; /* Reducir el tamaño del texto del encabezado */
+    }
+    main {
+        max-width: 80%; /* Hacer que el contenido principal sea más ancho en pantallas más pequeñas */
+    }
+    .formulario-registro {
+        flex-direction: column; /* Cambiar la dirección del formulario para que los elementos se apilen verticalmente */
+    }
+    .form-mitad,
+    .form-otramitad {
+        margin-right: 0; /* Eliminar el margen entre las mitades del formulario en pantallas más pequeñas */
+    }
+
+    label {
+        margin: 5px 0;   /* margin: 5px 0;  Cambiar el margen entre los labels en pantallas más pequeñas */
+        font-size: 0.9em; /*  Reducir el tamaño de fuente de los labels */
+   }
+}
+
