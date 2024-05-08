@@ -32,10 +32,12 @@ body {
   font-size: 2em;
   font-family: "Acme", sans-serif;
   text-align: left;
+  flex: 1;
 }
 
 .barra {
   display: inline-flex;
+  flex: 2;
 }
 
 .barra ul {
@@ -61,9 +63,9 @@ body {
 }
 
 .miCuenta {
-  width: 100%;
   display: inline-flex;
   font-family: "Acme", sans-serif;
+  flex: 1;
 }
 
 .miCuenta a {
@@ -155,6 +157,7 @@ body {
 }
 
 article h3 {
+  margin-top: 2%;
   font-family: "Livvic";
   font-weight: bolder;
   color: #ffffff;
