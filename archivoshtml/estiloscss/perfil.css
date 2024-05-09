@@ -1,0 +1,31 @@
+*{
+    color: white;
+}
+
+body{
+    background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
+    margin: 0%;
+    padding: 0%;
+}
+
+h1{
+    background-color: red;
+}
+
+h2{
+    background-color: yellow;
+}
+
+section{
+    padding: 5px;
+    background-color: aqua;
+}
+
+article{
+    background-color: orange;
+}
+
+aside{
+    align-items: start;
+    background-color: green;
+}
