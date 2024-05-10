@@ -1,11 +1,29 @@
 *{
     color: white;
+    margin: 0%;
+    padding: 0%;
+    display: inline;
+}
+header{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    background-color: coral;
+    text-align: center;
+    align-items: center;
+    gap: 1px;
+}
+header h1{
+    text-align: left;
 }
 
 body{
+    display: block;
     background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
     margin: 0%;
     padding: 0%;
+}
+main{
+    display: grid;
 }
 
 h1{
@@ -13,19 +31,43 @@ h1{
 }
 
 h2{
-    background-color: yellow;
+    background-color: rgb(176, 176, 61);
+}
+
+h3{
+    background-color: rgb(57, 132, 107);
+}
+ 
+.perfil{
+    background-color: rgb(33, 33, 221);
+}
+
+img{
+    height: 12em;
+    border-radius: 5em;
 }
 
 section{
+    display: block;
     padding: 5px;
     background-color: aqua;
+    
 }
 
 article{
-    background-color: orange;
+    background-color: rgb(110, 79, 22);
 }
 
 aside{
     align-items: start;
     background-color: green;
+}
+
+.contenedor{
+    background-color: darkcyan;
+    display: grid;
+
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 100%;
+    
 }
