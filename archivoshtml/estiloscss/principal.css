@@ -11,48 +11,59 @@ body {
   height: 100vh;
   background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
   background-attachment: fixed;
+  box-sizing: border-box;
 }
 
 /* _________NAV_____________________ */
 .principal-nav {
-  display: inline-flex;
+  display: flex;
   width: 100%;
   background-color: rgba(25, 25, 25, 0.5);
+  align-items: center;
+  justify-content: space-between;
 }
 
-.principal-nav div {
+/* .principal-nav div {
   justify-content: center;
   align-items: center;
   width: 100%;
-}
+} */
 
 .titulo {
   color: #ffffff;
   text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); /*SOMBREADO TEXTO */
   font-size: 2em;
   font-family: "Acme", sans-serif;
-  text-align: left;
-  flex: 1;
+
+  /* text-align: left; */
+  /* flex: 1; */
 }
 
 .barra {
-  display: inline-flex;
-  flex: 2;
+  /* display: inline-flex;
+  flex: 2; */
+  background-color: aqua;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  gap: 5%;
+  
 }
 
 .barra ul {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10%;
+  width: auto;
 }
 
 .barra ul li {
   list-style: none;
-  margin: 0 10%;
   font-family: "Livvic";
   font-weight: bolder;
   color: #ffffff;
-  padding: 3%;
 }
 
 .barra ul a {
