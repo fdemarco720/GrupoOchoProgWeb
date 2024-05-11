@@ -6,23 +6,33 @@
     <link rel="stylesheet" href="./estiloscss/recuperar-contrasenia.css">
     <title>Bomflix - Recuperar Contraseña</title>
 </head>
-<body class="body">
-    <header><h1 class="header-titulo">B O M F L I X</h1></header>
+<body >
+    <header>
+        <h1>B O M F L I X</h1>
+        <h3>Las mejores series y películas</h3>
+    </header>
     
-        <main class="body-principal">
-            <h2>Recuperar Contraseña</h2>
-            <form action="../archivoshtml/recuperar-contrasenia.html">
-                <label for="nombreDeUsuario">
-                    Nombre De Usuario
-                    <input type="text" id="nombreDeUsuario" placeholder="Usurio1462" required>
-                </label>
-                <br>
-                <label for="email"> 
-                    Correo Electronico
-                    <input type="text" id="email" placeholder="ejemplo@gmail.com" required>
-                </label>
-                <button type="submit" class="boton-confirmar">Confirmar</button>
-                <button class="boton-cancelar"><a href="../archivoshtml/login.html"></a>Cancelar</button> 
+        <main >
+            <section>
+                <div class="encabezado">
+                <h2>Recuperar  Contraseña</h2>
+            </div>
+                <form action="../archivoshtml/recuperar-contrasenia.html">
+                    <label for="nombreDeUsuario">Nombre De Usuario: </label>
+                    <input type="text"  name =nombreDeUsuario id="nombre_De_Usuario" placeholder="Usurio1462" required>
+                    <article>
+
+                 
+                    <label for="email">Correo Electronico: </label>
+                    <input type="text" name="email" id="email" placeholder="ejemplo@gmail.com" required>
+                </article>
+                    <div class="botones">
+                        <button type="submit" class="boton-confirmar">Confirmar</button>
+                        <button class="boton-cancelar" type="button"><a href="./login.html">Cancelar</a></button>
+                    </div>
+                     
+                </form>
+            </section>
             </form>
            
         </main>
