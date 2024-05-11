@@ -22,6 +22,32 @@ body{
     margin: 0%;
     padding: 0%;
 }
+
+aside{
+    background-color: green;
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+}
+
+aside div{
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor{
+    background-color: darkcyan;
+    display: grid;
+
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 100%;   
+}
+
 main{
     display: grid;
 }
@@ -32,6 +58,7 @@ h1{
 
 h2{
     background-color: rgb(176, 176, 61);
+
 }
 
 h3{
@@ -49,25 +76,10 @@ img{
 
 section{
     display: block;
-    padding: 5px;
     background-color: aqua;
-    
 }
 
 article{
     background-color: rgb(110, 79, 22);
 }
 
-aside{
-    align-items: start;
-    background-color: green;
-}
-
-.contenedor{
-    background-color: darkcyan;
-    display: grid;
-
-    grid-template-columns: 25% 75%;
-    grid-template-rows: 100%;
-    
-}
