@@ -1,85 +1,105 @@
+
+img{
+    height: 10em;
+    border-radius: 5em;
+    margin: 5px;
+}
 *{
-    color: white;
-    margin: 0%;
-    padding: 0%;
-    display: inline;
+    margin: 0;
+
+}
+body{
+    background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
 }
 header{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    background-color: coral;
     text-align: center;
-    align-items: center;
-    gap: 1px;
+    
+    }
+    h1{
+       font-size: medium;
+    }
+nav{
+    display: grid;
+    grid-template-columns: 10% auto;
 }
-header h1{
+ul{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+
+    
+}
+li{
+    
+    list-style: none;
+}
+li h1{
     text-align: left;
 }
 
-body{
-    display: block;
-    background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
-    margin: 0%;
-    padding: 0%;
-}
-
-aside{
-    background-color: green;
-    padding-bottom: 1em;
-    display: flex;
-    flex-direction: column;
+h2{
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 0%;
-}
-
-aside div{
-    background-color: aqua;
-    justify-content: center;
-    align-items: center;
-}
-
-.contenedor{
-    background-color: darkcyan;
-    display: grid;
-
-    grid-template-columns: 25% 75%;
-    grid-template-rows: 100%;   
+    
 }
 
 main{
-    display: grid;
-}
+   display: block;
+  margin: 5px;
+  background-color: rgba(25, 25, 25, 0.5);
+height: 400px;
 
-h1{
-    background-color: red;
-}
-
-h2{
-    background-color: rgb(176, 176, 61);
-
-}
-
-h3{
-    background-color: rgb(57, 132, 107);
-}
- 
-.perfil{
-    background-color: rgb(33, 33, 221);
-}
-
-img{
-    height: 12em;
-    border-radius: 5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
 }
 
 section{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+   
+}
+
+
+.datos-usuario{
+   
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+   padding: 5px;
+}
+
+.lascontras{
     display: block;
-    background-color: aqua;
+    margin: 0px 10px 10px 0px;
 }
 
-article{
-    background-color: rgb(110, 79, 22);
+
+.foto{
+   
+    text-align: center;
+
 }
 
+.ingreso{
+    border-style: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    margin-right: 5px;
+}
+
+.pagos{
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.labeltarjeta{
+    display: block;
+    
+    
+    
+}
+
+.radios{
+    margin: 5px;
+}
+.efectivo{
+    display: inline;
+    text-align: center;
+}
