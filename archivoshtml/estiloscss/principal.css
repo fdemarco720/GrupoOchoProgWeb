@@ -42,7 +42,7 @@ body {
 .barra {
   /* display: inline-flex;
   flex: 2; */
-  background-color: aqua;
+  /* background-color: aqua;    Este no va */
   width: auto;
   left: 50%;
   transform: translateX(-50%);

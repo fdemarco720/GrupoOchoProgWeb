@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Livvic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+}
+
+/* Main */
+/* Flex ordenamiento general de iframe-boton y detalle de peli-atributos */
+.info-peli {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding-top: 2em;
+  gap: 30px;
+}
+/* contenedor de iframe y boton comenzar */
+.iframe-comenzar {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-content: center;
+  gap: 2em;
+}
+
+.iframe-comenzar iframe{
+  width: 45em;
+  height: 30em;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgb(173, 172, 172);
+}
+.iframe-comenzar a{
+  font-family: 'Livvic';
+  font-size: 1.2em;
+  background-color: rgb(207, 207, 207);
+  color: black;
+  width: 20%;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 5px;
+}
+.iframe-comenzar a:hover{
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 0, 0.686);
+  border: 1px solid white;
+}
+
+/* DETALLE DE LA PPELICULA (ATRIBUTOS Y SINOPSIS)*/
+.detalle-peli{
+  display: flex;
+  flex-direction: column;
+  gap:100px;
+  
+  
+}
+/* DIV  CAMPO-ATRIBUTO */
+/* Campos */
+.detalle-peli .campo-atributo{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-content: center;
+  align-items: center;
+  justify-content: start;
+  
+}
+.detalle-peli .campo-atributo .campo{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Livvic';
+  font-size: 1.2em;
+  align-content: space-between;
+  gap: 20px;
+}
+.campo h3{
+  color: yellow;
+}
+/* Atributos */
+.detalle-peli .campo-atributo .atributo{
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  gap: 25px;
+}
+.atributo p,a{
+  font-family: 'Livvic';
+  font-size: 1.2em;
+}
+/* DIV  SINOPSIS */
+.detalle-peli .sinopsis p{
+font-family: 'Livvic';
+font-size: 1.5em;
+}
+
+/* --------------------BOTON VER SIMILARES------------------------- */
+.boton-similares{
+  margin-top: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+  border: 1px dashed rgb(228, 224, 224);
+  box-shadow: 1px 1px 20px rgba(93, 93, 93, 0.976);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(17, 17, 17, 0.202);
+  height: 8em;
+}
+.boton-similares a{
+font-family: 'Acme' ;
+}
+.boton-similares a:hover{
+  opacity: 80%;
+  color: yellow;
+}
+
+
+
+/*----------------SECCION SIMILARES --------------  */
+
+.similares{
+  display: flex;
+  flex-direction: column;
+  padding:15px;
+  gap:50px;
+  padding: 15px;
+}
+.similares h2{
+  font-family: 'Acme';
+}
+.flex-pelis{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.flex-pelis a img{
+  width: 20em;
+  height: 30em;
+  border-radius: 5px;
+}
+.flex-pelis a img:hover{
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estiloscss/principal.css">
+    <link rel="stylesheet" href="./estiloscss/detalle-serie.css">
+    <title>DARK | Series Bomflix</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="principal-header">
+        <nav class="principal-nav">
+            <div class="titulo">
+                <h1>Bomflix</h1>
+            </div>
+            <div class="barra">
+                <ul>
+                    <li><a href="./principal.html">Home</a></li>
+                    <li><a href="./series.html">Series</a></li>
+                    <li><a href="./peliculas.html">Peliculas</a></li>
+                    <li>Perfil</li>
+                </ul>
+            </div>
+            <div class="miCuenta">
+                <!-- <a href="./perfil.html">Mi cuenta</a>     SE PUEDE SACAR  -->
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- SECCION SERIE (TRAILER, DETALLE Y SINOPSIS) -->
+        <section class="info-serie">
+            <section class="iframe-comenzar">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IJ_AZCvCacw?si=KJHNNvd8O1ZhXmIs"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <a href="https://www.youtube.com/watch?v=IJ_AZCvCacw" target="_blank" rel="noopener noreferrer">
+                    Comenzar
+                </a>
+            </section>
+
+            <!-- SECCION DETALLE COMPLETO DE SERIE -->
+            <!-- atributos y sinopsis (Flex) -->
+            <section class="detalle-serie">
+                <!-- campos y atributos -->
+                <div class="grid-campo-atributo">
+                    <div class="campo">
+                        <h3>Titulo:</h3>
+                        <h3>Genero:</h3>
+                        <h3>Actores:</h3>
+                    </div>
+
+                    <form class="formulario" action="#">
+                        <label for="temporadas">Temporadas</label>
+                        <select name="tempordas" id="temporadas">
+                            <option value="1">Temporada 1</option>
+                            <option value="2">Temporada 2</option>
+                            <option value="3">Temporada 3</option>
+                        </select>
+                        <label for="capitulo">Capitulo</label>
+                        <select name="capitulo" id="capitulo">
+                            <option value="2">Capitulo 1</option>
+                            <option value="1">Capitulo 2</option>
+                            <option value="3">Capitulo 3</option>
+                            <option value="4">Capitulo 4</option>
+                            <option value="5">Capitulo 5</option>
+                            <option value="6">Capitulo 6</option>
+                        </select>
+                    </form>
+
+                    <div class="atributo">
+
+                    </div>
+                </div>
+                <!-- sinopsis -->
+                <div class="sinopsis">
+                    <p>Tras la desaparición de un niño, cuatro familias desesperadas tratan de entender lo ocurrido a
+                        medida que van desvelando un retorcido misterio que abarca tres décadas.</p>
+                </div>
+
+            </section>
+
+        </section>
+    </main>
+</body>
+
+</html>

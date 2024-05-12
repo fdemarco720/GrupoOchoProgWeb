@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Livvic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-decoration: none;
+}
+
+/*------- Main --------*/
+/* Display general de la vista detalle */
+.info-serie {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding-top: 2em;
+  gap: 30px;
+}
+
+/* Display del iframe y el boton comenzar */
+.iframe-comenzar {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-content: center;
+  gap: 2em;
+}
+
+.iframe-comenzar iframe {
+  width: 45em;
+  height: 30em;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgb(173, 172, 172);
+}
+
+.iframe-comenzar a {
+  font-family: "Livvic";
+  font-size: 1.2em;
+  background-color: rgb(207, 207, 207);
+  color: black;
+  width: 20%;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+/* SECCION DETALLE DE SERIE COMPLETO con display flex*/
+
+.detalle-serie {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+/* Sección detalle con display grid (Areas) */
+
+.grid-campo-atributo{
+    grid-template-areas: none;
+}
+
+.campo{
+    grid-area: campo;
+}

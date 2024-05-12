@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./estiloscss/principal.css">
+  <link rel="stylesheet" href="./estiloscss/detalle-pelicula.css">
+  <title>COCO | Peliculas Bomflix</title>
+</head>
+
+<body>
+  <header class="principal-header">
+    <nav class="principal-nav">
+      <div class="titulo">
+        <h1>Bomflix</h1>
+      </div>
+      <div class="barra">
+        <ul>
+          <li><a href="./principal.html">Home</a></li>
+          <li><a href="./series.html">Series</a></li>
+          <li><a href="./peliculas.html">Peliculas</a></li>
+          <li>Perfil</li>
+        </ul>
+      </div>
+      <div class="miCuenta">
+        <!-- <a href="./perfil.html">Mi cuenta</a>     SE PUEDE SACAR  -->
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- Sección DETALLE DE PELICULA-->
+    <section class="info-peli">
+      <!-- iframe y boton comenzar -->
+      <div class="iframe-comenzar">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/awzWdtCezDo?si=1GtNjHYklJTzFqlv"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/watch?v=awzWdtCezDo" target="_blank" rel="noopener noreferrer">
+          Comenzar
+        </a>
+      </div>
+
+      <!-- Información y reseña  (Contenedor de campo-atributo y reseña)-->
+      <div class="detalle-peli">
+        <!-- contenedora de Atributos y Datos de peli -->
+        <div class="campo-atributo">
+
+          <div class="campo">
+            <h3>Titulo:</h3>
+            <h3>Duracion:</h3>
+            <h3>Genero:</h3>
+            <h3>Actores:</h3>
+          </div>
+          <div class="atributo">
+            <p>Coco</p>
+            <p>1h 45m</p>
+            <p>Fantasía/Aventura</p>
+            <a href="https://es.wikipedia.org/wiki/Anthony_Gonzalez" target="_blank" rel="noopener noreferrer">Anthony
+              Gonzalez</a>
+          </div>
+
+        </div>
+        <!-- contendedor de reseña -->
+        <div class="sinopsis">
+          <p>Miguel es un niño que sueña con ser músico, pero su familia se lo prohíbe porque su tatarabuelo, músico,
+            los abandonó, y quieren obligar a Miguel a ser zapatero, como todos los miembros de la familia. Por
+            accidente, Miguel entra en la Tierra de los Muertos, de donde sólo podrá salir si un familiar difunto le
+            concede su bendición, pero su tatarabuela se niega a dejarlo volver con los vivos si no promete que no será
+            músico</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!----------------- BOTON VER SIMILARES  ------------------->
+
+    <section class="boton-similares">
+      <a href="#similares"> VER MAS PELIS</a>
+    </section>
+
+    <!----------------- SECCION PELICULAS SIMILARES ------------------------->
+    <section class="similares" id="similares">
+      <h2>SIMILARES</h2>
+      <div class="flex-pelis">
+        <a href=""> <img src="./img/messi.jpg" alt="Messi"> </a>
+        <a href=""> <img src="./img/cars.jpg" alt="Cars"> </a>
+        <a href=""><img src="./img/losIncreibles.jpg" alt="Los increibles"> </a>
+        <a href=""><img src="./img/elemental.jpeg" alt="Elemental"> </a>
+      </div>
+    </section>
+
+  </main>
+
+
+</body>
+
+</html>
