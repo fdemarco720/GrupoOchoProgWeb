@@ -1,68 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Livvic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+*{
+    margin: 0;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
 
 img{
     height: 10em;
     border-radius: 5em;
     margin: 5px;
 }
-*{
-    margin: 0;
 
-}
+
 body{
     background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
 }
+
 header{
     text-align: center;
-    
-    }
-    h1{
-       font-size: medium;
-    }
+    text-align: center;
+    font-family: "Livvic";
+    font-weight: bolder;
+    font-size: 1em;
+}
+
 nav{
     display: grid;
     grid-template-columns: 10% auto;
+    align-items: center;
 }
+
+.titulo-marca{
+    font-size: 2em;
+}
+
 ul{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-
-    
 }
+
 li{
-    
     list-style: none;
 }
+
 li h1{
     text-align: left;
 }
 
 h2{
     text-align: center;
-    
 }
 
 main{
-   display: block;
-  margin: 5px;
-  background-color: rgba(25, 25, 25, 0.5);
-height: 400px;
-
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
+    display: block;
+    margin: 5em;
+    background-color: rgba(25, 25, 25, 0.5);
+    height: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
 }
 
 section{
     display: grid;
     grid-template-columns: auto auto auto;
-    
-   
 }
 
 
 .datos-usuario{
-   
     display: grid;
     grid-template-rows: auto auto auto auto;
-   padding: 5px;
+    padding: 5px;
 }
 
 .lascontras{
@@ -72,9 +82,7 @@ section{
 
 
 .foto{
-   
     text-align: center;
-
 }
 
 .ingreso{
@@ -90,16 +98,15 @@ section{
 }
 
 .labeltarjeta{
-    display: block;
-    
-    
-    
+    display: block; 
 }
 
 .radios{
     margin: 5px;
 }
+
 .efectivo{
     display: inline;
     text-align: center;
 }
+
