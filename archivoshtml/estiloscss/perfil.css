@@ -20,8 +20,8 @@ img{
 
 body{
     background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
-    padding-bottom: 13.6em;
     justify-content: center;
+    height: 100vh;
 }
 
 header{
