@@ -4,6 +4,7 @@
 *{
     margin: 0;
     color: white;
+    font-family: 'Livvic';
 }
 
 a{
@@ -44,7 +45,7 @@ nav{
 
 ul{
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
 }
 
 li{
@@ -65,26 +66,26 @@ h2{
 
 main{
     display: block;
-    margin: 6em;
+    margin: 0 auto;
     background-color: rgba(25, 25, 25, 0.5);
-    height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
-    margin: 0em 15em;
-    
+    max-width: 70em;
 }
 
 section{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    grid-template-rows: 80% 20%;
     padding-top: 0.5em;
     border-top: 1px black solid;
-   
 }
 
 .datos-usuario{
     display: grid;
-    grid-template-rows: auto auto auto auto;
-    margin-left: 4em;
+    grid-template-rows: 4;
+    /* margin-left: 4em; */
+    /* margin-right: 4em; */
 }
 
 .datos-usuario label{
@@ -95,11 +96,11 @@ section{
     margin: 1.5em 0em;
 }
 
-.nueva-contraseña label{
+.nueva-contraseÃ±a label{
     margin-bottom: 0;
 }
 
-.nueva-contraseña label{
+.nueva-contraseÃ±a label{
     display: block;
 }
 
@@ -113,7 +114,7 @@ section{
 
 .ingreso{
     border-style: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(255, 255, 255);
     background-color: transparent;
     margin-right: 5px;
 }
@@ -122,6 +123,7 @@ section{
     display: grid;
     grid-template-rows: auto auto auto;
     justify-self: center;
+    /* margin-left: 10em; */
 }
 
 .tarjetas{
@@ -138,6 +140,7 @@ section{
 .numero-tarjeta{
     display: block;  
     text-align: center;  
+    margin: 1em 0em;
 }
 
 .codigo-cvv{
@@ -179,4 +182,40 @@ h4{
 }
 #rapi_pago{
    padding-left: 2em;
+}
+.guardar-cambios{
+    color: black;
+    background-color: yellow;
+    border: none;
+    border-radius: 2em;
+    height: 3em;
+    margin: 2em;
+    padding: 1em;
+}
+
+.cancelar-suscripcion{
+    color: black;
+    background-color: red;
+    border: none;
+    border-radius: 2em;
+    height: 3em;
+    padding: 1em;
+}
+
+.guardar-cambios:hover{
+    background-color: #2458d3;
+}
+
+.cancelar-suscripcion:hover{
+    background-color: coral;
+}
+
+
+.botones{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.contrasenia{
+    display: block;
 }
