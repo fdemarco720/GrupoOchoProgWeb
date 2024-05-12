@@ -5,6 +5,7 @@
     margin: 0;
     color: white;
 }
+
 a{
     text-decoration: none;
 }
@@ -18,6 +19,8 @@ img{
 
 body{
     background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
+    padding-bottom: 13.6em;
+    justify-content: center;
 }
 
 header{
@@ -26,6 +29,7 @@ header{
     font-family: "Livvic";
     font-weight: bolder;
     font-size: 1em;
+    padding-bottom: 8em;
 }
 
 nav{
@@ -55,34 +59,56 @@ h2{
     text-align: center;
 }
 
+.mi-perfil{
+    padding: 0.5em;
+}
+
 main{
     display: block;
-    margin: 5em;
+    margin: 6em;
     background-color: rgba(25, 25, 25, 0.5);
-    height: 400px;
+    height: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
+    margin: 0em 15em;
+    
 }
 
 section{
     display: grid;
     grid-template-columns: auto auto auto;
+    padding-top: 0.5em;
+    border-top: 1px black solid;
+   
 }
-
 
 .datos-usuario{
     display: grid;
     grid-template-rows: auto auto auto auto;
-    padding: 5px;
+    margin-left: 4em;
 }
 
-.lascontras{
+.datos-usuario label{
+    margin: 1.5em 0em;
+}
+
+.formulario div{
+    margin: 1.5em 0em;
+}
+
+.nueva-contraseña label{
+    margin-bottom: 0;
+}
+
+.nueva-contraseña label{
     display: block;
-    margin: 0px 10px 10px 0px;
 }
-
 
 .foto{
     text-align: center;
+    align-items: center;
+}
+.foto p{
+    margin: 0.8em;
 }
 
 .ingreso{
@@ -95,18 +121,62 @@ section{
 .pagos{
     display: grid;
     grid-template-rows: auto auto auto;
+    justify-self: center;
+}
+
+.tarjetas{
+    padding: 1em 0em;
 }
 
 .labeltarjeta{
     display: block; 
+    margin: 0.5em;
+    margin-left: 0;
+    text-align: center; 
+}
+
+.numero-tarjeta{
+    display: block;  
+    text-align: center;  
+}
+
+.codigo-cvv{
+    display: block;
+    text-align: center;
 }
 
 .radios{
-    margin: 5px;
+    margin: 0.5em;
 }
 
 .efectivo{
     display: inline;
     text-align: center;
+    padding: 1em 0em;
 }
 
+.banco{
+    padding: 1em 0em;
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+    font-size: large;
+}
+
+#RC{
+    display: block;
+}
+
+#tarjeta_credito{
+    margin: 0.5em;
+    margin-left: 0;
+}
+
+#pago_facil{
+    margin-right: 0.7em;
+}
+#rapi_pago{
+   padding-left: 2em;
+}

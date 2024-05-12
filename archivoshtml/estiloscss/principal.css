@@ -189,6 +189,7 @@ article h3 {
   }
   
   .grid-img img:hover {
-    transform: scale(1.1);
-    transition-duration: 0.3s;
+    transform: scale(1.03);
+    transition-duration: 0.7s;
+    box-shadow: 1px 1px 15px #ffffff;
   }

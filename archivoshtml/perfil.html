@@ -4,75 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estiloscss/perfil.css">
-    <title></title>
+    <script src="https://kit.fontawesome.com/f1568403b0.js" crossorigin="anonymous"></script>
+    <title>BOMFLIX-PERFIL</title>
 </head>
 <body> 
     <header>
         <nav>
-            <h1>B O M F L I X</h1>
-        <ul>
-            
-            <li><a href="./principal.html">Home</a></li>
-            <li><a href="./series.html">Series</a></li>
-            <li><a href="./peliculas.html">Peliculas</a></li>
-            <li><a href="./perfil.html" class="resaltar-perfil">Perfil</a></li>
-        </ul>
+            <h1 class="titulo-marca">Bomflix</h1>
+            <ul>
+                <li><a href="./principal.html">Home</a></li>
+                <li><a href="./series.html">Series</a></li>
+                <li><a href="./peliculas.html">Peliculas</a></li>
+                <li><a href="./perfil.html" class="resaltar-perfil">Perfil</a></li>
+            </ul>
         </nav>
         
     </header>  
 
     <main>
-        <h2>Mi Perfil</h2>
+        <h2 class="mi-perfil">Mi Perfil</h2>
+
         <section>
-            <article class="foto"><img src="./img/Messi Vé.jpg" alt="imgperfil"><p>Nombre de Usuario</p></article>
-            
-            <article class="datos-usuario">
-<label for="email">Email: Usuario@gmail.com</label>
-<label for="contrasenia">Contraseña: ************</label>
-<form action="./perfil.html">
-
-   <div class="lascontras">
-    <label for="Nueva-contrasenia" >Nueva Contraseña</label>
-    <input type="password" name="Nueva-contrasenia" id="NC " class="ingreso">
-</div>
-
-    <label for="Repetir-contrasenia">Repetir Contraseña</label>
-    <input type="password" name="Repetir-contrasenia" id="RC" class="ingreso">
-
+            <article class="foto">
+                <img src="./img/Messi Vé.jpg" alt="imgperfil">
+                <p><h3>Nombre de Usuario</h3></p>
+                <p>Mis favoritos <i class="fa-regular fa-heart"></i></p>
+                <p>Notificaciones <i class="fa-regular fa-bell"></i></p>
             </article>
+                
+                <article class="datos-usuario">
+                    
+                    <label for="email">Email: Usuario@gmail.com</label>
+                    <label for="contrasenia">Contraseña: ************</label>
 
-            <article class="pagos">
-                <h4>Método de pago</h4>
+            <form class="formulario" action="./perfil.html">
 
-                
-           <div class="tarjetas">
-                <label for="tarjeta_credito" class="labeltarjeta">
-                <input type="radio" name="metodo_pago" id="tarjeta_credito"   value="tarjeta_credito" class="radios" required>Tarjeta de crédito</label >
-                
-                <label for="numero_tarjeta">Número de tarjeta</label>
-                <input type="number" name="metodo_pago" id="numero_tarjeta" value="numero_tarjeta" class="ingreso">
-                
-                <label for="codigo_cvv">Código CVV</label>
-                <input type="number" name="metodo_pago" id="codigo_cvv" value="CVV" class="ingreso">
-            </div>
-            <div class="efectivo">
-                <label for="rapi_pago">
-                <input type="radio" name="metodo_pago" id="rapi_pago" value="rapi_pago" class="radios"> Rapi pago </label>
-                
-                <label for="pago_facil">
-                <input type="radio" name="metodo_pago" id="pago_facil" value="pago_facil" class="radios">Pago facil </label>
-                
-            </div>
-            <div class="banco">
-                <label for="Transferencia_bancaria">
-                <input type="radio" name="metodo_pago" id="Transferencia_bancaria" class="radios">
-                    Transferencia bancaria
-                    <br>
-                    <p>CBU:14312414141512151</p>
-                </label> 
-            </div>
-            </article>
-        </form>
+                    <div class="nueva-contraseña">
+                        <label for="Nueva-contrasenia" >Nueva Contraseña</label>
+                        <input type="password" name="Nueva-contrasenia" id="NC " class="ingreso">
+                    </div>
+                    <div>
+                        <label for="Repetir-contrasenia">Repetir Contraseña</label>
+                        <input type="password" name="Repetir-contrasenia" id="RC" class="ingreso">
+                    </div>
+                </article>
+
+                <article class="pagos">
+                    <h4>Método de pago</h4>
+
+                    
+                    <div class="tarjetas">
+                        <label for="tarjeta_credito" class="labeltarjeta">
+                            <input type="radio" name="metodo_pago" id="tarjeta_credito" value="tarjeta_credito" class="radios" required>Tarjeta de crédito</label>
+                        <div class="numero-tarjeta">
+
+                            <label for="numero_tarjeta">Número de tarjeta</label>
+                            <input type="number" name="metodo_pago" id="numero_tarjeta" class="ingreso">
+                        </div>
+                        <div class="codigo-cvv">
+                            <label for="codigo_cvv">Código CVV</label>
+                            <input type="number" name="metodo_pago" id="codigo_cvv" class="ingreso">
+                        </div>
+                    </div>
+
+                    <div class="efectivo">
+                        <label for="rapi_pago">
+                        <input type="radio" name="metodo_pago" id="rapi_pago" value="rapi_pago" class="radios"> Rapi pago </label>
+                        
+                        <label for="pago_facil">
+                        <input type="radio" name="metodo_pago" id="pago_facil" value="pago_facil" class="radios">Pago facil </label>  
+                    </div>
+
+                    <div class="banco">
+                        <label for="Transferencia_bancaria">
+                            <input type="radio" name="metodo_pago" id="Transferencia_bancaria" class="radios">
+                            Transferencia bancaria
+                            <br>
+                            <p>CBU:14312414141512151</p>
+                        </label> 
+                    </div>
+
+                </article>
+            </form>
         </section>
     </main>
 </body>
