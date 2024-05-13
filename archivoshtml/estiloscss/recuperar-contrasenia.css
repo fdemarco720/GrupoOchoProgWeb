@@ -6,6 +6,7 @@ body{
     margin: 0%;
     margin-top: 35px;
     padding: 0%;
+    height: 100vh;
 }
 
 header{
@@ -14,7 +15,7 @@ header{
     font-size: 1.5em;
     font-family: "Acme", sans-serif;
     color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); /*SOMBREADO TEXTO */
+    text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); 
 }
 header h1{
     margin-bottom: 10px;
@@ -30,7 +31,7 @@ h3{
 
 main{
     background-color: rgba(25, 25, 25, 0.5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
     text-align: center;
     margin-top: 50px;
     margin-right: 600px;
@@ -60,7 +61,7 @@ button{
     padding: 15px;
     cursor: pointer;
     font-family:'Livvic';
-    color:black ; /* Color de los enlaces en blanco */
+    color:black ; 
     font-weight: bold;
 }
 
@@ -78,7 +79,7 @@ button{
 a{
     text-decoration: none;
     font-family:   'Livvic';
-    color:black ; /* Color de los enlaces en blanco */
+    color:black ; 
     font-weight: bold;
 }
 
@@ -95,14 +96,14 @@ label {
 
 input{
     border: none;
-    background: transparent; /* Fondo transparente */
+    background: transparent; 
     border-bottom: 1px white solid;
 }
 
 a{
     text-decoration: none;
     font-family:   'Livvic';
-    color:black ; /* Color de los enlaces en blanco */
+    color:black ; 
     font-weight: bold;
 }
 
@@ -114,4 +115,35 @@ button:hover{
     background-color: #bc9e9e;
 }
 
+@media screen and (max-width: 640px) {
+    header {
+        font-size: 1.2em;
+    }
+    main {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+
+@media screen and (min-width: 641px) and (max-width: 912px) {
+    main {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (min-width: 913px) and (max-width: 1024px) {
+    main {
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    main {
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+}
 
