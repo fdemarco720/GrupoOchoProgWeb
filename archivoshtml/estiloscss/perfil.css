@@ -13,11 +13,10 @@ a{
 }
 
 img{
-    height: 10em;
+    height: 13em;
     border-radius: 5em;
     margin: 5px;
 }
-
 
 body{
     background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
@@ -30,12 +29,12 @@ header{
     text-align: center;
     font-weight: bolder;
     font-size: 1em;
-    padding-bottom: 8em;
+    margin-bottom: 10em;
 }
 
 ul{
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 li{
@@ -51,7 +50,7 @@ h2{
 }
 
 .mi-perfil{
-    padding: 0.5em;
+    padding: 0.8em;
 }
 
 main{
@@ -67,31 +66,34 @@ section{
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     grid-template-rows: 80% 20%;
-    padding-top: 0.5em;
+    padding: 1.5em 0em;
     border-top: 1px black solid;
 }
 
 .datos-usuario{
     display: grid;
     grid-template-rows: 4;
-    /* margin-left: 4em; */
-    /* margin-right: 4em; */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .datos-usuario label{
-    margin: 1.5em 0em;
+    padding: 1em 0em;
+    font-size: larger;
 }
 
-.formulario div{
-    margin: 1.5em 0em;
-}
-
-.nueva-contraseÃ±a label{
-    margin-bottom: 0;
-}
-
-.nueva-contraseÃ±a label{
+.formulario label{
     display: block;
+}
+
+.formulario input{
+    display: inline;
+}
+
+.nueva-contraseña label{
+    display: block;
+    margin-bottom: 0;
 }
 
 .foto{
@@ -107,7 +109,7 @@ section{
     border-style: none;
     border-bottom: 1px solid rgb(255, 255, 255);
     background-color: transparent;
-    margin-right: 5px;
+    margin: 0.5em;
 }
 
 .pagos{
@@ -159,10 +161,6 @@ h4{
     font-size: large;
 }
 
-#RC{
-    display: block;
-}
-
 #tarjeta_credito{
     margin: 0.5em;
     margin-left: 0;
@@ -171,9 +169,11 @@ h4{
 #pago_facil{
     margin-right: 0.7em;
 }
+
 #rapi_pago{
    padding-left: 2em;
 }
+
 .guardar-cambios{
     color: black;
     background-color: yellow;
@@ -193,20 +193,46 @@ h4{
     padding: 1em;
 }
 
-.guardar-cambios:hover{
-    background-color: #2458d3;
-}
-
-.cancelar-suscripcion:hover{
-    background-color: coral;
-}
-
-
 .botones{
     display: block;
     text-align: center;
     margin: 0 auto;
 }
+
 .contrasenia{
     display: block;
+}
+
+form input{
+    display: block;
+    border-style: none;
+    background-color: transparent;
+    border-bottom: 1px white solid;
+}
+
+.datos-usuario-email{
+    padding-inline: 0%;
+}
+
+.formulario{
+    margin-bottom:2.5em;
+}
+
+.guardar-cambios:hover{
+    background-color: #2458d3;
+    cursor: pointer;
+}
+
+.cancelar-suscripcion:hover{
+    background-color: coral;
+    cursor: pointer;
+}
+
+.ingreso{
+    margin: 0;
+}
+
+#em{
+    padding: 0%;
+    margin-bottom: 0.5em;
 }

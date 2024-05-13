@@ -40,19 +40,15 @@
                     
                     <article class="datos-usuario">
                 <form class="formulario" action="./perfil.html">      
-                        <label for="email">Email: Usuario@gmail.com</label>
-                        <label class="contrasenia" for="contrasenia">Contraseña: ************</label>
-
+                        <label class="datos-usuario-email" for="email" id="em">E-mail : </label>
+                        <input type="password" name="email" id="email" placeholder="ejemplo@gmail.com" disabled>
+                        <label class="contrasenia" for="contraseña">Contraseña : </label>
+                        <input type="text" name="contraseña" id="contraseña" placeholder="********" disabled>
                 
-
-                        <div class="nueva-contraseña">
-                            <label for="Nueva-contrasenia" >Nueva Contraseña</label>
-                            <input type="password" name="Nueva-contrasenia" id="NC " class="ingreso" placeholder="2112121" disabled>
-                        </div>
-                        <div>
-                            <label for="Repetir-contrasenia">Repetir Contraseña</label>
-                            <input type="password" name="Repetir-contrasenia" id="RC" class="ingreso">
-                        </div>
+                        <label for="Nueva-contrasenia" >Nueva Contraseña: </label>
+                        <input type="password" name="Nueva-contrasenia" id="NC " class="ingreso" placeholder="**********">
+                        <label for="Repetir-contrasenia">Repetir Contraseña: </label>
+                        <input type="password" name="Repetir-contrasenia" id="RC" class="ingreso" placeholder="Repita la contraseña">
                     </article>
 
                     <article class="pagos">
