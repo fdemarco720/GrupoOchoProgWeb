@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./estiloscss/perfil.css">
     <link rel="stylesheet" href="./estiloscss/principal.css">
     <script src="https://kit.fontawesome.com/f1568403b0.js" crossorigin="anonymous"></script>
+
     <title>BOMFLIX-PERFIL</title>
 </head>
 <body> 
@@ -33,17 +34,17 @@
         <section>
                 <article class="foto">
                     <img src="./img/Messi Vé.jpg" alt="imgperfil">
-                    <h3>Nombre de Usuario</h3>
+                    <h4>Nombre de Usuario</h4>
                     <p>Mis favoritos <i class="fa-regular fa-heart"></i></p>
                     <p>Notificaciones <i class="fa-regular fa-bell"></i></p>
                 </article>
                     
                     <article class="datos-usuario">
-                <form class="formulario" action="./perfil.html">      
+                <form class="formulario" action="./perfil.html" method="post">      
                         <label class="datos-usuario-email" for="email" id="em">E-mail : </label>
                         <input type="password" name="email" id="email" placeholder="ejemplo@gmail.com" disabled>
                         <label class="contrasenia" for="contraseña">Contraseña : </label>
-                        <input type="text" name="contraseña" id="contraseña" placeholder="********" disabled>
+                        <input type="text" name="contraseña" id="contraseña" placeholder="Contraseña" disabled>
                 
                         <label for="Nueva-contrasenia" >Nueva Contraseña: </label>
                         <input type="password" name="Nueva-contrasenia" id="NC " class="ingreso" placeholder="**********">
