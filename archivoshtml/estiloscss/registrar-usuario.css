@@ -6,7 +6,7 @@ body {
     font-family:sans-serif;
     background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
     background-color: #f3f1f1;
-    /* margenes 0 para que el backgorund del header no tenga espacion en blanco*/
+   
    
     padding: 0%;
 
@@ -36,9 +36,9 @@ header {
     
     height: 10em;
     color: white;
-    /* le agrego pading(relleno) para que el background no tenga espacios en blanco*/
+    
     text-align: center;
-    text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); /*SOMBREADO TEXTO */
+    text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); 
     font-family: "Acme", sans-serif;
     font-size: 1em;
    
@@ -49,16 +49,16 @@ header {
 */
 main {
         text-align: center;
-        /* el maxwidth le da el ancho maximo que puede tener el contendido dentro del main*/
+      
         max-width: 50%;
-        /* utilizo el  auto margin para centrarlo y el 20px para alejarlo un poco del header*/
+      
         margin:  0px auto ;
-        /* utilizo el pading para dar espacio entre los elementos dentro del main*/
+        
         padding: 20px;
-        /*el color del contenedor*/
+        
         background-color: rgba(25, 25, 25, 0.5);
 
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
         
         
     
@@ -69,7 +69,7 @@ main {
 footer{
    
     text-align: center;
-    padding: 1em; /* Espaciado interno del pie de página */
+    padding: 1em;
 }
 footer ul{
     color: white;
@@ -91,8 +91,8 @@ footer ul{
 .form-mitad{
     display: flex;
     flex-direction: column;
-    padding: 20px; /* Espacio interno entre los elementos del formulario */
-    margin-right: 10%; /* Espacio entre las mitades del formulario */
+    padding: 20px; 
+    margin-right: 10%; 
     
     
    
@@ -115,14 +115,14 @@ label {
 
 input{
     font-family: 'Livvic';
-    border: none; /* Elimina el borde predeterminado */
-    background: transparent; /* Fondo transparente */
-    border-bottom: 1px solid #ffffff; /* Añade un subrayado */
-    cursor: pointer; /* Cursor cambia al puntero */
+    border: none;
+    background: transparent; 
+    border-bottom: 1px solid #ffffff; 
+    cursor: pointer; 
     border-radius: 1px  #ccc;
     padding: 1%;
     color:rgb(211, 211, 20);
-    outline: none; /* Elimina el contorno predeterminado cuando lo seleccionas */
+    outline: none; 
     
     
 }
@@ -135,28 +135,28 @@ input{
     display: inline-block;
 }
 .opcion-tarjeta label{
-    display: inline-block; /* Muestra rapipago y pago facil en LINEA */
+    display: inline-block; 
 }
 .opcion-cupon label{
-    display: inline-block; /* Muestra rapipago y pago facil en LINEA */
+    display: inline-block; 
 }
 
 a{
     font-family: 'Livvic';
-    color:black ; /* Color de los enlaces en blanco */
-    text-decoration: none; /* Sin subrayado */
+    color:black ; 
+    text-decoration: none; 
     font-weight: bold;
     
 }
 
 .botones button{
     font-family: 'Livvic';
-    color:black ; /* Color de los enlaces en blanco */
+    color:black ; 
     font-weight: bold;
-    padding: 10px 20px; /* Espaciado interno del botón */
-    border: none; /* Sin borde */
+    padding: 10px 20px; 
+    border: none; 
     border-radius: 5px;
-    cursor: pointer; /* Cursor cambia al puntero */
+    cursor: pointer; 
     margin: 5px;
 }
 .boton-confirmar{

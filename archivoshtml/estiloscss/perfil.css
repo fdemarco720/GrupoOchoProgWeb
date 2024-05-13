@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Livvic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 
@@ -12,40 +13,30 @@ a{
 }
 
 img{
-    height: 10em;
+    height: 13em;
     border-radius: 5em;
     margin: 5px;
 }
-
 
 body{
     background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
     justify-content: center;
     height: 100vh;
+    margin: 0%;
+    padding: 0%;
 }
 
 header{
     text-align: center;
     text-align: center;
-    font-family: "Livvic";
     font-weight: bolder;
     font-size: 1em;
-    padding-bottom: 8em;
-}
-
-nav{
-    display: grid;
-    grid-template-columns: 10% auto;
-    align-items: center;
-}
-
-.titulo-marca{
-    font-size: 2em;
+    margin-bottom: 10em;
 }
 
 ul{
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 li{
@@ -61,7 +52,7 @@ h2{
 }
 
 .mi-perfil{
-    padding: 0.5em;
+    padding: 0.8em;
 }
 
 main{
@@ -70,6 +61,7 @@ main{
     background-color: rgba(25, 25, 25, 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
     max-width: 70em;
+    margin-bottom: 12.25em;
 }
 
 section{
@@ -77,31 +69,34 @@ section{
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     grid-template-rows: 80% 20%;
-    padding-top: 0.5em;
+    padding: 1.5em 0em;
     border-top: 1px black solid;
 }
 
 .datos-usuario{
     display: grid;
     grid-template-rows: 4;
-    /* margin-left: 4em; */
-    /* margin-right: 4em; */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 .datos-usuario label{
-    margin: 1.5em 0em;
+    padding: 1em 0em;
+    font-size: larger;
 }
 
-.formulario div{
-    margin: 1.5em 0em;
-}
-
-.nueva-contraseÃ±a label{
-    margin-bottom: 0;
-}
-
-.nueva-contraseÃ±a label{
+.formulario label{
     display: block;
+}
+
+.formulario input{
+    display: inline;
+}
+
+.nueva-contraseña label{
+    display: block;
+    margin-bottom: 0;
 }
 
 .foto{
@@ -110,13 +105,14 @@ section{
 }
 .foto p{
     margin: 0.8em;
+
 }
 
 .ingreso{
     border-style: none;
     border-bottom: 1px solid rgb(255, 255, 255);
     background-color: transparent;
-    margin-right: 5px;
+    margin: 0.5em;
 }
 
 .pagos{
@@ -163,13 +159,13 @@ section{
     text-align: center;
 }
 
+h1 a{
+    font-family: 'Acme';
+}
+
 h4{
     text-align: center;
     font-size: large;
-}
-
-#RC{
-    display: block;
 }
 
 #tarjeta_credito{
@@ -180,9 +176,11 @@ h4{
 #pago_facil{
     margin-right: 0.7em;
 }
+
 #rapi_pago{
    padding-left: 2em;
 }
+
 .guardar-cambios{
     color: black;
     background-color: yellow;
@@ -202,20 +200,101 @@ h4{
     padding: 1em;
 }
 
-.guardar-cambios:hover{
-    background-color: #2458d3;
-}
-
-.cancelar-suscripcion:hover{
-    background-color: coral;
-}
-
-
 .botones{
     display: block;
     text-align: center;
     margin: 0 auto;
 }
+
 .contrasenia{
     display: block;
+}
+
+form input{
+    display: block;
+    border-style: none;
+    background-color: transparent;
+    border-bottom: 1px white solid;
+}
+
+.datos-usuario-email{
+    padding-inline: 0%;
+}
+
+.formulario{
+    margin-bottom:2.5em;
+}
+
+.guardar-cambios:hover{
+    background-color: #2458d3;
+    cursor: pointer;
+}
+
+.cancelar-suscripcion:hover{
+    background-color: coral;
+    cursor: pointer;
+}
+
+.ingreso{
+    margin: 0;
+}
+
+#em{
+    padding: 0%;
+    margin-bottom: 0.5em;
+}
+
+@media screen and (max-width: 640px) {
+    .principal-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .titulo {
+        margin-bottom: 1em;
+    }
+    ul {
+        grid-template-columns: 1fr;
+    }
+    .miCuenta {
+        margin-top: 1em;
+    }
+    main {
+        max-width: 90%;
+    }
+    section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+    .datos-usuario {
+        grid-row: auto;
+    }
+    .pagos {
+        grid-row: auto;
+    }
+    .tarjetas, .efectivo, .banco {
+        margin: 1em auto;
+    }
+    .guardar-cambios, .cancelar-suscripcion {
+        margin: 1em auto;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 912px) {
+    main {
+        max-width: 90%;
+        
+    }
+    .guardar-cambios, .cancelar-suscripcion {
+        margin: 1em auto;
+    }
+}
+
+
+@media screen and (min-width: 913px) and (max-width: 1025px) {
+    main {
+        max-width: 70%;
+    }
+    .guardar-cambios, .cancelar-suscripcion {
+        margin: 1em auto;
+    }
 }

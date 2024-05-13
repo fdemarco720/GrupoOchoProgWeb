@@ -7,6 +7,13 @@
 }
 
 /* _____MAIN______ */
+body{
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+
+
 main h2 {
   text-align: center;
   font-family: "Livvic";
@@ -31,7 +38,7 @@ main h2 {
   color: #ffffff;
 }
 
-.barra-lateral div {
+.peli-buscar, .peli-titulo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,4 +117,84 @@ main h2 {
   transform: scale(1.03);
   transition-duration: 0.7s;
   box-shadow: 1px 1px 15px #ffffff;
+}
+
+
+@media screen and (max-width: 640px) {
+  
+  .peliculas-flex{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
+
+  }
+
+  .barra-lateral{
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    padding: 0 0;
+    margin-bottom: 3%;
+  }
+
+  .barra-lateral div{
+    padding-bottom: 1%;
+  }
+
+  .barra-lateral form{
+    display: flex; /* Utiliza flexbox para colocar los elementos uno al lado del otro */
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .barra-lateral label{
+    font-size: 0.9em;
+    width: 40%;
+  }
+
+  .barra-lateral select{
+    width: 60%;
+  }
+
+  .peli-titulo{
+    display: none;
+  }
+
+  .peli-buscar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+  }
+
+  .barra-lateral input {
+    margin-top: 0;
+    padding: 1%;
+    width: 80%;
+  }
+  
+  .barra-lateral button {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    width: 20%;
+  }
+  
+  .barra-lateral form {
+    margin-bottom: 0;
+    gap: 0;
+  }
+  
+  .barra-lateral select {
+    padding: 0;
+  }
+
+  .grid-peliculas {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+  }
+
+  
 }

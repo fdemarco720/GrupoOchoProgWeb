@@ -7,11 +7,12 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
   background-attachment: fixed;
 }
+
 
 /* NAV */
 .login-header {
@@ -22,7 +23,13 @@ body {
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); /*SOMBREADO TEXTO */
+  text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); 
+  background-image: url(Banner-Bomflix.png);
+  border-radius: 2em;
+  margin: 1em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .login-header h1 {
@@ -56,7 +63,7 @@ body {
   background-color: rgba(25, 25, 25, 0.5);
   border-radius: 15px;
   height: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
 
 .login-main-section form {
@@ -75,10 +82,10 @@ body {
 
 .login-main input {
   font-family: "Livvic";
-  border: none; /* Elimina el borde predeterminado */
-  outline: none; /* Elimina el contorno predeterminado */
-  background: transparent; /* Fondo transparente */
-  border-bottom: 1px solid #ffffff; /* Añade un subrayado */
+  border: none; 
+  outline: none; 
+  background: transparent; 
+  border-bottom: 1px solid #ffffff; 
   padding: 5%;
   color: rgb(211, 211, 20);
 }
@@ -107,7 +114,7 @@ body {
 }
 
 .login-main div a {
-  text-decoration: none; /* Sin subrayado */
+  text-decoration: none; 
 
   color: #c1d2fa;
 }
@@ -124,3 +131,4 @@ body {
 .a a:hover {
   text-decoration: underline;
 }
+

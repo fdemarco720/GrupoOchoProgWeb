@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estiloscss/perfil.css">
+    <link rel="stylesheet" href="./estiloscss/principal.css">
     <script src="https://kit.fontawesome.com/f1568403b0.js" crossorigin="anonymous"></script>
+
     <title>BOMFLIX-PERFIL</title>
 </head>
 <body> 
     <header>
-        <nav>
-            <h1 class="titulo-marca">Bomflix</h1>
+        <nav class="principal-nav">
+          <div class="titulo">
+            <h1><a href="./principal.html">Bomflix</a></h1>
+          </div>
+          <div class="barra">
             <ul>
-                <li><a href="./principal.html">Home</a></li>
-                <li><a href="./series.html">Series</a></li>
-                <li><a href="./peliculas.html">Peliculas</a></li>
-                <li><a href="./perfil.html" class="resaltar-perfil">Perfil</a></li>
+              <li><a href="./principal.html">Home</a></li>
+              <li><a href="./series.html">Series</a></li>
+              <li><a href="./peliculas.html">Peliculas</a></li>
             </ul>
+          </div>
+          <div class="miCuenta">
+            <a href="./perfil.html"><i class="fa-regular fa-user"></i></a>
+          </div>
         </nav>
-        
-    </header>  
+      </header>
 
     <main>
         <h2 class="mi-perfil">Mi Perfil</h2>
@@ -27,26 +34,22 @@
         <section>
                 <article class="foto">
                     <img src="./img/Messi Vé.jpg" alt="imgperfil">
-                    <h3>Nombre de Usuario</h3>
+                    <h4>Nombre de Usuario</h4>
                     <p>Mis favoritos <i class="fa-regular fa-heart"></i></p>
                     <p>Notificaciones <i class="fa-regular fa-bell"></i></p>
                 </article>
                     
                     <article class="datos-usuario">
-                <form class="formulario" action="./perfil.html">      
-                        <label for="email">Email: Usuario@gmail.com</label>
-                        <label class="contrasenia" for="contrasenia">Contraseña: ************</label>
-
+                <form class="formulario" action="./perfil.html" method="post">      
+                        <label class="datos-usuario-email" for="email" id="em">E-mail : </label>
+                        <input type="password" name="email" id="email" placeholder="ejemplo@gmail.com" disabled>
+                        <label class="contrasenia" for="contraseña">Contraseña : </label>
+                        <input type="text" name="contraseña" id="contraseña" placeholder="Contraseña" disabled>
                 
-
-                        <div class="nueva-contraseña">
-                            <label for="Nueva-contrasenia" >Nueva Contraseña</label>
-                            <input type="password" name="Nueva-contrasenia" id="NC " class="ingreso" placeholder="2112121" disabled>
-                        </div>
-                        <div>
-                            <label for="Repetir-contrasenia">Repetir Contraseña</label>
-                            <input type="password" name="Repetir-contrasenia" id="RC" class="ingreso">
-                        </div>
+                        <label for="Nueva-contrasenia" >Nueva Contraseña: </label>
+                        <input type="password" name="Nueva-contrasenia" id="NC " class="ingreso" placeholder="**********">
+                        <label for="Repetir-contrasenia">Repetir Contraseña: </label>
+                        <input type="password" name="Repetir-contrasenia" id="RC" class="ingreso" placeholder="Repita la contraseña">
                     </article>
 
                     <article class="pagos">
