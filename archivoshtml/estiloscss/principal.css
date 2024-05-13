@@ -15,55 +15,51 @@ body {
 }
 
 /* _________NAV_____________________ */
+
 .principal-nav {
   display: flex;
   width: 100%;
   background-color: rgba(25, 25, 25, 0.5);
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  height: fit-content;
 }
 
-/* .principal-nav div {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-} */
-
 .titulo {
-  color: #ffffff;
-  text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); /*SOMBREADO TEXTO */
-  font-size: 2em;
-  font-family: "Acme", sans-serif;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: left;
+  padding-left: 5%;
+}
 
-  /* text-align: left; */
-  /* flex: 1; */
+.titulo h1{
+  font-size: 3em;
+  font-family: "Acme", sans-serif;
+}
+
+.titulo a{
+  text-decoration: none;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8);
 }
 
 .barra {
-  /* display: inline-flex;
-  flex: 2; */
-  /* background-color: aqua;    Este no va */
-  width: auto;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  position: absolute;
-  gap: 5%;
-  
+  width: fit-content;
 }
 
 .barra ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 10%;
-  width: auto;
 }
 
 .barra ul li {
   list-style: none;
-  font-family: "Livvic";
-  font-weight: bolder;
-  color: #ffffff;
+  padding: 1.5%;
 }
 
 .barra ul a {
@@ -74,28 +70,42 @@ body {
 }
 
 .miCuenta {
-  display: inline-flex;
-  font-family: "Acme", sans-serif;
+  display: flex;
   flex: 1;
+  align-items: center;
+  justify-content: right;
+  padding-right: 5%;
 }
 
 .miCuenta a {
-  width: 100%;
-  display: inline-flex;
-  justify-content: right;
-  margin-right: 5%;
   color: #ffffff;
+  font-family: "Acme", sans-serif;
+  border-radius: 50%;
+  padding: 1%;
 }
 
 /* ___________AJUSTE NAV________________ */
+
+.titulo a:hover{
+  text-shadow: 2px 2px 5px rgba(250, 250, 250, 0.5);
+}
+
 .barra ul li:hover {
   background-color: rgba(250, 250, 250, 0.5);
-  color: yellow;
   border-radius: 10px;
   transform: scale(1.2);
 }
 
-.barra ul li a:hover {
+.barra ul li a:hover{
+  color: yellow;
+}
+
+.miCuenta a:hover {
+  background-color: rgba(250, 250, 250, 0.5);
+  transform: scale(1.2);
+}
+
+.miCuenta i:hover{
   color: yellow;
 }
 
@@ -189,6 +199,7 @@ article h3 {
   }
   
   .grid-img img:hover {
-    transform: scale(1.1);
-    transition-duration: 0.3s;
+    transform: scale(1.03);
+    transition-duration: 0.7s;
+    box-shadow: 1px 1px 15px #ffffff;
   }

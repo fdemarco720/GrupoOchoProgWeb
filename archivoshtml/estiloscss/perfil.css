@@ -1,85 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Livvic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+*{
+    margin: 0;
+    color: white;
+    font-family: 'Livvic';
+}
+
+a{
+    text-decoration: none;
+}
 
 img{
     height: 10em;
     border-radius: 5em;
     margin: 5px;
 }
-*{
-    margin: 0;
 
-}
+
 body{
     background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
+    justify-content: center;
+    height: 100vh;
 }
+
 header{
     text-align: center;
-    
-    }
-    h1{
-       font-size: medium;
-    }
+    text-align: center;
+    font-family: "Livvic";
+    font-weight: bolder;
+    font-size: 1em;
+    padding-bottom: 8em;
+}
+
 nav{
     display: grid;
     grid-template-columns: 10% auto;
+    align-items: center;
 }
+
+.titulo-marca{
+    font-size: 2em;
+}
+
 ul{
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
-
-    
+    grid-template-columns: auto auto auto auto;
 }
+
 li{
-    
     list-style: none;
 }
+
 li h1{
     text-align: left;
 }
 
 h2{
     text-align: center;
-    
+}
+
+.mi-perfil{
+    padding: 0.5em;
 }
 
 main{
-   display: block;
-  margin: 5px;
-  background-color: rgba(25, 25, 25, 0.5);
-height: 400px;
-
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(25, 25, 25, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
+    max-width: 70em;
 }
 
 section{
     display: grid;
-    grid-template-columns: auto auto auto;
-    
-   
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    grid-template-rows: 80% 20%;
+    padding-top: 0.5em;
+    border-top: 1px black solid;
 }
-
 
 .datos-usuario{
-   
     display: grid;
-    grid-template-rows: auto auto auto auto;
-   padding: 5px;
+    grid-template-rows: 4;
+    /* margin-left: 4em; */
+    /* margin-right: 4em; */
 }
 
-.lascontras{
+.datos-usuario label{
+    margin: 1.5em 0em;
+}
+
+.formulario div{
+    margin: 1.5em 0em;
+}
+
+.nueva-contraseÃ±a label{
+    margin-bottom: 0;
+}
+
+.nueva-contraseÃ±a label{
     display: block;
-    margin: 0px 10px 10px 0px;
 }
-
 
 .foto{
-   
     text-align: center;
-
+    align-items: center;
+}
+.foto p{
+    margin: 0.8em;
 }
 
 .ingreso{
     border-style: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(255, 255, 255);
     background-color: transparent;
     margin-right: 5px;
 }
@@ -87,19 +122,100 @@ section{
 .pagos{
     display: grid;
     grid-template-rows: auto auto auto;
+    justify-self: center;
+    /* margin-left: 10em; */
+}
+
+.tarjetas{
+    padding: 1em 0em;
 }
 
 .labeltarjeta{
+    display: block; 
+    margin: 0.5em;
+    margin-left: 0;
+    text-align: center; 
+}
+
+.numero-tarjeta{
+    display: block;  
+    text-align: center;  
+    margin: 1em 0em;
+}
+
+.codigo-cvv{
     display: block;
-    
-    
-    
+    text-align: center;
 }
 
 .radios{
-    margin: 5px;
+    margin: 0.5em;
 }
+
 .efectivo{
     display: inline;
     text-align: center;
+    padding: 1em 0em;
+}
+
+.banco{
+    padding: 1em 0em;
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+    font-size: large;
+}
+
+#RC{
+    display: block;
+}
+
+#tarjeta_credito{
+    margin: 0.5em;
+    margin-left: 0;
+}
+
+#pago_facil{
+    margin-right: 0.7em;
+}
+#rapi_pago{
+   padding-left: 2em;
+}
+.guardar-cambios{
+    color: black;
+    background-color: yellow;
+    border: none;
+    border-radius: 2em;
+    height: 3em;
+    margin: 2em;
+    padding: 1em;
+}
+
+.cancelar-suscripcion{
+    color: black;
+    background-color: red;
+    border: none;
+    border-radius: 2em;
+    height: 3em;
+    padding: 1em;
+}
+
+.guardar-cambios:hover{
+    background-color: #2458d3;
+}
+
+.cancelar-suscripcion:hover{
+    background-color: coral;
+}
+
+
+.botones{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.contrasenia{
+    display: block;
 }
