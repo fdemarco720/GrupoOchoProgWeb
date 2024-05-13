@@ -21,7 +21,9 @@ img{
 body{
     background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
     justify-content: center;
-    height: 100%;
+    height: 100vh;
+    margin: 0%;
+    padding: 0%;
 }
 
 header{
@@ -240,4 +242,59 @@ form input{
 #em{
     padding: 0%;
     margin-bottom: 0.5em;
+}
+
+@media screen and (max-width: 640px) {
+    .principal-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .titulo {
+        margin-bottom: 1em;
+    }
+    ul {
+        grid-template-columns: 1fr;
+    }
+    .miCuenta {
+        margin-top: 1em;
+    }
+    main {
+        max-width: 90%;
+    }
+    section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+    .datos-usuario {
+        grid-row: auto;
+    }
+    .pagos {
+        grid-row: auto;
+    }
+    .tarjetas, .efectivo, .banco {
+        margin: 1em auto;
+    }
+    .guardar-cambios, .cancelar-suscripcion {
+        margin: 1em auto;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 912px) {
+    main {
+        max-width: 90%;
+        
+    }
+    .guardar-cambios, .cancelar-suscripcion {
+        margin: 1em auto;
+    }
+}
+
+
+@media screen and (min-width: 913px) and (max-width: 1025px) {
+    main {
+        max-width: 70%;
+    }
+    .guardar-cambios, .cancelar-suscripcion {
+        margin: 1em auto;
+    }
 }
