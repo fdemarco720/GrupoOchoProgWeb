@@ -7,8 +7,9 @@ body {
     background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
     background-color: #f3f1f1;
     /* margenes 0 para que el backgorund del header no tenga espacion en blanco*/
-    margin: 0%;
+   
     padding: 0%;
+
     
 }
 
@@ -172,7 +173,7 @@ a{
 }
 
 @media screen and (max-width: 640px) {
-    /* Estilos para pantallas con un ancho máximo de 640px */
+   
     body {
         font-size: 14px;  /* Reducir el tamaño de fuente para pantallas más pequeñas */
     }
@@ -197,3 +198,45 @@ a{
    }
 }
 
+@media screen and (max-width: 912px) {
+   
+    header {
+        height: 9em; /* Modificar la altura del encabezado */
+    }
+    main {
+        max-width: 70%; /* Ajustar el ancho máximo del contenido principal */
+    }
+    .formulario-registro {
+        flex-direction: column; /* Cambiar la dirección del formulario para apilar los elementos verticalmente */
+    }
+    .form-mitad,
+    .form-otramitad {
+        margin-right: 0; /* Eliminar el margen entre las mitades del formulario */
+    }
+   
+}
+
+@media screen and (max-width: 1025px) {
+  
+    body {
+        font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
+    } 
+
+    header {
+        height: 9em; /* Ajusta la altura del encabezado */
+        font-size: 0.9em; /* Ajusta el tamaño de fuente del encabezado */
+    }
+
+    main {
+        max-width: 70%; /* Ajusta el ancho del contenido principal */
+    }
+    .formulario-registro {
+        flex-direction: column; /* Apila los elementos del formulario verticalmente */
+    }
+    .form-mitad,
+    .form-otramitad {
+        margin-right: 0; /* Elimina el margen entre las mitades del formulario */
+    }
+
+    
+}
