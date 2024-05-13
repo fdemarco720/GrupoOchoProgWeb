@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Livvic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 
@@ -27,20 +28,9 @@ body{
 header{
     text-align: center;
     text-align: center;
-    font-family: "Livvic";
     font-weight: bolder;
     font-size: 1em;
     padding-bottom: 8em;
-}
-
-nav{
-    display: grid;
-    grid-template-columns: 10% auto;
-    align-items: center;
-}
-
-.titulo-marca{
-    font-size: 2em;
 }
 
 ul{
@@ -110,6 +100,7 @@ section{
 }
 .foto p{
     margin: 0.8em;
+
 }
 
 .ingreso{

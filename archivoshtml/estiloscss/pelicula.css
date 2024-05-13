@@ -31,7 +31,7 @@ main h2 {
   color: #ffffff;
 }
 
-.barra-lateral div {
+.peli-buscar, .peli-categorias, .peli-lanzamiento, .peli-temporadas, .peli-titulo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,4 +110,97 @@ main h2 {
   transform: scale(1.03);
   transition-duration: 0.7s;
   box-shadow: 1px 1px 15px #ffffff;
+}
+
+
+@media screen and (max-width: 640px) {
+  
+  .peliculas-flex{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .barra-lateral{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    "titulo buscar buscar"
+    "categorias temporadas lanzamiento";
+    background-color: violet;
+  }
+
+  .peli-titulo{
+    display: grid;
+    grid-area: titulo;
+    background-color: red;
+  }
+
+  .peli-buscar{
+    display: grid;
+    grid-area: buscar;
+  }
+
+  .peli-temporadas{
+    display: grid;
+    grid-area: temporadas;
+  }
+
+  .peli-categorias{
+    display: grid;
+    grid-area: categorias;
+  }
+
+  .peli-lanzamiento{
+    display: grid;
+    grid-area: lanzamiento;
+  }
+
+  .barra-lateral input {
+    margin-top: 0;
+
+    padding: 0;
+    
+  }
+  
+  .barra-lateral button {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+
+  }
+  
+  .barra-lateral button:hover {
+    background-color: rgb(211, 211, 20);
+    border: solid 1px;
+    border-color: #ffffff;
+  }
+  
+  .barra-lateral form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    gap: 0;
+    font-family: "Livvic";
+  }
+  
+  .barra-lateral select {
+    border: none; /* Elimina el borde predeterminado */
+    border-radius: 20px;
+    outline: none; /* Elimina el contorno predeterminado */
+    background: transparent; /* Fondo transparente */
+    background-color: rgba(25, 25, 25, 0.5);
+    padding: 0;
+    color: rgb(211, 211, 20);
+    font-family: "Livvic";
+    font-weight: bolder;
+  }
+  
+  .barra-lateral option {
+    background-color: #0b0a43;
+    font-family: "Livvic";
+    font-weight: bolder;
+    border-radius: 10px;
+  }
 }
