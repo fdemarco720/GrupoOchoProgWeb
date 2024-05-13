@@ -259,6 +259,10 @@ article h3 {
     gap: 10%;
   }
 
+  .barra a{
+    font-size: 0.8em;
+  }
+
   /* MAIN */
   .barra-horizontal {
     display: flex;
