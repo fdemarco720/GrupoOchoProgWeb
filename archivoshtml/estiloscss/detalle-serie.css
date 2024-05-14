@@ -13,41 +13,158 @@
 body {
   background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
   min-height: 100vh;
+  width: 100%;
   display: grid;
-  grid-template-areas: 
-  "header header header"
-  "main main main"
-  "main main main"
-  "main main main"
-  "main main main"
-  "main main main"
-  "main main main"
-  "main main main"
-  "footer footer footer"
-  ;
+  grid-template-rows: 7%;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
 }
 /* Definición de Areas en grid */
-.header{
+.header {
   grid-area: header;
   position: sticky;
-  height: 52%;
 }
-.main{
+.main {
+  /* padding-left: 1em; */
   grid-area: main;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-self: flex-start;
 }
-.footer{
-grid-area: footer;
+.footer {
+  grid-area: footer;
 }
 
 /* Main */
-.detalle-serie{
-  display: flex;
-  flex-direction: row;
+.detalle-serie {
+  display: grid;
+  grid-template-columns: 40% 50%;
+  height: 80%;
+  column-gap: 2em;
+  width: 100%;
 }
 
+/* --------------- iframe y boton comenzar (1er elemento) */
+.detalle-serie .iframe-comenzar {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding-left: 1em;
+}
+.iframe-comenzar iframe {
+  width: 100%;
+  height: 30em;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px rgb(173, 172, 172);
+}
+.iframe-comenzar a button {
+  width: 100%;
+  height: 3em;
+  background: rgba(148, 34, 8, 0.993);
+  font-family: "Acme";
+  font-size: 1em;
+}
+.iframe-comenzar a button:hover {
+  cursor: pointer;
+  border: 1px solid black;
+  box-shadow: 1px 1px 5px rgb(109, 108, 108);
+}
 
+/*--------------- Info-Serie Temporadas y Sinopsis (2do elemento) -------------*/
+.detalle-serie .info-serie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+}
+.info-serie .campo-atributos {
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.campo-atributos .primero {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5em;
+  align-items: center;
+}
+.campo-atributos .segundo {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  align-items: center;
+}
+.campo-atributos .tercero {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  align-items: center;
+}
 
+/* Seleccionar temporadas y capitulo */
+.temporadas form label {
+  font-family: "Livvic";
+}
+.temporadas form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2em;
+}
+
+/* Edit de Textos (h4,span y links) */
+h4 {
+  color: yellow;
+  font-family: "Livvic";
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+span {
+  font-size: 1.5em;
+}
+.tercero a {
+  font-size: 1.5em;
+}
+
+.temporadas select {
+  border: none; /* Elimina el borde predeterminado */
+  border-radius: 20px;
+  outline: none; /* Elimina el contorno predeterminado */
+  background: transparent; /* Fondo transparente */
+  background-color: rgba(25, 25, 25, 0.5);
+  color: rgb(211, 211, 20);
+  font-family: "Livvic";
+  font-weight: bolder;
+  padding: 1.5%;
+}
+.temporadas select option {
+  background: black;
+  color: rgb(211, 211, 20);
+  font-family: "Livvic";
+  font-weight: bolder;
+}
+
+/* -------------- SINOPSIS (3er elemento) -------------------- */
+.sinopsis {
+  height: 20%;
+}
+.sinopsis p {
+  font-size: 1.5em;
+  font-family: "Livvic";
+}
+
+/* -------------- VER MAS SERIES ------------------- */
+.ver-mas{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid black;
+  height: 5em;
+}
