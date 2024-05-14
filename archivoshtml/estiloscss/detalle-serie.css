@@ -12,7 +12,7 @@
 /* Layout de página con GRID */
 body {
   background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
-  min-height: 100vh;
+  min-height: 150vh;
   width: 100%;
   display: grid;
   grid-template-rows: 7%;
@@ -31,7 +31,9 @@ body {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 1em;
+  padding-left: 1em;
 }
 .footer {
   grid-area: footer;
@@ -41,7 +43,7 @@ body {
 .detalle-serie {
   display: grid;
   grid-template-columns: 40% 50%;
-  height: 80%;
+  height: 60%;
   column-gap: 2em;
   width: 100%;
 }
@@ -51,7 +53,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  padding-left: 1em;
 }
 .iframe-comenzar iframe {
   width: 100%;
@@ -160,11 +161,41 @@ span {
   font-family: "Livvic";
 }
 
-/* -------------- VER MAS SERIES ------------------- */
-.ver-mas{
+/* -------------- SIMILARES ------------------- */
+.similares{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 1em;
+}
+.similares .grid-similares a img{
+  height: 100%;
+  width: 100%;
+  /* Al darle 100% en ancho y alto la imagen ocupa el mismo
+  tamaño del padre, es decir de la etiqueta "a", el tamaño
+  de la etiqueta "a", lo definimos luego en el template columns
+  con la función repeat(autofill,minmax("minimo", máximo)) */
+}
+.similares h2{
+  font-family: 'Acme';
+  border-bottom: 1px solid white;
+}
+.similares .grid-similares{
+  padding-top: 1em;
+  display: grid;
+  grid-template-columns:repeat(auto-fill,minmax(12em, 1fr));
+  column-gap: 2em;
+}
+.grid-similares a img:hover{
+  transform: scale(1.02);
+  transition-duration: 0.7s;
+  box-shadow: 1px 1px 15px #ffffff;
+}
+
+/*------------------ Footer --------------------*/
+.footer{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  border: 1px solid black;
-  height: 5em;
+  align-items: center;
+  background-color: #0b0a43;
 }
