@@ -14,80 +14,49 @@
 <body>
 
     <!-- HEADER -->
-    <header>
+    <header class="header">
         <nav class="principal-nav">
-          <div class="titulo">
-            <h1><a href="./principal.html">Bomflix</a></h1>
-          </div>
-          <div class="barra">
-            <ul>
-                <li><a href="./principal.html">Home</a></li>
-                <li><a href="./series.html">Series</a></li>
-                <li><a href="./peliculas.html">Peliculas</a></li>
-            </ul>
-          </div>
-          <div class="miCuenta">
-            <a href="./perfil.html"><i class="fa-regular fa-user"></i></a>
-          </div>
+            <div class="titulo">
+                <h1><a href="./principal.html">Bomflix</a></h1>
+            </div>
+            <div class="barra">
+                <ul>
+                    <li><a href="./principal.html">Home</a></li>
+                    <li><a href="./series.html">Series</a></li>
+                    <li><a href="./peliculas.html">Peliculas</a></li>
+                </ul>
+            </div>
+            <div class="miCuenta">
+                <a href="./perfil.html"><i class="fa-regular fa-user"></i></a>
+            </div>
+
         </nav>
-      </header>
+    </header>
 
 
-    <main>
-        <!-- SECCION SERIE (TRAILER, DETALLE Y SINOPSIS) -->
-        <section class="info-serie">
-            <section class="iframe-comenzar">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/IJ_AZCvCacw?si=KJHNNvd8O1ZhXmIs"
+    <main class="main">
+        <section class="detalle-serie">
+            <div class="iframe-comenzar">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IJ_AZCvCacw?si=18SBLrKmvOfdGF5C"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <a href="https://www.youtube.com/watch?v=IJ_AZCvCacw" target="_blank" rel="noopener noreferrer">
-                    Comenzar
-                </a>
-            </section>
+                <button><a href="http://" target="_blank" rel="noopener noreferrer">Coemnzar</a></button>
+            </div>
+            <div class="info/serie">
 
-            <!-- SECCION DETALLE COMPLETO DE SERIE -->
-            <!-- atributos y sinopsis (Flex) -->
-            <section class="detalle-serie">
-                <!-- campos y atributos -->
-                <div class="grid-campo-atributo">
-                    <div class="campo">
-                        <h3>Titulo:</h3>
-                        <h3>Genero:</h3>
-                        <h3>Actores:</h3>
-                    </div>
+            </div>
 
-                    <form class="formulario" action="#">
-                        <label for="temporadas">Temporadas</label>
-                        <select name="tempordas" id="temporadas">
-                            <option value="1">Temporada 1</option>
-                            <option value="2">Temporada 2</option>
-                            <option value="3">Temporada 3</option>
-                        </select>
-                        <label for="capitulo">Capitulo</label>
-                        <select name="capitulo" id="capitulo">
-                            <option value="2">Capitulo 1</option>
-                            <option value="1">Capitulo 2</option>
-                            <option value="3">Capitulo 3</option>
-                            <option value="4">Capitulo 4</option>
-                            <option value="5">Capitulo 5</option>
-                            <option value="6">Capitulo 6</option>
-                        </select>
-                    </form>
+        </section>
 
-                    <div class="atributo">
+        <section class="similares">
 
-                    </div>
-                </div>
-                <!-- sinopsis -->
-                <div class="sinopsis">
-                    <p>Tras la desaparición de un niño, cuatro familias desesperadas tratan de entender lo ocurrido a
-                        medida que van desvelando un retorcido misterio que abarca tres décadas.</p>
-                </div>
-
-            </section>
         </section>
     </main>
+
+    <footer class="footer">
+
+    </footer>
 </body>
 
 </html>

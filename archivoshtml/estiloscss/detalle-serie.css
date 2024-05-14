@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Livvic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 
+/* Generales */
 * {
   margin: 0;
   padding: 0;
@@ -8,65 +9,45 @@
   text-decoration: none;
 }
 
-/*------- Main --------*/
-/* Display general de la vista detalle */
-.info-serie {
-  padding: 15px;
+/* Layout de página con GRID */
+body {
+  background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: 
+  "header header header"
+  "main main main"
+  "main main main"
+  "main main main"
+  "main main main"
+  "main main main"
+  "main main main"
+  "main main main"
+  "footer footer footer"
+  ;
+}
+/* Definición de Areas en grid */
+.header{
+  grid-area: header;
+  position: sticky;
+  height: 52%;
+}
+.main{
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
+}
+.footer{
+grid-area: footer;
+}
+
+/* Main */
+.detalle-serie{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  padding-top: 2em;
-  gap: 30px;
 }
 
-/* Display del iframe y el boton comenzar */
-.iframe-comenzar {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-content: center;
-  gap: 2em;
-}
 
-.iframe-comenzar iframe {
-  width: 45em;
-  height: 30em;
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px rgb(173, 172, 172);
-}
 
-.iframe-comenzar a {
-  font-family: "Livvic";
-  font-size: 1.2em;
-  background-color: rgb(207, 207, 207);
-  color: black;
-  width: 20%;
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 15px;
-  padding: 5px;
-}
-.iframe-comenzar a:hover{
-    transform: scale(1.1);
-    background-color: rgba(255, 255, 0, 0.686);
-    border: 1px solid white;
-  }
-
-/* SECCION DETALLE DE SERIE COMPLETO con display flex*/
-
-.detalle-serie {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-}
-/* Sección detalle con display grid (Areas) */
-
-.grid-campo-atributo{
-    grid-template-areas: none;
-}
-
-.campo{
-    grid-area: campo;
-}
