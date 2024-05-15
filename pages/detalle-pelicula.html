@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./estiloscss/principal.css">
-  <link rel="stylesheet" href="./estiloscss/detalle-pelicula.css">
+  <link rel="stylesheet" href="../styles/principal.css">
+  <link rel="stylesheet" href="../styles/detalle-pelicula.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <script src="https://kit.fontawesome.com/f1568403b0.js" crossorigin="anonymous"></script>
   
-  <title>COCO | Peliculas Bomflix</title>
+  <title>El Exorcista | Peliculas Bomflix</title>
 </head>
 
 <body>
@@ -42,46 +42,52 @@
       </article>
       
      <article class="descripcion-pelicula">
-        <h4>Titulo: </h4> 
-        <p>El Exorcista: Creyente</p>
+        <div>
+          <h4>Titulo: </h4> 
+          <p>El Exorcista: Creyente</p>
+        </div>
         
-        <h4>Duración:</h4>
-        <p>2h 1m</p>
+        <div>
+          <h4>Duración:</h4>
+          <p>2h 1m</p>
+        </div>
+
+        <div>
+          <h4>Genero: </h4>
+          <p>Terror / Misterio</p>
+        </div>
         
-        <h4>Genero: </h4>
-        <p>Terror / Misterio</p>
-        
-        <h4>Actores: </h4>
-        <p>Linda Blair, Jennifer Nettles, Franco Nadal Quispe 1kg de papa</p>
+        <div>
+          <h4>Actores: </h4>
+          <p><a target="_blank" href="https://es.wikipedia.org/wiki/Linda_Blair">Linda Blair</a>
+            <a target="_blank" href="https://es.wikipedia.org/wiki/Jennifer_Nettles">, Jennifer Nettles</a> 
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Norbert_Leo_Butz">, Norbert Leo Butz</a>
+        </div>
         
         <p class="sinopsis">Cuando su hija Angela y su amiga Katherine muestran signos de posesión demoníaca, se desata una cadena de acontecimientos 
           que obligan al padre Victor Fielding a afrontar el punto más bajo del mal.Cuando su hija Angela y su amiga Katherine muestran signos de posesión demoníaca, se desata una cadena de acontecimientos 
           que obligan al padre Victor Fielding a afrontar el punto más bajo del mal.
         </p>
       </article>
-      <button>Comenzar</button>
+      <button><a target="_blank" href="https://www.youtube.com/watch?v=gYApro2YXQQ&t=2s">Comenzar</a></button>
     </section>
     
     <!----------------- SECCION PELICULAS SIMILARES ------------------------->
-    <section class="similares" id="similares">
-      <h2>SIMILARES</h2>
-      <div class="flex-pelis">
-        <a href=""> <img src="./img/exorcismoEnElVaticano.webp" alt="Exorcismo En El Vaticano"> </a>
-        <a href=""> <img src="./img/anticristo.jpg" alt="Anticristo"> </a>
-        <a href=""><img src="./img/rezaPorElDiablo.jpg" alt="Reza Por El Diablo"> </a>
-        <a href=""><img src="./img/evilDeadRise.jpg" alt="Evil Dead Rise"> </a>
-        <a href=""><img src="./img/smile.jpeg" alt="Smile"> </a>
-        <a href=""><img src="./img/terrifier.jpg" alt="Terrifier"> </a>
-        <a href=""><img src="./img/laAbuelaLaLaLaLa.webp" alt="La Abuela"> </a>
-        <a href=""><img src="./img/mama.jpg" alt="Mamá"> </a>
-        <a href=""><img src="./img/laHuerfana.jpg" alt="La Abuela"> </a>
-        <a href=""><img src="./img/laPrimeraProfesia.webp" alt="Mamá"> </a>
-      </div>
-    </section>
-
-  </main>
-
-
-</body>
+     <!-- Segundo contenedor padre  -->
+     <section class="similares" id="similares">
+        <h2>SIMILARES</h1>
+            <article class="grid-similares">
+              <a href="./detalle-pelicula.html"> <img src="../img/exorcismoEnElVaticano.webp" alt="Exorcismo En El Vaticano"> </a>
+              <a href="./detalle-pelicula.html"><img src="../img/laAbuelaLaLaLaLa.webp" alt="La Abuela"> </a>
+              <a href="./detalle-pelicula.html"><img src="../img/mama.jpg" alt="Mamá"> </a>
+              <a href="./detalle-pelicula.html"><img src="../img/evilDeadRise.jpg" alt="Evil Dead Rise"> </a>
+              <a href="./detalle-pelicula.html"><img src="../img/laHuerfana.jpg" alt="La Huerfana"> </a>
+              <a href="./detalle-pelicula.html"><img src="../img/terrifier.jpg" alt="Terrifier"> </a>
+              <a href="./detalle-pelicula.html"><img src="../img/laPrimeraProfesia.webp" alt="Mamá"> </a>
+            </article>
+      </section>
+    </main>
+  </body>
 
 </html>
+
