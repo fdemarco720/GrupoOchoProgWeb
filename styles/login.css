@@ -9,14 +9,17 @@
 body {
   height: 100%;
   width: 100%;
-  background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
+   background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
   background-attachment: fixed;
+  background-image: url(Banner-Bomflix.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 
 /* NAV */
 .login-header {
-  height: 10em;
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -24,12 +27,8 @@ body {
   justify-content: center;
   color: #ffffff;
   text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); 
-  background-image: url(Banner-Bomflix.png);
   border-radius: 2em;
-  margin: 1em;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  margin: 2em 0;
 }
 
 .login-header h1 {
@@ -60,7 +59,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0% 5%;
-  background-color: rgba(25, 25, 25, 0.5);
+  background: linear-gradient(1500deg, #0b0a43, #142f6e, rgb(2, 33, 49));
   border-radius: 15px;
   height: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
@@ -96,13 +95,10 @@ body {
   background-color: rgb(211, 211, 20);
   border: none;
   border-radius: 5px;
-}
-
-.login-main button a {
-  font-family: "Livvic";
   color: #0b0a43;
   text-decoration: none;
   font-weight: bold;
+  font-family: "Livvic";
 }
 
 .login-main div {
@@ -114,22 +110,26 @@ body {
 }
 
 .login-main div a {
-  text-decoration: none; 
-
+  text-decoration: underline; 
+  font-family: "Livvic";
   color: #c1d2fa;
+
 }
 
 .login-main button:hover {
   background-color: rgb(211, 211, 20, 0.7);
   cursor: pointer;
+  box-shadow: 1px 1px 5px #ffffff;
 }
 
-.login-main button a:hover {
+.login-main button:hover {
   color: #ffff;
   text-decoration: wavy;
 }
-.a a:hover {
-  text-decoration: underline;
+
+.login-main div a:hover {
+  text-shadow: 1px 1px 5px #ffffff;
+
 }
 
 @media screen and (max-width: 640px) {
@@ -141,5 +141,9 @@ body {
   
   .login-header h1 {
     font-size: 2em;
+  }
+
+  .login-main-section {
+    padding: 0% 10%; 
   }
 }

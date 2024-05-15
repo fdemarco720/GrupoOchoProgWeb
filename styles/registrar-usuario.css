@@ -1,242 +1,202 @@
-
-
-    @import url('https://fonts.googleapis.com/css2?family=Livvic&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Livvic&display=swap");
 
 body {
-    font-family:sans-serif;
-    background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
-    background-color: #f3f1f1;
-   
-   height: 100vh;
-    padding: 0%;
+  font-family: sans-serif;
+  background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
+  background-color: #f3f1f1;
 
-    
+  height: 100%;
+  padding: 0%;
 }
 
-h1,h3{  
-    margin: 0;
+h1,
+h3 {
+  margin: 0;
 }
 
-h3{
-    color: white;
-    font-weight: normal;
+h3 {
+  color: white;
+  font-weight: normal;
 }
 
-h2{
-    margin-top: 3%;
-    
+h2 {
+  margin-top: 3%;
 }
-h4{
-    color: white;
-    font-size: 120%;
-    font-family: "Acme", sans-serif;
-    font-weight: normal;
+h4 {
+  color: white;
+  font-size: 120%;
+  font-family: "Acme", sans-serif;
+  font-weight: normal;
 }
 header {
-    
-    height: 10em;
-    color: white;
-    
-    text-align: center;
-    text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); 
-    font-family: "Acme", sans-serif;
-    font-size: 1em;
-   
-    
-    
+  height: 10em;
+  color: white;
+
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8);
+  font-family: "Acme", sans-serif;
+  font-size: 1em;
 }
 /*
 */
 main {
-        text-align: center;
-      
-        max-width: 50%;
-      
-        margin:  0px auto ;
-        
-        padding: 20px;
-        
-        background-color: rgba(25, 25, 25, 0.5);
+  text-align: center;
 
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-        
-        
-    
-            
-          
-           }
-    
-footer{
-   
-    text-align: center;
-    padding: 1em;
-}
-footer ul{
-    color: white;
+  max-width: 50%;
+
+  margin: 0px auto;
+
+  padding: 20px;
+
+  background-color: rgba(25, 25, 25, 0.5);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.formulario-registro{
-
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    padding: 10px;
-   
-    
-    
+footer {
+  text-align: center;
+  padding: 1em;
+}
+footer ul {
+  color: white;
 }
 
-
-.form-mitad{
-    display: flex;
-    flex-direction: column;
-    padding: 20px; 
-    margin-right: 10%; 
-    
-    
-   
+.formulario-registro {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  padding: 10px;
 }
-.form-otramitad{
-    
-    padding: 20px;
-    display: flex;
-    flex-direction: column
+
+.form-mitad {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-right: 10%;
+}
+.form-otramitad {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-    
-   
-    color:#ffffff;
-    margin: 2% ;
-    font-family: 'Livvic';
-    
+  color: #ffffff;
+  margin: 2%;
+  font-family: "Livvic";
 }
 
-input{
-    font-family: 'Livvic';
-    border: none;
-    background: transparent; 
-    border-bottom: 1px solid #ffffff; 
-    cursor: pointer; 
-    border-radius: 1px  #ccc;
-    padding: 1%;
-    color:rgb(211, 211, 20);
-    outline: none; 
-    
-    
+input {
+  font-family: "Livvic";
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+  border-radius: 1px #ccc;
+  padding: 1%;
+  color: rgb(211, 211, 20);
+  outline: none;
 }
-.formulario-registro input{
-    margin: 5px;
-    padding: 5%;
+.formulario-registro input {
+  margin: 5px;
+  padding: 5%;
 }
 
-.opcion-bancaria label{
-    display: inline-block;
+.opcion-bancaria label {
+  display: inline-block;
 }
-.opcion-tarjeta label{
-    display: inline-block; 
+.opcion-tarjeta label {
+  display: inline-block;
 }
-.opcion-cupon label{
-    display: inline-block; 
-}
-
-a{
-    font-family: 'Livvic';
-    color:black ; 
-    text-decoration: none; 
-    font-weight: bold;
-    
+.opcion-cupon label {
+  display: inline-block;
 }
 
-.botones button{
-    font-family: 'Livvic';
-    color:black ; 
-    font-weight: bold;
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 5px;
-    cursor: pointer; 
-    margin: 5px;
+a {
+  font-family: "Livvic";
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
-.boton-confirmar{
-    background-color:rgb(211, 211, 20);
-    
-    
-    
-    
+
+.botones button {
+  font-family: "Livvic";
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
 }
-.boton-cancelar{
-    background-color: #e80000; /* Color de fondo celestito */
-    
-    
+.boton-confirmar {
+  background-color: rgb(211, 211, 20);
+}
+.boton-cancelar {
+  background-color: #e80000; /* Color de fondo celestito */
 }
 
 @media screen and (max-width: 640px) {
-   
-    body {
-        font-size: 14px;  /* Reducir el tamaño de fuente para pantallas más pequeñas */
-    }
-    header {
-        height: 8em; /* Reducir la altura del encabezado */
-        font-size: 0.8em; /* Reducir el tamaño del texto del encabezado */
-    }
-    main {
-        max-width: 80%; /* Hacer que el contenido principal sea más ancho en pantallas más pequeñas */
-    }
-    .formulario-registro {
-        flex-direction: column; /* Cambiar la dirección del formulario para que los elementos se apilen verticalmente */
-    }
-    .form-mitad,
-    .form-otramitad {
-        margin-right: 0; /* Eliminar el margen entre las mitades del formulario en pantallas más pequeñas */
-    }
+  body {
+    font-size: 14px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
+    height: 100%;
+  }
+  header {
+    height: 8em; /* Reducir la altura del encabezado */
+    font-size: 0.8em; /* Reducir el tamaño del texto del encabezado */
+  }
+  main {
+    max-width: 80%; /* Hacer que el contenido principal sea más ancho en pantallas más pequeñas */
+  }
+  .formulario-registro {
+    flex-direction: column; /* Cambiar la dirección del formulario para que los elementos se apilen verticalmente */
+  }
+  .form-mitad,
+  .form-otramitad {
+    margin-right: 0; /* Eliminar el margen entre las mitades del formulario en pantallas más pequeñas */
+  }
 
-    label {
-        margin: 5px 0;   /* margin: 5px 0;  Cambiar el margen entre los labels en pantallas más pequeñas */
-        font-size: 0.9em; /*  Reducir el tamaño de fuente de los labels */
-   }
+  label {
+    margin: 5px 0; /* margin: 5px 0;  Cambiar el margen entre los labels en pantallas más pequeñas */
+    font-size: 0.9em; /*  Reducir el tamaño de fuente de los labels */
+  }
 }
 
 @media screen and (max-width: 912px) {
-   
-    header {
-        height: 9em; /* Modificar la altura del encabezado */
-    }
-    main {
-        max-width: 70%; /* Ajustar el ancho máximo del contenido principal */
-    }
-    .formulario-registro {
-        flex-direction: column; /* Cambiar la dirección del formulario para apilar los elementos verticalmente */
-    }
-    .form-mitad,
-    .form-otramitad {
-        margin-right: 0; /* Eliminar el margen entre las mitades del formulario */
-    }
-   
+  header {
+    height: 9em; /* Modificar la altura del encabezado */
+  }
+  main {
+    max-width: 70%; /* Ajustar el ancho máximo del contenido principal */
+  }
+  .formulario-registro {
+    flex-direction: column; /* Cambiar la dirección del formulario para apilar los elementos verticalmente */
+  }
+  .form-mitad,
+  .form-otramitad {
+    margin-right: 0; /* Eliminar el margen entre las mitades del formulario */
+  }
 }
 
 @media screen and (max-width: 1025px) {
-  
-    body {
-        font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
-    } 
+  body {
+    font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
+  }
 
-    header {
-        height: 9em; /* Ajusta la altura del encabezado */
-        font-size: 0.9em; /* Ajusta el tamaño de fuente del encabezado */
-    }
+  header {
+    height: 9em; /* Ajusta la altura del encabezado */
+    font-size: 0.9em; /* Ajusta el tamaño de fuente del encabezado */
+  }
 
-    main {
-        max-width: 70%; /* Ajusta el ancho del contenido principal */
-    }
-    .formulario-registro {
-        flex-direction: column; /* Apila los elementos del formulario verticalmente */
-    }
-    .form-mitad,
-    .form-otramitad {
-        margin-right: 0; /* Elimina el margen entre las mitades del formulario */
-    }
-
-    
+  main {
+    max-width: 70%; /* Ajusta el ancho del contenido principal */
+  }
+  .formulario-registro {
+    flex-direction: column; /* Apila los elementos del formulario verticalmente */
+  }
+  .form-mitad,
+  .form-otramitad {
+    margin-right: 0; /* Elimina el margen entre las mitades del formulario */
+  }
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +9,9 @@
   <script src="https://kit.fontawesome.com/f1568403b0.js" crossorigin="anonymous"></script>
   
   <title>El Exorcista | Peliculas Bomflix</title>
-</head>
 
-<body>
+</head>
+<body class="body">
   <header>
     <nav class="principal-nav">
       <div class="titulo">
@@ -25,33 +24,34 @@
             <li><a href="./peliculas.html">Peliculas</a></li>
         </ul>
       </div>
+
       <div class="miCuenta">
         <a href="./perfil.html"><i class="fa-regular fa-user"></i></a>
+        <a href="../index.html"> <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
       </div>
+
     </nav>
+
   </header>
-
   <!-- MAIN -->
-  <main>
-
+  <main class="main">
     <!-- Sección DETALLE DE PELICULA-->
-    <section>
-      
+    <section class="contenedor-principal">
+      <!-- width="560" height="315"  -->
       <article class="pelicula">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/gYApro2YXQQ?si=ZcZX3-yh4a9gaR51" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe class="video"src="https://www.youtube.com/embed/gYApro2YXQQ?si=ZcZX3-yh4a9gaR51" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button class="boton-comenzar"><a target="_blank" href="https://www.youtube.com/watch?v=gYApro2YXQQ&t=2s">Comenzar</a></button>
       </article>
-      
-     <article class="descripcion-pelicula">
+        <article class="descripcion-pelicula">
         <div>
           <h4>Titulo: </h4> 
-          <p>El Exorcista: Creyente</p>
+          <p>EL EXORCISTA: CREYENTE</p>
         </div>
         
         <div>
           <h4>Duración:</h4>
           <p>2h 1m</p>
         </div>
-
         <div>
           <h4>Genero: </h4>
           <p>Terror / Misterio</p>
@@ -65,17 +65,18 @@
         </div>
         
         <p class="sinopsis">Cuando su hija Angela y su amiga Katherine muestran signos de posesión demoníaca, se desata una cadena de acontecimientos 
-          que obligan al padre Victor Fielding a afrontar el punto más bajo del mal.Cuando su hija Angela y su amiga Katherine muestran signos de posesión demoníaca, se desata una cadena de acontecimientos 
-          que obligan al padre Victor Fielding a afrontar el punto más bajo del mal.
+          que obligan al padre Victor Fielding a afrontar el punto más bajo del mal. Desde la muerte de su esposa embarazada en un terremoto en Haití 
+          hace 12 años, Victor Fielding (Leslie Odom Jr.) ha tenido que criar y cuidar por su cuenta a su hija, Angela. Por momentos, parece que ha 
+          conseguido criar a una joven feliz y sana..
         </p>
+      
       </article>
-      <button><a target="_blank" href="https://www.youtube.com/watch?v=gYApro2YXQQ&t=2s">Comenzar</a></button>
     </section>
     
     <!----------------- SECCION PELICULAS SIMILARES ------------------------->
      <!-- Segundo contenedor padre  -->
      <section class="similares" id="similares">
-        <h2>SIMILARES</h1>
+        <h2>SIMILARES</h2>
             <article class="grid-similares">
               <a href="./detalle-pelicula.html"> <img src="../img/exorcismoEnElVaticano.webp" alt="Exorcismo En El Vaticano"> </a>
               <a href="./detalle-pelicula.html"><img src="../img/laAbuelaLaLaLaLa.webp" alt="La Abuela"> </a>
@@ -87,7 +88,13 @@
             </article>
       </section>
     </main>
+
+    <footer class="pie-pagina">
+      <p>&copy;Copiryght todos los derechos reservados</p>
+      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i>Instagram </a>
+      <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i>Youtube</a>
+      <p><i class="fa-solid fa-globe"></i> Soporte </p>
+    </footer>
+
   </body>
-
 </html>
-
