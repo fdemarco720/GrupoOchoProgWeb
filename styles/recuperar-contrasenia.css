@@ -1,152 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Livvic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Livvic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
 
-body{
-    background: linear-gradient(1500deg,#0b0a43,#2458d3,rgb(9,45,65));
-    margin: 0%;
-    margin-top: 35px;
-    padding: 0%;
-    height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-header{
-    text-align: center;
-    font-weight: bolder;
-    font-size: 1.5em;
-    font-family: "Acme", sans-serif;
+body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
+  background-attachment: fixed;
+  background-image: url(Banner-Bomflix.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* NAV */
+.login-header {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); 
+  border-radius: 2em;
+  margin: 2em 0;
+}
+
+.login-header h1 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 3em;
+  font-family: "Acme", sans-serif;
+}
+
+.login-header h3 {
+  font-family: "Acme", sans-serif;
+  font-weight: normal;
+  text-align: center;
+}
+
+.login-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Livvic";
+  height: 350px;
+  max-height: 100%;
+}
+
+.login-main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2.5%;
+  background: linear-gradient(1500deg, #0b0a43, #142f6e, rgb(2, 33, 49));
+  border-radius: 15px;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.login-main p, .login-main h3 {
     color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(25, 25, 25, 0.8); 
-}
-header h1{
-    margin-bottom: 10px;
+    font-family: "Livvic";
+  }
+
+.login-main-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-h3{
-    font-family: "Acme", sans-serif;
-    font-size: 0.8em;
-    font-weight: bolder;
-    text-align: center;
-    margin: 0;
+.login-main label {
+  color: #ffffff;
+  margin: 5% 0;
+  font-family: "Livvic";
 }
 
-main{
-    background-color: rgba(25, 25, 25, 0.5);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-    text-align: center;
-    margin-top: 50px;
-    margin-right: 600px;
-    margin-left: 600px;
-    margin-bottom: 240px;
-    padding-bottom: 15px;
-    border-radius: 15px;   
+.login-main input {
+  font-family: "Livvic";
+  border: none; 
+  outline: none; 
+  background: transparent; 
+  border-bottom: 1px solid #ffffff; 
+  padding: 5%;
+  color: rgb(211, 211, 20);
 }
 
-.encabezado{
-   padding-top: 10px;
+.button-confirmar {
+  margin: 2.5% 0;
+  padding: 5% 10%;
+  background-color: rgb(211, 211, 20);
+  border: none;
+  border-radius: 5px;
 }
 
-label{
-    display: block;
-    margin: 5px;
+.button-confirmar a {
+  font-family: "Livvic";
+  color: #0b0a43;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.botones{
-    margin: 10px;
-    margin-top:30px;
+.button-confirmar:hover {
+  background-color: rgba(211, 211, 20, 0.7);
+  cursor: pointer;
+  box-shadow: 1px 1px 5px #ffffff;
 }
 
-button{
+.button-cancelar {
+    margin: 2.5% 0;
+    padding: 5% 10%;
+    background-color: rgb(69, 211, 50);
     border: none;
     border-radius: 5px;
-    padding: 15px;
+  }
+  
+  .button-cancelar a {
+    font-family: "Livvic";
+    color: #ffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .button-cancelar:hover {
+    background-color: rgba(69, 211, 50, 0.7);
     cursor: pointer;
-    font-family:'Livvic';
-    color:black ; 
-    font-weight: bold;
-}
+    box-shadow: 1px 1px 5px #ffffff;
+  }
 
-.boton-confirmar{
-    margin-right: 15px;
-    background-color: rgb(211, 211, 20);
-    background-color: rgb(211, 211, 20);
-    border-radius: 5px;
-}
 
-.boton-cancelar{
-    background-color:#e80000;
+.login-main button a:hover {
+  text-decoration: wavy;
 }
-
-a{
-    text-decoration: none;
-    font-family:   'Livvic';
-    color:black ; 
-    font-weight: bold;
-}
-
-h2{
-    color: white;
-    font-family: "Acme", sans-serif;
-}
-
-label {
-    color:#ffffff;
-    margin-right: 40px;
-    font-family: 'Livvic'; 
-}
-
-input{
-    border: none;
-    background: transparent; 
-    border-bottom: 1px white solid;
-    
-    outline: none; 
-    color:rgb(211, 211, 20);
-}
-
-a{
-    text-decoration: none;
-    font-family:   'Livvic';
-    color:black ; 
-    font-weight: bold;
-}
-
-article{
-    margin-top: 35px;      
-}
-
-button:hover{
-    background-color: #bc9e9e;
+.a a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 640px) {
-    header {
-        font-size: 1.2em;
-    }
-    main {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+
+  .login-header {
+    height: 7em;
+    border-radius: 1em;
+  }
+  
+  .login-header h1 {
+    font-size: 2em;
+  }
 }
-
-
-@media screen and (max-width: 912px) {
-    main {
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-}
-
-@media screen and (min-width: 913px) and (max-width: 1024px) {
-    main {
-        margin-left: 200px;
-        margin-right: 200px;
-    }
-}
-
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
-    main {
-        margin-left: 300px;
-        margin-right: 300px;
-    }
-}
-

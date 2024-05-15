@@ -7,35 +7,46 @@
     <title>Bomflix - Recuperar Contraseña</title>
 </head>
 <body >
-    <header>
-        <h1>B O M F L I X</h1>
-        <h3>Las mejores series y películas</h3>
+    <header class="login-header">   
+        <nav class="login-nav">
+            <h1>B O M F L I X</h1>
+            <h3>Las mejores series y películas</h3>
+        </nav>
     </header>
-    
-        <main >
-            <section>
-                <div class="encabezado">
-                <h2>Recuperar  Contraseña</h2>
-            </div>
-                <form action="../index.html">
-                    <label for="nombreDeUsuario">Nombre De Usuario: </label>
-                    <input type="text"  name =nombreDeUsuario id="nombre_De_Usuario" placeholder="Usuario22" required>
-                    <article>
 
-                 
-                    <label for="email">Correo Electronico: </label>
+        <!-- <main class="login-main">
+            <section class="login-main-section">
+           <form action="../index.html" method="get">
+                <label for="nombre_usuario">Nombre de usuario: <br>
+                    <input type="text" name="nombreDeusuario" id="nombre_De_usuario" placeholder="Nombre de usuario" required>
+                </label>
+                <label for="email">Correo Electronico: <br>
                     <input type="text" name="email" id="email" placeholder="ejemplo@gmail.com" required>
-                </article>
-                    <div class="botones">
-                        <button type="submit" class="boton-confirmar">Confirmar</button>
-                        <button class="boton-cancelar" type="button"><a href="../index.html">Cancelar</a></button>
-                    </div>
-                     
-                </form>
-            </section>
+                </label>
+                <button class="button-confirmar" type="submit"><a href="../index.html">Confirmar</a></button>
+                <button class="button-cancelar" type="button"><a href="../index.html">Cancelar</a></button>
             </form>
-           
+        </section>
+        </main> -->
+
+        <main class="login-main">
+            <section class="login-main-section">
+               <h3>¿Olvidaste la contraseña?</h3>
+               <p>¡No te prepcupes!</p> 
+               <p>Completa los datos y recuperala.</p>
+               <form action="../index.html" method="get">
+                <label for="nombre_usuario">Nombre de usuario: <br>
+                    <input type="text" name="nombreDeusuario" id="nombre_De_usuario" placeholder="Nombre de usuario" required>
+                </label>
+                <label for="email">Correo Electronico: <br>
+                    <input type="text" name="email" id="email" placeholder="ejemplo@gmail.com" required>
+                </label>
+                <button class="button-confirmar" type="submit"><a href="../index.html">Confirmar</a></button>
+                <button class="button-cancelar" type="button"><a href="../index.html">Cancelar</a></button>
+            </form>
+        </section>
         </main>
+        
 </body>
 </html>
 
