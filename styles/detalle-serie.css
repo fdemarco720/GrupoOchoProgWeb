@@ -139,16 +139,17 @@ h4 {
   color: yellow;
   font-family: "Livvic";
   font-weight: bolder;
-  font-size: 1.5em;
+  font-size:1.2em;
 }
 
 span {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-family: 'Livvic';
 }
 
 .tercero a {
-  font-size: 1.5em;
+  font-size: 1.2em;
+  font-family: 'Livvic';
 }
 
 /* Edit de selectores y opciones de temporadas y capitulos */
@@ -282,9 +283,15 @@ span {
     "info-serie"
     "temporadas"
     ;
-    height: 60%;
+    height: 50%;
     /* column-gap: 2em; */
     width: 100%;
+  }
+
+  .iframe-comenzar iframe{
+    padding-top: 1em;
+    width: 90%;
+    margin: auto;
   }
 
   .detalle-serie .info-serie{
@@ -350,10 +357,10 @@ align-items: center;
 }
 
 /* 1020 px vista tablet */
-@media  screen and (max-width: 640px){
+@media  (min-width: 760px) and (max-width: 1280px)  {
   body {
     width: 100%;
-    min-height: 300vh;
+    min-height:220vh;
     background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
     display: grid;
     grid-template-rows: 2.5%;
@@ -363,4 +370,117 @@ align-items: center;
     "footer"
     ;
   }
+
+  /* Definicion de areas */
+  .header {
+    grid-area: header;
+    width:100% ;
+  }
+  .main {
+    /* padding-left: 1em; */
+    grid-area: main;
+    width:100% ;
+    padding: 0;
+    justify-content: center;
+    
+  }
+  .footer {
+    grid-area: footer;
+    width:100% ;
+  }
+
+  .iframe-comenzar{
+    grid-area: iframe-comenzar;
+  }
+  .info-serie{
+    grid-area: info-serie;
+  }
+  .temporadas{
+    grid-area: temporadas;
+  }
+
+  /* ----------- Comienzo del main ----------- */
+  .detalle-serie {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "iframe-comenzar"
+    "info-serie"
+    "temporadas"
+    ;
+   
+    /* column-gap: 2em; */
+    width: 100%;
+  }
+
+  .iframe-comenzar iframe{
+    padding-top: 1em;
+    width: 90%;
+    margin: auto;
+  }
+
+  .detalle-serie .info-serie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+}
+
+.info-serie .campo-atributos{
+  gap: 1em;
+  align-items: center;
+}
+
+.info-serie .campo-atributos .primero{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+}
+.info-serie .campo-atributos .segundo{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+}
+.info-serie .campo-atributos .tercero{
+  display: flex;
+  flex-direction: column;
+  gap:0em;
+  align-items: center;
+  }
+
+  /* Edit de Textos (h4,span y links) */
+h4 {
+  color: yellow;
+  font-family: "Livvic";
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+span {
+  font-size: 1.2em;
+}
+.tercero a {
+  font-size: 1.2em;
+}
+
+.detalle-serie .temporadas form{
+flex-direction: column;
+align-items: center;
+}
+
+/* Sinopsis */
+.sinopsis{
+  height: 10%;
+}
+.sinopsis p{
+  font-size: 1em;
+}
+
+.footer{
+  justify-content: flex-start;
+}
+
+ 
 }
