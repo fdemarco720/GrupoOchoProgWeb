@@ -20,6 +20,7 @@ header{
   top: 0;
   z-index: 2;
   box-shadow: 1px 5px 10px black;
+
 }
 
 .principal-nav {
@@ -308,6 +309,10 @@ article h3 {
   .grid-img {
     display: grid;
     grid-template-columns: repeat(3,auto);
+  }
+
+  .miCuenta a{
+    margin: 0 1em;
   }
 
 }
