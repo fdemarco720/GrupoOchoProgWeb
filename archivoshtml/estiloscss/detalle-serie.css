@@ -77,14 +77,14 @@ body {
 .detalle-serie .info-serie {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 2em;
+  justify-content: flex-start;
+  gap: 3.5em;
 }
 .info-serie .campo-atributos {
   display: flex;
   flex-direction: column;
   height: 30%;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-content: center;
 }
 .campo-atributos .primero {
@@ -134,6 +134,7 @@ span {
   font-size: 1.5em;
 }
 
+/* Edit de selectores y opciones de temporadas y capitulos */
 .temporadas select {
   border: none; /* Elimina el borde predeterminado */
   border-radius: 20px;
@@ -182,7 +183,7 @@ span {
 .similares .grid-similares{
   padding-top: 1em;
   display: grid;
-  grid-template-columns:repeat(auto-fill,minmax(12em, 1fr));
+  grid-template-columns:repeat(auto-fill,minmax(10em, 1fr));
   column-gap: 2em;
 }
 .grid-similares a img:hover{
@@ -198,4 +199,26 @@ span {
   justify-content: center;
   align-items: center;
   background-color: #0b0a43;
+}
+
+
+
+/* ------------- Media querys ---------------*/
+
+/* 
+640 px mobile
+900 tablet
+1024 1280 desktop */
+
+@media  screen and (max-width: 1280px) {
+  body {
+    background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+  }
+
 }
