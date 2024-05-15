@@ -152,16 +152,64 @@ footer{
 
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 800px) {
   
+  .body{
+    min-height: 203vh;
+  }
+
+  .main{
+    height: 113vh;
+  }
+
   .miCuenta a{
     display: inline;
     margin: 0;
   }
 
-  section{
+  .contenedor-principal{
     display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 2;
+    grid-template-rows: none;
+    grid-template-columns:none;
+    grid-template-areas: 
+    "pelicula" 
+    "boton-comenzar"
+    "descripcion-pelicula"
+    ;
+    height: 40em;
   }
+
+  .pelicula{
+    grid-area: pelicula;
+    margin: 0;
+  }
+
+  .boton-comenzar{
+    grid-area: boton-comenzar;
+    margin: 1em;
+  }
+
+  .descripcion-pelicula{
+    grid-area: descripcion-pelicula;
+  }
+
+  .pelicula .video{
+    width: 100%;
+  }
+
+  .similares{
+    height: 0;
+  }
+
+  .grid-similares{
+    margin-bottom: 1em;
+  }
+
+  .pie-pagina{
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
 }
