@@ -155,4 +155,8 @@ body {
   .login-header h1 {
     font-size: 2em;
   }
+
+  .login-main-section{
+    padding: 0 10%;
+  }
 }
