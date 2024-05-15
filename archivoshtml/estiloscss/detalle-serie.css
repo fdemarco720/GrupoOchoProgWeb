@@ -21,11 +21,13 @@ body {
     "main"
     "footer";
 }
+
 /* Definición de Areas en grid */
 .header {
   grid-area: header;
   position: sticky;
 }
+
 .main {
   /* padding-left: 1em; */
   grid-area: main;
@@ -35,6 +37,7 @@ body {
   padding-top: 1em;
   padding-left: 1em;
 }
+
 .footer {
   grid-area: footer;
 }
@@ -54,19 +57,25 @@ body {
   flex-direction: column;
   gap: 2em;
 }
+
 .iframe-comenzar iframe {
   width: 100%;
   height: 30em;
   border-radius: 15px;
   box-shadow: 1px 1px 10px rgb(173, 172, 172);
 }
+
 .iframe-comenzar a button {
+  border: none;
+  border-radius: 0.5em;
+  padding: 1em;
   width: 100%;
   height: 3em;
-  background: rgba(148, 34, 8, 0.993);
+  background: linear-gradient(1500deg, #0b0a43, #0b389f, rgb(9, 45, 65));
   font-family: "Acme";
   font-size: 1em;
 }
+
 .iframe-comenzar a button:hover {
   cursor: pointer;
   border: 1px solid black;
@@ -80,6 +89,7 @@ body {
   justify-content: flex-start;
   gap: 3.5em;
 }
+
 .info-serie .campo-atributos {
   display: flex;
   flex-direction: column;
@@ -87,18 +97,21 @@ body {
   justify-content: space-around;
   align-content: center;
 }
+
 .campo-atributos .primero {
   display: flex;
   flex-direction: row;
   gap: 2.5em;
   align-items: center;
 }
+
 .campo-atributos .segundo {
   display: flex;
   flex-direction: row;
   gap: 2em;
   align-items: center;
 }
+
 .campo-atributos .tercero {
   display: flex;
   flex-direction: row;
@@ -110,6 +123,7 @@ body {
 .temporadas form label {
   font-family: "Livvic";
 }
+
 .temporadas form {
   width: 100%;
   display: flex;
@@ -127,9 +141,12 @@ h4 {
   font-weight: bolder;
   font-size: 1.5em;
 }
+
 span {
   font-size: 1.5em;
+  font-family: 'Livvic';
 }
+
 .tercero a {
   font-size: 1.5em;
 }
@@ -146,6 +163,7 @@ span {
   font-weight: bolder;
   padding: 1.5%;
 }
+
 .temporadas select option {
   background: black;
   color: rgb(211, 211, 20);
