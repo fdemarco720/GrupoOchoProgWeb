@@ -98,6 +98,9 @@ input{
     border: none;
     background: transparent; 
     border-bottom: 1px white solid;
+    
+    outline: none; 
+    color:rgb(211, 211, 20);
 }
 
 a{
@@ -126,7 +129,7 @@ button:hover{
 }
 
 
-@media screen and (min-width: 641px) and (max-width: 912px) {
+@media screen and (max-width: 912px) {
     main {
         margin-left: 50px;
         margin-right: 50px;
