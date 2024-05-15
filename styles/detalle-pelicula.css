@@ -28,6 +28,7 @@ header {
   margin-bottom: 0.5em;
 }
 
+
 section{
   height: 28em;
   display: grid;
@@ -144,8 +145,23 @@ h1{
 }
 
 footer{
-  background-color: #0b389f;
+  background: linear-gradient(1500deg, #0b0a43, #0f2b6b, rgb(9, 45, 65));
   padding: 1em;
   display: flex;
   justify-content: space-around;
+
+}
+
+@media screen and (max-width: 640px) {
+  
+  .miCuenta a{
+    display: inline;
+    margin: 0;
+  }
+
+  section{
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+  }
 }
