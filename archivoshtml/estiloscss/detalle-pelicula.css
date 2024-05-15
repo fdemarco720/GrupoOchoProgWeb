@@ -7,10 +7,25 @@
   color: white;
   text-decoration: none;
   font-family: 'Livvic';
+  font-size: 1.001em;
 }
 
-body{
-  max-height: 100vh;
+body {
+  background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
+  max-width: 100%;
+  min-height: 150vh;
+  display: grid;
+  grid-template-rows: 8%;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+header {
+  grid-area: header;
+  position: sticky;
+  margin-bottom: 0.5em;
 }
 
 section{
@@ -31,6 +46,14 @@ section{
   justify-content: space-between;
 }
 
+.descripcion-pelicula h4{
+  display: inline;
+}
+
+.descripcion-pelicula p{
+  display: inline;
+}
+
 .sinopsis{
   font-size: large;
 }
@@ -38,26 +61,25 @@ section{
 iframe{
   width: 100%;
   height: 100%;
-  border-radius: 2em;
-  border-color: white;
+  border-radius: 1em;
+ box-shadow: 1px 1px 10px rgb(173, 172, 172);
 }
 
 iframe:hover{
   border: none;
   transition: 0.2s;
-  border: 3px white solid;
-
 }
 
 button{
   border: none;
-  background: linear-gradient(1500deg, #0b0a43, #1640a0, rgb(9, 45, 65));
+  background: linear-gradient(1500deg, #0b0a43, #0b389f, rgb(9, 45, 65));
   padding: 1em;
   border-radius: 0.5em;
   margin: 0em 1em;
 }
 
 button:hover{
+  cursor: pointer;
   scale: 1.01;
   transition: 2s;
   border: 1px black solid ;
@@ -79,23 +101,44 @@ h2{
 .similares{
   display: flex;
   flex-direction: column;
+  font-size: 1.4em;
+}
+
+h1{
+  font-family: 'Acme';
+}
+
+.titulo a{
+  font-family: 'Acme';
+}
+
+.similares .grid-similares a img{
+  height: 100%;
+  width: 100%;
+  /* Al darle 100% en ancho y alto la imagen ocupa el mismo
+  tamaño del padre, es decir de la etiqueta "a", el tamaño
+  de la etiqueta "a", lo definimos luego en el template columns
+  con la función repeat(autofill,minmax("minimo", máximo)) */
 }
 
 .similares h2{
   font-family: 'Acme';
+  border-bottom: 1px solid white;
 }
 
-.flex-pelis{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0em 1em;
+.similares .grid-similares{
+  padding-top: 1em;
+  display: grid;
+  grid-template-columns:repeat(auto-fill,minmax(12%, 1fr));
+  grid-gap: 1.5em;
 }
-.flex-pelis a img{
-  height: 8em;
-  border-radius: 0.5em;
+
+.grid-similares a img:hover{
+  transform: scale(1.02);
+  transition-duration: 0.7s;
+  box-shadow: 1px 1px 15px #ffffff;
 }
-.flex-pelis a img:hover{
-  transform: scale(1.1);
-  transition-duration: 0.3s;
+
+.grid-similares{
+  margin-left: 1em;
 }
