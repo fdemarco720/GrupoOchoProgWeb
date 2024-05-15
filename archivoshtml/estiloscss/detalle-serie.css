@@ -210,10 +210,17 @@ span {
 900 tablet
 1024 1280 desktop */
 
-@media  screen and (max-width: 1280px) {
+
+
+/* 640px vista mobile */
+@media  screen and (max-width: 640px) {
+  
   body {
+    width: 100%;
+    min-height: 300vh;
     background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
     display: grid;
+    grid-template-rows: 2.5%;
     grid-template-areas: 
     "header"
     "main"
@@ -221,4 +228,121 @@ span {
     ;
   }
 
+  /* Definicion de areas */
+  .header {
+    grid-area: header;
+    width:100% ;
+  }
+  .main {
+    /* padding-left: 1em; */
+    grid-area: main;
+    width:100% ;
+    padding: 0;
+    
+  }
+  .footer {
+    grid-area: footer;
+    width:100% ;
+  }
+
+  .iframe-comenzar{
+    grid-area: iframe-comenzar;
+  }
+  .info-serie{
+    grid-area: info-serie;
+  }
+  .temporadas{
+    grid-area: temporadas;
+  }
+
+  /* ----------- Comienzo del main ----------- */
+  .detalle-serie {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-areas: 
+    "iframe-comenzar"
+    "info-serie"
+    "temporadas"
+    ;
+    height: 60%;
+    /* column-gap: 2em; */
+    width: 100%;
+  }
+
+  .detalle-serie .info-serie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+}
+
+.info-serie .campo-atributos{
+  gap: 1em;
+  align-items: center;
+}
+
+.info-serie .campo-atributos .primero{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+}
+.info-serie .campo-atributos .segundo{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+}
+.info-serie .campo-atributos .tercero{
+  display: flex;
+  flex-direction: column;
+  gap:0em;
+  align-items: center;
+  }
+
+  /* Edit de Textos (h4,span y links) */
+h4 {
+  color: yellow;
+  font-family: "Livvic";
+  font-weight: bolder;
+  font-size: 1em;
+}
+span {
+  font-size: 1em;
+}
+.tercero a {
+  font-size: 1em;
+}
+
+.detalle-serie .temporadas form{
+flex-direction: column;
+align-items: center;
+}
+
+/* Sinopsis */
+.sinopsis{
+  height: 10%;
+}
+.sinopsis p{
+  font-size: 1em;
+}
+
+
+}
+
+/* 1020 px vista tablet */
+@media  screen and (max-width: 640px){
+  body {
+    width: 100%;
+    min-height: 300vh;
+    background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
+    display: grid;
+    grid-template-rows: 2.5%;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+  }
 }
