@@ -31,7 +31,7 @@ header{
     text-align: center;
     font-weight: bolder;
     font-size: 1em;
-    margin-bottom: 10em;
+    margin-bottom: 5em;
 }
 
 ul{
@@ -235,6 +235,10 @@ form input{
     cursor: pointer;
 }
 
+.foto p:hover{
+    cursor: pointer;
+}
+
 .ingreso{
     margin: 0;
 }
@@ -242,6 +246,22 @@ form input{
 #em{
     padding: 0%;
     margin-bottom: 0.5em;
+}
+
+footer{
+    background: linear-gradient(1500deg, #0b0a43, #0f2b6b, rgb(9, 45, 65));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+footer p{
+    margin: 0.5em;
+}
+
+footer a{
+    margin: 0.5em;
 }
 
 @media screen and (max-width: 640px) {
@@ -287,6 +307,12 @@ form input{
     .guardar-cambios, .cancelar-suscripcion {
         margin: 1em auto;
     }
+
+    .pie-pagina{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
@@ -297,4 +323,11 @@ form input{
     .guardar-cambios, .cancelar-suscripcion {
         margin: 1em auto;
     }
+
+    .pie-pagina{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
 }
