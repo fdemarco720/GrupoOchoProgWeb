@@ -31,7 +31,7 @@ header{
   /* background-color: rgba(25, 25, 25, 0.5); */
   align-items: center;
   justify-content: space-between;
-  /* position: relative;  
+  /* position: relative;
   height: fit-content; */
 }
 
@@ -261,7 +261,7 @@ article h3 {
     border-top: 1px solid transparent; /* Línea superior transparente */
     border-image: linear-gradient(to right, rgba(255, 255, 255, 0),#2458d3, rgba(255, 255, 255, 0)); /* Gradiente para el difuminado */
     border-image-slice: 1; /* Define cómo se corta el gradiente */
-    
+
   }
 
   .barra ul {
@@ -282,19 +282,33 @@ article h3 {
     align-items: center;
     width: 100%;
     padding: 0;
+    margin: 0;
   }
+
+  
+ .barra-horizontal-categorias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 
   .barra-horizontal-buscar {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex: 1;
+    flex-direction: column-reverse;
+    box-sizing: border-box;
     justify-content: center;
+    align-items: center;
   }
 
+
   .barra-horizontal input {
-    width: 60%;
+    width: 80%;
+    padding: 2% 0;
+    margin-top: 2%;
   }
+
 
   article h3 {
     display: block;

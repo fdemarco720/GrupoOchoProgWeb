@@ -78,7 +78,7 @@ iframe:hover{
   display: flex;
   flex-direction: column;
   margin-left: 5%;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .descripcion-pelicula div{
@@ -133,7 +133,7 @@ h1{
   border-radius: 5px;
   grid-gap: 10px;
   display: grid;
-  grid-template-columns: repeat(7, minmax(5%, 1fr));
+  grid-template-columns: repeat(8, minmax(5%, 1fr));
   margin: 0 3%;
 }
 
@@ -222,14 +222,43 @@ footer{
   
   }
 }
- 
+  @media screen and (max-width: 640px) {
+
+    *{
+      background-repeat: no-repeat;
+    }
+
+    body{
+      height: auto;
+    }
+
+    main{
+      display: block;
+      height: auto;
+    }
+
+    .descripcion-pelicula{
+      height: auto;
+    }
+
+    .similares{
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .grid-similares{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
 
   @media screen and (max-width: 1024px){
     body{
       height: 100vh;
     }
-      }
-/* 
+      
+
   .miCuenta a{
     display: inline;
     margin: 0;
@@ -243,6 +272,7 @@ footer{
     "pelicula" 
     "boton-comenzar"
     "descripcion-pelicula"
+    "pie-pagina"
     ;
   }
 
@@ -276,8 +306,8 @@ footer{
     padding: 0;
     flex-direction: column;
     align-items: center;
+    margin-top: 65em;
   }
 
 
- */
 }
