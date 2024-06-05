@@ -159,71 +159,7 @@ footer{
   justify-content: space-between;
 
 }
-/*
-@media screen and (max-width: 640px) {
 
-  body{
-   height: 100vh;
-  }
-
-  main{
-    max-height: 100vh;
-  }
-
-  .contenedor-principal{
-    display: flex;
-    flex-direction: column;
-    padding: 0%;
-    padding-left: 0%;
-    height: 100%;
-    width: 100%;
-    padding: 3%;
-    box-sizing: border-box;
-  }
-
-  .pelicula{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-  }
-    
-  .boton-comenzar{
-    grid-area: boton;
-    width: 50%;
-  }
-  
-  
-  .descripcion-pelicula{
-    grid-area: descripcion;
-    display: flex;
-    flex-direction: column;
-    margin-left: 0%;
-    justify-content: center;
-    margin-top: 3%;
-  }
-  
-  .descripcion-pelicula div{
-    display: flex;
-    flex-direction: row;
-    margin: 0% 0;
-    align-items: center;
-  }
-
-  .sinopsis{
-    width: 100%;
-  }
-
-  .descripcion-pelicula h4{
-    font-size: normal;
-    font-weight: bolder;
-  
-  }
-  
-}
-*/
   @media screen and (max-width: 640px) {
 
     .body{
@@ -304,45 +240,3 @@ footer{
     }
 
   }
-  /*
-
-@media screen and (max-width: 1024px){
-
-    body{
-      height: 100vh;
-    }
-      
-
-  .miCuenta a{
-    display: inline;
-    margin: 0;
-  }
-
-  .contenedor-principal{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns:1fr;
-    grid-template-areas: 
-    "pelicula" 
-    "descripcion-pelicula"
-    ;
-  }
-
-  .pelicula{
-    grid-area: pelicula;
-    margin: 0;
-  }
-
-  .descripcion-pelicula{
-    grid-area: descripcion-pelicula;
-  }
-
-  .pie-pagina{
-    padding: 0;
-    flex-direction: column;
-    align-items: center;
-  }
-
-
-}
-*/
