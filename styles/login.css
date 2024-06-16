@@ -15,12 +15,16 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
 /* NAV */
 .login-header {
-  max-width: 100%;
+  /* max-width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,13 +48,16 @@ body {
   text-align: center;
 }
 
+/* MAIN_RECUADRO */
+
 .login-main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: "Livvic";
-  height: 300px;
+  height: 350px;
+  width: 350px;
 }
 
 .login-main-section {
@@ -58,7 +65,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0% 5%;
+  padding: 0 5em;
   background: linear-gradient(1500deg, #0b0a43, #142f6e, rgb(2, 33, 49));
   border-radius: 15px;
   height: 100%;
@@ -85,13 +92,13 @@ body {
   outline: none; 
   background: transparent; 
   border-bottom: 1px solid #ffffff; 
-  padding: 5%;
+  padding: 5% 0;
   color: rgb(211, 211, 20);
 }
 
 .login-main button {
   margin: 5% 0;
-  padding: 10% 20%;
+  padding: 1em 2em;
   background-color: rgb(211, 211, 20);
   border: none;
   border-radius: 5px;
@@ -109,11 +116,10 @@ body {
   text-decoration: none;
 }
 
-.login-main div a {
+.login-main div a{
   text-decoration: underline; 
   font-family: "Livvic";
   color: #c1d2fa;
-
 }
 
 .login-main button:hover {
@@ -127,9 +133,19 @@ body {
   text-decoration: wavy;
 }
 
+
 .login-main div a:hover {
   text-shadow: 1px 1px 5px #ffffff;
+}
 
+.login-main div p {
+  text-decoration: underline; 
+  font-family: "Livvic";
+  color: #d60e0e;
+  text-shadow: 1px 1px 2px #ec5d5d;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 640px) {
@@ -144,6 +160,6 @@ body {
   }
 
   .login-main-section {
-    padding: 0% 10%; 
+    padding: 0 5em; 
   }
 }

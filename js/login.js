@@ -11,7 +11,7 @@ function corroborarLogin(e) {
     }else if(nombreUsuario.value.length < 3){
         alertas.textContent = "Nombre de usuario debe ser mayor a 3 caracteres";
     }else if(password.value.length < 3) {
-        alertas.textContent="La ontraseña debe ser mayor a 3 caracteres";
+        alertas.textContent="La contraseña debe ser mayor a 3 caracteres";
     }
 }
 
