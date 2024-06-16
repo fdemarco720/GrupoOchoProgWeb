@@ -19,16 +19,17 @@
                <h3>¿Olvidaste la contraseña?</h3>
                <p>¡No te prepcupes!</p> 
                <p>Completa los datos y recuperala.</p>
-               <form action="../index.html" method="get">
+               <form id="formulario" action="../index.html" method="get">
                 <label for="nombre_usuario">Nombre de usuario: <br>
                     <input type="text" name="nombreDeusuario" id="nombre_De_usuario" placeholder="Nombre de usuario" required>
                 </label>
                 <label for="email">Correo Electronico: <br>
                     <input type="text" name="email" id="email" placeholder="ejemplo@gmail.com" required>
                 </label>
-                <button class="button-confirmar" type="submit"><a href="../index.html">Confirmar</a></button>
+                <button id="boton-confirmar" class="button-confirmar" type="submit" disabled><a href="../index.html">Confirmar</a></button>
                 <button class="button-cancelar" type="button"><a href="../index.html">Cancelar</a></button>
             </form>
+            <script src="../js/recuperar-contrasenia.js"></script>
         </section>
         </main>
         
