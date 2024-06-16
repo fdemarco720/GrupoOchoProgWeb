@@ -8,7 +8,7 @@
 
 body {
   height: 100%;
-  width: 100%;
+  max-width: 100%;
    background: linear-gradient(1500deg, #0b0a43, #2458d3, rgb(9, 45, 65));
   background-attachment: fixed;
   background-image: url(Banner-Bomflix.png);
@@ -58,6 +58,7 @@ body {
   font-family: "Livvic";
   height: 350px;
   width: 350px;
+  max-width: 350px;
 }
 
 .login-main-section {

@@ -12,7 +12,11 @@ function corroborarLogin(e) {
         alertas.textContent = "Nombre de usuario debe ser mayor a 3 caracteres";
     }else if(password.value.length < 3) {
         alertas.textContent="La contraseña debe ser mayor a 3 caracteres";
+    }else{
+        window.location.href = "./pages/principal.html";
     }
 }
-
 botonIniciarSesion.addEventListener("click", corroborarLogin); // Agregar un event listener al botón de iniciar sesión
+
+localStorage.getItem('storageUsuario', nombreUsuario);
+localStorage.getItem('storagePassword', password);
