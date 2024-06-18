@@ -9,7 +9,7 @@ const email = document.querySelector('#email');
 const nombreUsuario = document.querySelector('#nombre_usuario');
 const contraseña = document.querySelector('#contraseña');
 const contraseñaRepetida = document.querySelector('#contraseña_repetida');
-const numeroTarjetaCredito = document.querySelector('#numero_tarjeta');
+
 
 const radioButtomTarjetaCredito = document.getElementById('#tarjeta_credito');
 
@@ -41,13 +41,13 @@ function contieneLoNecesarioParaSerUnMail(variableAValidar){
 }
 
 function esUnNombreValido(){
-    contieneLetras = false;
+    let contieneLetras = false;
     contieneLetras = esUnaLetra(nombreDelUsuario.value);
     return contieneLetras; //DEBERÍA RETORNAR TRUE
 }
 
 function esUnApellidoValido(){ 
-    contieneLetras = false;
+    let contieneLetras = false;
     contieneLetras = esUnaLetra(apellidoUsuario.value);
     return contieneLetras; //DEBERÍA RETORNAR TRUE
 }
@@ -55,25 +55,25 @@ function esUnApellidoValido(){
 //addEventListener('click', esUnaLetra); //Revisa 
 
 function esUnEmail(){ //DEBE RETORNAR TRUE
-    esUnEmail = false;
+    let esUnEmail = false;
     esUnEmail = contieneLoNecesarioParaSerUnMail(email.value);
     return esUnEmail;
 }
 
 function esUnNombreDeUsuarioValido(){ //DEBE DEVOLVER TRUE
-    elNombreDeUsarioEsValido = false;
+    let elNombreDeUsarioEsValido = false;
     elNombreDeUsarioEsValido = contieneNumerosYLetras(nombreUsuario.value);
     return elNombreDeUsarioEsValido;
 }
 
 function esUnaContraseniaValida(){ //DEBE DEVOLVER TRUE
-    esContraseniaValida = false;
+    let esContraseniaValida = false;
     esContraseniaValida = contieneLoNecesarioParaSerUnaContrasenia(contraseña.value);
     return esContraseniaValida;
 }
 
 function repetirContrasenia(){ //DEBE DEVOLVER TRUE
-    laContraseniaRepetidaEsValida = false;
+    let laContraseniaRepetidaEsValida = false;
     if(contraseña.value === contraseñaRepetida.value){
         laContraseniaRepetidaEsValida = true;
     }
@@ -81,7 +81,7 @@ function repetirContrasenia(){ //DEBE DEVOLVER TRUE
 }
 
 function todosLosCamposEstanOcupados(){    
-    todosLosCamposFueronOcupados = false;
+    let todosLosCamposFueronOcupados = false;
     if(esUnNombreValido && esUnApellidoValido && esUnNombreDeUsuarioValido && esUnEmail && esUnaContraseniaValida && repetirContrasenia 
         && ( ((radioButtomTarjetaCredito != null && (campoNumeroTarjetaCredito.value.length == 16 &&
              (codigoCVV.value.length == 3) && (!codigoCVV.value.contains("000")) ))) //SI ESTA SELECCIONADO EL BOTON DE TARJETA DE CREDITO Y AMBOS CAMPOS ESTÁN LLENOS, ENTRA AL IF
@@ -93,7 +93,7 @@ function todosLosCamposEstanOcupados(){
 }
 
 function losDatosFueronConfirmados(){
-    losDatosSePuedenConfirmar = false;
+    let losDatosSePuedenConfirmar = false;
     if(todosLosCamposEstanOcupados()){
         losDatosSePuedenConfirmar = true;
     }
@@ -101,7 +101,7 @@ function losDatosFueronConfirmados(){
 }
 
 function losCamposDeContraseniaSonIguales(){
-    losCamposSonIguales = false;
+    let losCamposSonIguales = false;
     if(contraseña.value === contraseñaRepetida.value){
         losCamposSonIguales = true;
     }else{
@@ -111,8 +111,8 @@ function losCamposDeContraseniaSonIguales(){
 }
 
 function elCampoCodigoCVVEsCorrecto(){
-elCodigoEsValido = false;
-    if(!codigoCVV.value.contains("000")){
+let elCodigoEsValido = false;
+    if(codigoCVV.value.contains("000")){
         alert("El campo del codigo CVV debe estar completo sin '000' ");
     }else{
         elCodigoEsValido = true;
@@ -120,8 +120,60 @@ elCodigoEsValido = false;
     return elCodigoEsValido;
 }
 
+function laTarjetaTieneLosDigitosNecesarios(){
+    losDigitosSonSuficientes = false;
+    if(campoNumeroTarjetaCredito.value.length >= 16 && campoNumeroTarjetaCredito.value.length <= 19){
+        losDigitosSonSuficientes = true;
+    }
+    return losDigitosSonSuficientes;
+}
+
+function elUltimoNumeroDeLaTarjetaEsPar(){
+    let variableAuxiliar = 0;
+    let suma = 0;
+    let elUltimoNumeroEsPar = false;
+    if(laTarjetaTieneLosDigitosNecesarios()){
+        variableAuxiliar = campoNumeroTarjetaCredito.value.length;
+        for(let i=0; i < variableAuxiliar.value.length-1;i++){ //length - 1  --> 16 - 1 = 15 
+            suma += parseInt(variableAuxiliar.charAt(i), 10);
+        }
+        if(suma % 2 != 0){ // SI ME DÁ RESTO 2 QUIERE DECIR QUE ES UN NUMERO IMPAR
+            if(variableAuxiliar.charAt(variableAuxiliar.length) % 2 == 0){
+                elUltimoNumeroEsPar = true;
+            }
+        }
+    }
+    return elUltimoNumeroEsPar;
+}
+
+function elUltimoNumeroDeLaTarjetaEsImpar(){
+    let variableAuxiliar = 0;
+    let suma = 0;
+    let elUltimoNumeroEsImpar = false;
+    if(laTarjetaTieneLosDigitosNecesarios()){
+        variableAuxiliar = campoNumeroTarjetaCredito.value.length;
+        for(let i=0; i < variableAuxiliar.value.length-1;i++){ //length - 1  --> 16 - 1 = 15 
+            suma += parseInt(variableAuxiliar.charAt(i), 10);
+        }
+        if(suma % 2 == 0){ // SI ME DÁ RESTO 0 QUIERE DECIR QUE ES UN NUMERO PAR
+            if(variableAuxiliar.charAt(variableAuxiliar.length) % 2 != 0){
+                elUltimoNumeroEsImpar = true;
+            }
+        }
+    }
+    return elUltimoNumeroEsImpar;
+}
+
+function laTarjetaEsValida(){
+    let laTarjetaEsValida = false;
+    if(campoNumeroTarjetaCredito.value.length < 16 || campoNumeroTarjetaCredito.value.length > 19){
+        laTarjetaEsValida = true;
+    }
+    return laTarjetaEsValida;
+}
+
 function validacionFinal(){
-    estaTodoValidadoCorrectamente = false;
+    let estaTodoValidadoCorrectamente = false;
     if(losDatosFueronConfirmados() && losCamposDeContraseniaSonIguales() && elCampoCodigoCVVEsCorrecto()){
         estaTodoValidadoCorrectamente = true;
         botonDeConfirmacion.disabled = false;
@@ -158,4 +210,15 @@ i. Debe aparecer un mensaje de error si se completa con 000
 b. Los campos contraseña y validar contraseña deben tener el mismo valor.
 i. Debe aparecer un mensaje de error si son distintas o no cumplen con las
 condiciones mencionadas arriba
+*/
+
+/*
+c. El campo tarjeta de crédito solo debe aceptar números con una longitud de entre 16
+y 19 dígitos.
+i. El último número de la tarjeta debe ser par si la suma de todos los números
+anteriores (el último no cuenta) es un número impar.
+ii. El último número de la tarjeta debe ser impar si la suma de todos los
+números anteriores (el último no cuenta) es un número par.
+iii. Debe aparecer un mensaje de error si la tarjeta es inválida.
+6. El botón confirmar debe estar deshabilitado si los campos no están completos.
 */
