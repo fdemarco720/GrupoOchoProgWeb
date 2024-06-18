@@ -1,4 +1,5 @@
-const ARRAY_PELICULAS = JSON.parse(localStorage.getItem("datosPeliculasStorage")); //Me paso el array de datos.js que lo envie al localStorage en formato string y lo parseo a formato ARRAY nuevamnete
+const JSON_DATOSPELICULAS = localStorage.getItem("datosPeliculasStorage"); //Me paso el array de datos.js que lo envie al localStorage
+const ARRAY_PELICULAS = JSON.parse(JSON_DATOSPELICULAS); // lo parseo a formato ARRAY nuevamnete ya que esta en String
 
 function agregarPeliculas(){
         let sectionListadoPeliculas = document.querySelector("#listadoSeriesPeliculas")

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles/principal.css">
   <!-- <link rel="stylesheet" href="../styles/detalle-pelicula.css"> -->
+   <link rel="stylesheet" href="../styles/nuevo-detalle-pelicula.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
   <link rel="stylesheet" href="../carrousel/css/flickity.min.css" media="screen">
   <link rel="stylesheet" href="../carrousel/css/carrousel-desing.css">
@@ -35,11 +36,12 @@
  </header>
   
  <main>
-    <section>
+    <section class="sectionPrincipal">
         <!-- ARTICLE 1 contiene video y boton -->
-        <article id="iframePelicula">
-        <!-- <iframe class="video"src="https://www.youtube.com/embed/gYApro2YXQQ?si=ZcZX3-yh4a9gaR51" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-        <button>Comenzar</button>
+        <article class="articleVideo">
+        <iframe id="iframePelicula" allowfullscreen  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        
+        <a id="btn_comenzar">Comenzar</a>
       </article>
       
       <!-- ARTICLE 2 contiene titulo, duracion, genero, sinopsis -->

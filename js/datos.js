@@ -1,7 +1,7 @@
 
 if(localStorage.getItem("datosPeliculasStorage")==null){ //hago una verificacion para cargar todos los datos en el localStorage una sola vez y no siempre que se actuliece con f5 el navegador
 
-const coco = {nombrePelicula: "Coco", duracion: 120, imagen: "../img/coco.jpeg", genero: "dibujos animados",
+const coco = {nombrePelicula: "Coco", duracion: 120, imagen: "../img/coco.jpeg", genero: "dibujos animados", iframe: "https://www.youtube.com/embed/gYApro2YXQQ?si=ZcZX3-yh4a9gaR51",
     sinopsis: "Coco es una película animada de Pixar lanzada en 2017 que cuenta la historia un niño mexicano de 12 años con el sueño de convertirse en músico. En el Día de los Muertos, se encuentra en la Tierra de los Muertos, donde se conoce a sus ancestros y descubre secretos familiares. Con la ayuda de un encantador y travieso, se embarca en un viaje para desbloquear historia familiar y ganar la bendición de su familia para seguir su pasión por la música."
  };
     
