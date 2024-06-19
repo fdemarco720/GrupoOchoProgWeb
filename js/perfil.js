@@ -3,8 +3,8 @@ const user = document.getElementById("user");
 const contraActual = document.querySelector(".contrasenia")
 
 //contraseña y checkbox
-const nuevaContra = document.getElementById("NC").value;
-const repetirContra = document.getElementById("RC").value;
+const nuevaContra = document.getElementById("NC");
+const repetirContra = document.getElementById("RC");
 const checkTarjetaCredito = document.getElementById("tarjeta_credito");
 const checkRapiPago = document.getElementById("rapi_pago");
 const checkPagoFacil = document.getElementById("pago_facil");
@@ -31,7 +31,6 @@ const objetoUsuario = buscarUsuario(usuarioActual);
 //Modifico dinámicamente el nombre del usuario según el Perfil Logueado
 user.textContent = objetoUsuario.nombreUsuario;
 
-botonGuardar.addEventListener('click', habilitarGuardarCambios());
 
 
 
