@@ -24,8 +24,8 @@ const NOMBRE_PELICULA = URL_PASADO_A_STRING.searchParams.get('nombre'); //Le ind
         for (let pelicula of ARRAY_PELICULAS_) {
             if(NOMBRE_PELICULA == pelicula.nombrePelicula){
                 nodo_genero.textContent = `Género: ${pelicula.genero}`;
-                nodo_duracion.textContent = `${pelicula.duracion} <span>minutos</span>`;
-                nodo_sinopsis.textContent = `${pelicula.sinopsis}`;
+                nodo_duracion.textContent = `Duración: ${pelicula.duracion} minutos`;
+                nodo_sinopsis.textContent = `Sinopsis: ${pelicula.sinopsis}`;
                 generoPelicula.appendChild(nodo_genero);
                 duracionPelicula.appendChild(nodo_duracion);
                 sinopsisPelicula.appendChild(nodo_sinopsis);
