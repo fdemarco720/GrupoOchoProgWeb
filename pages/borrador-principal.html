@@ -33,32 +33,37 @@
   </header>
 
   <main class="main-flex">
+   
     <section class="barra-horizontal">
       <div class="barra-horizontal-categorias">
         <form action="#" method="post">
           <label for="categorias">Categorias</label>
           <select id="categorias" name="categorias">
-            <option value="1">Disney</option>
-            <option value="2">Hechos reales</option>
-            <option value="3">Terror</option>
-            <option value="4">Drama</option>
-            <option value="5">Aventura</option>
-            <option value="6">Ciencia ficcion</option>
-            <option value="7">Accion</option>
-            <option value="8">Fantasia</option>
+            <option value="0">Lo nuevo</option>
+            <!-- SE COMPLETA CON JS -->
           </select>
         </form>
       </div>
 
       <div class="barra-horizontal-buscar">
-        <input type="text" placeholder="Buscar">
+        <input type="text" placeholder="Buscar" id="buscador">
         <button type="submit"> Buscar </button>
       </div>
 
     </section>
 
-    <section class="grid-img" id="listadoSeriesPeliculas">
+    <section>
+      <h3>PELICULAS</h3>
+       <section class="grid-img" id="listadoPeliculas">
+      <!-- SE COMPLETA CON JS -->
+      </section>
+    </section>
 
+    <section> 
+      <h3>SERIES</h3>
+       <section class="grid-img" id="listadoSeries">
+      <!-- SE COMPLETA CON JS -->
+      </section>
     </section>
   </main>
 

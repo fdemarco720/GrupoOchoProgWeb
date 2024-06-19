@@ -31,7 +31,7 @@ const objetoUsuario = buscarUsuario(usuarioActual);
 //Modifico dinámicamente el nombre del usuario según el Perfil Logueado
 user.textContent = objetoUsuario.nombreUsuario;
 
-botonGuardar.addEventListener('click', habilitarGuardarCambios())
+botonGuardar.addEventListener('click', habilitarGuardarCambios());
 
 
 

@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Livvic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
 .sectionPrincipal{
     display: flex;
     flex-direction: row;
     max-width: 100%;
     height: 25em;
-    margin-top: 1em;
+    margin-top: 2em;
 
 }
 
@@ -19,12 +22,13 @@
     width: 100%;
     height: 100%;
     border-radius: 1em;
-   box-shadow: 1px 1px 10px rgb(173, 172, 172);
+    border: none;
   }
 
 #iframePelicula:hover{
-    border: none;
+    box-shadow: 1px 1px 10px rgb(173, 172, 172);
     transition: 0.2s;
+    scale: 1.01;
   }
 
 .articleVideo{
@@ -34,20 +38,25 @@
 }
 
 #btn_comenzar{
-    grid-area: boton;
     margin-top: 2%;
     padding: 1% 0;
     border: none;
-    background: linear-gradient(1500deg, #0b0a43, #0b389f, rgb(9, 45, 65));
+    background:linear-gradient(50deg, rgb(4, 2, 36), rgb(11, 11, 99), rgb(0, 1, 11));
     border-radius: 0.5em;
     width: 100%;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Livvic';
+
   }
   
   #btn_comenzar:hover{
     cursor: pointer;
     scale: 1.01;
-    transition: 2s;
-    border: 1px #ffff solid ;
+    transition: 0.2s;
+    box-shadow: 1px 1px 10px rgb(173, 172, 172);
+    color: yellow;
   }
 
   #detallesPelicula div{
@@ -56,10 +65,17 @@
   }
 
   #detallesPelicula h3, #detallesPelicula h4{
-
     display: flex;
     align-items:center;
     color: #fff;
+    font-weight: lighter;
+  }
+
+  .similares {
+    margin: 3% 0;
+  }
+  .similares h3{
+    padding-left: 5%;
   }
 
 
