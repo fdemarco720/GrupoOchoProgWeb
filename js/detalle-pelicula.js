@@ -15,14 +15,14 @@ function agregarTemporadas(){
     let i=1;
    
 
-    for (let series of ARRAY_SERIES_) {
-        if(series.nomr)
-        let nodo_option = document.createElement("option");
-        nodo_option.value = i;
-        nodo_option.textContent = temp[temp];
-        nodo_temporadas.appendChild(nodo_option);
-        i++;
-    }
+    // for (let series of ARRAY_SERIES_) {
+    //     if(series.nomr)
+    //     let nodo_option = document.createElement("option");
+    //     nodo_option.value = i;
+    //     nodo_option.textContent = temp[temp];
+    //     nodo_temporadas.appendChild(nodo_option);
+    //     i++;
+    // }
     temporadas.appendChild(nodo_temporadas);
 }
 

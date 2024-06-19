@@ -43,7 +43,7 @@ localStorage.setItem("datosPeliculasStorage",JSON.stringify(PELICULAS)); // con 
         }
        
         // SERIES
-const treceRazones = {nombreSerie: "trece razones", temporada: [ 1, 2, 3], capitulos: [1,2,3, 4, 5], imagen: "../img/13razones.jpg", genero: "Drama",sinopsis: "COMPLETAR" //COMPLETAR 
+const treceRazones = {nombreSerie: "trece razones", temporadas: [10, 8, 8], imagen: "../img/13razones.jpg", genero: "Drama",sinopsis: "COMPLETAR" //COMPLETAR 
         };
 
 const bebeReno = {nombreSerie: "bebe reno", duracion: 120, imagen: "../img/bebereno.jpg", genero: "Drama",sinopsis: "COMPLETAR" //COMPLETAR 
