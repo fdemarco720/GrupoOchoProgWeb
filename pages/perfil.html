@@ -35,7 +35,7 @@
         <section>
                 <article class="foto">
                     <img src="../img/Messi Vé.jpg" alt="imgperfil">
-                    <h4>Nombre de Usuario</h4>
+                    <h4 id="user">Nombre de Usuario</h4>
                     <p>Mis favoritos <i class="fa-regular fa-heart"></i></p>
                     <p>Notificaciones <i class="fa-regular fa-bell"></i></p>
                 </article>
@@ -47,7 +47,7 @@
                         <label class="contrasenia" for="contraseña">Contraseña : </label>
                             <p>********</p>
                         <label for="Nueva-contrasenia" >Nueva Contraseña: </label>
-                        <input type="password" name="Nueva-contrasenia" id="NC " class="ingreso" placeholder="**********">
+                        <input type="password" name="Nueva-contrasenia" id="NC " class="ingreso" placeholder="Nueva contraseña">
                         <label for="Repetir-contrasenia">Repetir Contraseña: </label>
                         <input type="password" name="Repetir-contrasenia" id="RC" class="ingreso" placeholder="Repita la contraseña">
                     </article>
@@ -88,7 +88,7 @@
                     </article>
                     <br>
                     <div class="botones">  
-                        <button class="guardar-cambios" type="submit">Guardar cambios</button>
+                        <button class="guardar-cambios" type="submit" disabled  >Guardar cambios</button>
                         <button class="cancelar-suscripcion" type="button"><a href="../index.html"> Cancelar Suscripción</a></button>
                     </div>
                 </form>
@@ -102,6 +102,7 @@
         <a href="https://www.facebook.com/"> Facebook <i class="fa-brands fa-facebook"></i></a>
         <a href="#"><i class="fa-solid fa-globe"> Soporte </i></a>
       </footer>
-      
+      <script src="../js/perfil.js"></script>
+      <!-- <script src="../js/login.js"></script> -->
 </body>
 </html>

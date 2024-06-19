@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // event.preventDefault(); // Solo si no deseas enviar el formulario realmente
     });
 });
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
     const password = document.getElementById('contraseña');

@@ -21,14 +21,14 @@ function corroborarLogin(e) {
         const usuarioValido = usuarios.find(usuario => 
             usuario.nombreUsuario === nombreUsuario.value && 
             usuario.contraseña === password.value
+            
         );
-
         if (usuarioValido) {
             window.location.href = "./pages/principal.html";
+            localStorage.setItem("usuarioActual",JSON.stringify(nombreUsuario.value))
         } else {
             alertas.textContent = "Nombre de usuario o contraseña incorrectos";
         }
     }
 }
-
 botonIniciarSesion.addEventListener("click", corroborarLogin);
