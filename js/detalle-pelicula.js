@@ -18,8 +18,8 @@ const NOMBRE_PELICULA = URL_PASADO_A_STRING.searchParams.get('nombre'); //Le ind
         let nodo_genero = document.createElement("h3");
         let nodo_duracion = document.createElement("h3");
         let nodo_sinopsis = document.createElement("h3");
-        let nodo_btn = document.querySelector("btn_comenzar");
-        let nodo_a = document.createElement("btn_comenzar");
+        let nodo_btn = document.querySelector("#btn_comenzar");
+       // let nodo_a = document.createElement("a");
 
         for (let pelicula of ARRAY_PELICULAS_) {
             if(NOMBRE_PELICULA == pelicula.nombrePelicula){
@@ -29,9 +29,12 @@ const NOMBRE_PELICULA = URL_PASADO_A_STRING.searchParams.get('nombre'); //Le ind
                 generoPelicula.appendChild(nodo_genero);
                 duracionPelicula.appendChild(nodo_duracion);
                 sinopsisPelicula.appendChild(nodo_sinopsis);
-                nodo_a.href = pelicula.iframe;
+        //        nodo_a.href = pelicula.linkVideo;
                 videoPelicula.src = pelicula.iframe;
-                nodo_btn.appendChild(nodo_a);
+        //        nodo_btn.appendChild(nodo_a);
+                nodo_btn.href = pelicula.linkVideo;
+                nodo_btn.target = "_blank";
+                
             }
         }
     }
