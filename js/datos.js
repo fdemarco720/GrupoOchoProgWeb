@@ -40,16 +40,16 @@ localStorage.setItem("datosPeliculasStorage",JSON.stringify(PELICULAS)); // con 
         }
        
         // SERIES
-const treceRazones = {nombrePelicula: "trece razones", duracion: 120, imagen: "../img/13razones.jpg", genero: "Drama",sinopsis: "COMPLETAR" //COMPLETAR 
+const treceRazones = {nombreSerie: "trece razones", temporada: [ 1, 2, 3], capitulos: [1,2,3, 4, 5], imagen: "../img/13razones.jpg", genero: "Drama",sinopsis: "COMPLETAR" //COMPLETAR 
         };
 
-const bebeReno = {nombrePelicula: "bebe reno", duracion: 120, imagen: "../img/bebereno.jpg", genero: "Drama",sinopsis: "COMPLETAR" //COMPLETAR 
+const bebeReno = {nombreSerie: "bebe reno", duracion: 120, imagen: "../img/bebereno.jpg", genero: "Drama",sinopsis: "COMPLETAR" //COMPLETAR 
         };
 
-        const strangerThings = {nombrePelicula: "stranger things", duracion: 120, imagen: "../img/series/stranger.jpg", genero: "Suspenso",sinopsis: "COMPLETAR" //COMPLETAR 
+        const strangerThings = {nombreSerie: "stranger things", duracion: 120, imagen: "../img/series/stranger.jpg", genero: "Suspenso",sinopsis: "COMPLETAR" //COMPLETAR 
         };
 
-        const dark = {nombrePelicula: "dark", duracion: 120, imagen: "../img/series/dark.jpg", genero: "Suspenso",sinopsis: "COMPLETAR" //COMPLETAR 
+        const dark = {nombreSerie: "dark", duracion: 120, imagen: "../img/series/dark.jpg", genero: "Suspenso",sinopsis: "COMPLETAR" //COMPLETAR 
         };
 
 const SERIES = [treceRazones, bebeReno, strangerThings, dark];

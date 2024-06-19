@@ -12,7 +12,7 @@ function devolverPeliculasAlHome(sectionParametro, arrayParametro){
         let nodo_img = document.createElement("img");
         nodo_img.src = pelicula.imagen;
         let nodo_a = document.createElement("a");
-        nodo_a.href = `../pages/detalle-pelicula.html?nombre=${pelicula.nombrePelicula}`;
+        nodo_a.href = `../pages/detalle-pelicula.html?nombre=${pelicula.nombrePelicula}&tipo=pelicula`;
         nodo_a.target ="_blank";
         
         nodo_a.appendChild(nodo_img);
@@ -28,7 +28,7 @@ function devolverSeriesAlHome(sectionParametro, arrayParametro){
         let nodo_img = document.createElement("img");
         nodo_img.src = serie.imagen;
         let nodo_a = document.createElement("a");
-        nodo_a.href = `../pages/detalle-pelicula.html?nombre=${serie.nombrePelicula}`;
+        nodo_a.href = `../pages/detalle-pelicula.html?nombre=${serie.nombreSerie}&tipo=serie`;
         nodo_a.target ="_blank";
         
         nodo_a.appendChild(nodo_img);
