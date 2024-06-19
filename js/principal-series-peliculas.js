@@ -38,56 +38,85 @@ function devolverSeriesAlHome(sectionParametro, arrayParametro){
     }
 }
 
-let sectionPrincipalConPeliculas = document.querySelector("#listadoPeliculas");
-devolverPeliculasAlHome(sectionPrincipalConPeliculas, ARRAY_PELICULAS);
-
-let sectionPrincipalConSeries = document.querySelector("#listadoSeries");
-devolverPeliculasAlHome(sectionPrincipalConSeries, ARRAY_SERIES);
-
-
-//FUNCION PARA QUE EL BUSCADOR FILTRE
-function filtrarPeliculas() {
-        let textoBuscado = document.querySelector('#buscador').value.toLowerCase(); //Valor que le pase por el input
-        let sectionPrincipalConPeliculas = document.querySelector("#listadoPeliculas");
-        sectionPrincipalConPeliculas.innerHTML = ''; //Vacio el section con innerHTML = ""; que previamente lo cargue con todas las peliculas;
-        let sectionPrincipalConSeries = document.querySelector("#listadoPeliculas");
-        sectionPrincipalConSeries.innerHTML = ''; //Vacio el section con innerHTML = ""; que previamente lo cargue con todas las peliculas;
-
-    
-        const ARRAY_PELICULAS_FILTRADAS = [];
-         for (let pelicula of ARRAY_PELICULAS) {
-            if (pelicula.nombrePelicula.toLowerCase().includes(textoBuscado.toLowerCase())) {
-                 ARRAY_PELICULAS_FILTRADAS.push(pelicula);
-             }
-        }
-        
-        //Si no se encuentran resultados, se muestra un mensaje
-        if (ARRAY_PELICULAS_FILTRADAS.length === 0) {
-        let mensajePeliculasNoEncontradas = document.createElement("h3");
-        mensajePeliculasNoEncontradas.textContent = "No se encontraron películas con ese criterio de búsqueda.";
-        sectionPrincipalConPeliculas.appendChild(mensajePeliculasNoEncontradas);
-        }else{
-        devolverPeliculasAlHome(sectionPrincipalConPeliculas, ARRAY_PELICULAS_FILTRADAS);
-        }
-}
-
-document.getElementById('buscador').addEventListener('input', filtrarPeliculas);
-    
+//AGREGAR CATEGORIAS AL SELECT
 function agregarCategorias(){
     let categoriasHome = document.querySelector("#categorias");
     let i=1;
     let generosAgregados = []; // Array para almacenar los géneros que ya han sido agregados
+   
+    const ARRAY_PELICULAS_Y_SERIES = [];
+    
+    for (let pelicula of ARRAY_PELICULAS) {
+    ARRAY_PELICULAS_Y_SERIES.push(pelicula);
+       }
+    
+    for (let series of ARRAY_SERIES) {
+        ARRAY_PELICULAS_Y_SERIES.push(series);
+           }
 
-for (let pelicula of ARRAY_PELICULAS) {
-    if (!generosAgregados.includes(pelicula.genero)) {
+    for (let categorias of ARRAY_PELICULAS_Y_SERIES) {
+    if (!generosAgregados.includes(categorias.genero)) {
         let nodo_option = document.createElement("option");
         nodo_option.value = i;
-        nodo_option.textContent = pelicula.genero;
+        nodo_option.textContent = categorias.genero;
         categoriasHome.appendChild(nodo_option);
-        generosAgregados.push(pelicula.genero); 
+        generosAgregados.push(categorias.genero); 
         i++;
     }
 }
 }
 
-agregarCategorias();
+//FUNCION PARA QUE EL BUSCADOR FILTRE PELICULAS
+function filtrarPeliculas() {
+let textoBuscado = document.querySelector('#buscador').value.toLowerCase(); //Valor que le pase por el input
+let sectionPrincipalConPeliculas = document.querySelector("#listadoPeliculas");
+sectionPrincipalConPeliculas.innerHTML = ''; //Vacio el section con innerHTML = ""; que previamente lo cargue con todas las peliculas;
+
+const ARRAY_PELICULAS_FILTRADAS = [];
+for (let pelicula of ARRAY_PELICULAS) {
+if (pelicula.nombrePelicula.toLowerCase().includes(textoBuscado.toLowerCase())) {
+ARRAY_PELICULAS_FILTRADAS.push(pelicula);
+   }
+}
+    
+//Si no se encuentran resultados, se muestra un mensaje
+if (ARRAY_PELICULAS_FILTRADAS.length === 0) {
+let mensajePeliculasNoEncontradas = document.createElement("h3");
+mensajePeliculasNoEncontradas.textContent = "No se encontraron películas con ese criterio de búsqueda.";
+sectionPrincipalConPeliculas.appendChild(mensajePeliculasNoEncontradas);
+}else{
+    devolverPeliculasAlHome(sectionPrincipalConPeliculas, ARRAY_PELICULAS_FILTRADAS);
+     }
+ }
+
+ //FUNCION PARA QUE EL BUSCADOR FILTRE SERIES
+function filtrarSeries() {
+    let textoBuscado = document.querySelector('#buscador').value.toLowerCase();
+    let sectionPrincipalConSeries = document.querySelector("#listadoSeries");
+    sectionPrincipalConSeries.innerHTML = '';
+    
+    
+    const ARRAY_SERIES_FILTRADAS = [];
+    for (let serie of ARRAY_SERIES) {
+    if (serie.nombrePelicula.toLowerCase().includes(textoBuscado.toLowerCase())) {
+    ARRAY_SERIES_FILTRADAS.push(serie);
+       }
+    }
+        
+    if (ARRAY_SERIES_FILTRADAS.length === 0) {
+    let mensajeSeriesNoEncontradas = document.createElement("h3");
+    mensajeSeriesNoEncontradas.textContent = "No se encontraron series con ese criterio de búsqueda.";
+    sectionPrincipalConSeries.appendChild(mensajeSeriesNoEncontradas);
+    }else{
+        devolverSeriesAlHome(sectionPrincipalConSeries, ARRAY_SERIES_FILTRADAS);
+         }
+ }
+ 
+ let sectionPrincipalConPeliculas = document.querySelector("#listadoPeliculas");
+ let sectionPrincipalConSeries = document.querySelector("#listadoSeries");
+
+ devolverPeliculasAlHome(sectionPrincipalConPeliculas, ARRAY_PELICULAS);
+ devolverSeriesAlHome(sectionPrincipalConSeries, ARRAY_SERIES);
+ agregarCategorias();
+ document.getElementById('buscador').addEventListener('input', filtrarPeliculas);    
+ document.getElementById('buscador').addEventListener('input', filtrarSeries);
