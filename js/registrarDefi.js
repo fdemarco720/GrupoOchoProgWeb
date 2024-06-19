@@ -34,85 +34,77 @@ function contieneLoNecesarioParaSerUnMail(variableAValidar) {
 }
 
 function esUnNombreValido() {
-    return esUnaLetra(nombreDelUsuario.value);
+    if (!esUnaLetra(nombreDelUsuario.value)) {
+        return "El nombre solo debe contener letras.";
+    }
+    return "";
 }
 
 function esUnApellidoValido() {
-    return esUnaLetra(apellidoUsuario.value);
+    if (!esUnaLetra(apellidoUsuario.value)) {
+        return "El apellido solo debe contener letras.";
+    }
+    return "";
 }
 
 function esUnEmail() {
-    return contieneLoNecesarioParaSerUnMail(email.value);
+    if (!contieneLoNecesarioParaSerUnMail(email.value)) {
+        return "El email no es válido.";
+    }
+    return "";
 }
 
 function esUnNombreDeUsuarioValido() {
-    return contieneNumerosYLetras(nombreUsuario.value);
+    if (!contieneNumerosYLetras(nombreUsuario.value)) {
+        return "El nombre de usuario solo debe contener letras y números.";
+    }
+    return "";
 }
 
 function esUnaContraseniaValida() {
-    return contieneLoNecesarioParaSerUnaContrasenia(contraseña.value);
+    if (!contieneLoNecesarioParaSerUnaContrasenia(contraseña.value)) {
+        return "La contraseña debe contener al menos dos letras, dos números y dos caracteres especiales.";
+    }
+    return "";
 }
 
 function repetirContrasenia() {
-    return contraseña.value === contraseñaRepetida.value;
-}
-
-function todosLosCamposEstanOcupados() {
-    return esUnNombreValido() && esUnApellidoValido() && esUnNombreDeUsuarioValido() && esUnEmail() && esUnaContraseniaValida() && repetirContrasenia() &&
-        ((radioButtomTarjetaCredito.checked && campoNumeroTarjetaCredito.value.length >= 16 && campoCodigoCVV.value.length === 3 && campoCodigoCVV.value !== "000") ||
-        radioButtomRapiPago.checked || radioButtomPagoFacil.checked || radioButtomTransferenciaBancaria.checked);
-}
-
-function losDatosFueronConfirmados() {
-    return todosLosCamposEstanOcupados();
-}
-
-function losCamposDeContraseniaSonIguales() {
     if (contraseña.value !== contraseñaRepetida.value) {
-        alert("Las contraseñas no coinciden. Vuelva a intentarlo por favor.");
-        return false;
+        return "Las contraseñas no coinciden.";
     }
-    return true;
+    return "";
 }
 
-function elCampoCodigoCVVEsCorrecto() {
-    if (campoCodigoCVV.value === "000") {
-        alert("El campo del código CVV debe estar completo sin '000'.");
-        return false;
+function validarCamposDePago() {
+    if (radioButtomTarjetaCredito.checked) {
+        if (campoNumeroTarjetaCredito.value.length < 16 || campoNumeroTarjetaCredito.value.length > 19) {
+            return "El número de tarjeta debe tener entre 16 y 19 dígitos.";
+        }
+        if (campoCodigoCVV.value.length !== 3 || campoCodigoCVV.value === "000") {
+            return "El código CVV debe tener 3 dígitos y no puede ser '000'.";
+        }
+    } else if (!radioButtomRapiPago.checked && !radioButtomPagoFacil.checked && !radioButtomTransferenciaBancaria.checked) {
+        return "Debe seleccionar un método de pago.";
     }
-    return true;
-}
-
-function laTarjetaTieneLosDigitosNecesarios() {
-    return campoNumeroTarjetaCredito.value.length >= 16 && campoNumeroTarjetaCredito.value.length <= 19;
-}
-
-function elUltimoNumeroDeLaTarjetaEsPar() {
-    let suma = 0;
-    const numeroTarjeta = campoNumeroTarjetaCredito.value;
-    for (let i = 0; i < numeroTarjeta.length - 1; i++) {
-        suma += parseInt(numeroTarjeta.charAt(i), 10);
-    }
-    const ultimoDigito = parseInt(numeroTarjeta.charAt(numeroTarjeta.length - 1), 10);
-    return suma % 2 !== 0 && ultimoDigito % 2 === 0;
-}
-
-function elUltimoNumeroDeLaTarjetaEsImpar() {
-    let suma = 0;
-    const numeroTarjeta = campoNumeroTarjetaCredito.value;
-    for (let i = 0; i < numeroTarjeta.length - 1; i++) {
-        suma += parseInt(numeroTarjeta.charAt(i), 10);
-    }
-    const ultimoDigito = parseInt(numeroTarjeta.charAt(numeroTarjeta.length - 1), 10);
-    return suma % 2 === 0 && ultimoDigito % 2 !== 0;
-}
-
-function laTarjetaEsValida() {
-    return campoNumeroTarjetaCredito.value.length >= 16 && campoNumeroTarjetaCredito.value.length <= 19;
+    return "";
 }
 
 function validacionFinal() {
-    return losDatosFueronConfirmados() && losCamposDeContraseniaSonIguales() && elCampoCodigoCVVEsCorrecto();
+    let mensajesDeError = "";
+
+    mensajesDeError += esUnNombreValido();
+    mensajesDeError += esUnApellidoValido();
+    mensajesDeError += esUnEmail();
+    mensajesDeError += esUnNombreDeUsuarioValido();
+    mensajesDeError += esUnaContraseniaValida();
+    mensajesDeError += repetirContrasenia();
+    mensajesDeError += validarCamposDePago();
+
+    if (mensajesDeError) {
+        alert(mensajesDeError);
+        return false;
+    }
+    return true;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -124,16 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
     form.addEventListener('submit', function(event) {
-        // Validar que las contraseñas coinciden
-        if (password.value !== confirmPassword.value) {
-            alert('Las contraseñas no coinciden. Por favor, inténtelo de nuevo.');
-            event.preventDefault();
-            return;
-        }
-
         // Validar todos los campos
         if (!validacionFinal()) {
-            alert('Por favor, complete todos los campos correctamente.');
             event.preventDefault();
             return;
         }
