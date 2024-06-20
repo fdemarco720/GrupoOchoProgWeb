@@ -230,6 +230,7 @@ section h3 a:hover{
   /* _________NAV_____________________ */
   body{
     height: 100%;
+    width: 100%;
   }
   .principal-nav {
     display: grid;
@@ -287,6 +288,7 @@ section h3 a:hover{
   /* MAIN */
   .barra-horizontal {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -295,27 +297,17 @@ section h3 a:hover{
   }
 
   
- .barra-horizontal-categorias {
+ .barra-horizontal form {
+  margin-top: 1em;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%;
+
 }
 
 
-  .barra-horizontal-buscar {
-    display: flex;
-    flex-direction: column-reverse;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-  }
-
-
   .barra-horizontal input {
-    width: 80%;
     padding: 2% 0;
-    margin-top: 2%;
+    margin-top: 1em;
   }
 
 

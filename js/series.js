@@ -36,7 +36,7 @@ function agregarCategorias(){
 }
 
  //FUNCION PARA QUE EL BUSCADOR FILTRE SERIES
-function filtrarSeries() {
+function filtrarPorBuscador() {
     let textoBuscado = document.querySelector('#buscador').value.toLowerCase();
     let sectionPrincipalConSeries = document.querySelector("#listadoSeries");
     sectionPrincipalConSeries.innerHTML = '';
@@ -58,8 +58,78 @@ function filtrarSeries() {
          }
  }
 
+ function filtrarPorCategoria() {
+    let categoriaSeleccionada = document.querySelector('#categorias').selectedOptions[0].textContent;
+    console.log(categoriaSeleccionada);
+
+    let ARRAY_SERIES_FILTRADAS = [];
+
+    for(series of ARRAY_SERIES){
+        if(categoriaSeleccionada == series.genero){
+            ARRAY_SERIES_FILTRADAS.push(series);
+        }
+    }
+
+    // Mostrar series filtradas en el listado de series
+    let sectionPrincipalConSeries = document.querySelector("#listadoSeries");
+    sectionPrincipalConSeries.innerHTML = '';
+    sectionPrincipalConSeries = document.querySelector("#listadoSeries");
+    if (ARRAY_SERIES_FILTRADAS.length > 0) {
+        devolverSeriesAlHome(sectionPrincipalConSeries, ARRAY_SERIES_FILTRADAS);
+    } else {
+        let mensajeSeriesNoEncontradas = document.createElement("h3");
+        mensajeSeriesNoEncontradas.textContent = "No se encontraron series con ese criterio de búsqueda.";
+        sectionPrincipalConSeries.appendChild(mensajeSeriesNoEncontradas);
+    }
+
+    if(categoriaSeleccionada == "Lo nuevo"){
+        sectionPrincipalConSeries.innerHTML = '';
+        devolverSeriesAlHome(sectionPrincipalConSeries, ARRAY_SERIES);
+    }
+
+}
+
+function filtrarPorTemporada(){
+    let cantidadSeleccionada = document.querySelector('#temporadas').selectedOptions[0].textContent;
+
+    let ARRAY_SERIES_FILTRADAS = [];
+
+    for(series of ARRAY_SERIES){
+        if(cantidadSeleccionada == "Una"){
+            if(series.temporadas.length == 1){
+                ARRAY_SERIES_FILTRADAS.push(series);
+            }   
+        }else if(cantidadSeleccionada == "Hasta tres"){
+            if(series.temporadas.length <= 3){
+                ARRAY_SERIES_FILTRADAS.push(series);
+            }   
+        }else if(cantidadSeleccionada == "Tres o más"){
+        if(series.temporadas.length >= 3){
+            ARRAY_SERIES_FILTRADAS.push(series);
+            }   
+        }else{
+            ARRAY_SERIES_FILTRADAS = ARRAY_SERIES;
+        }
+    }
+
+    // Mostrar series filtradas en el listado de series
+    let sectionPrincipalConSeries = document.querySelector("#listadoSeries");
+    sectionPrincipalConSeries.innerHTML = '';
+    sectionPrincipalConSeries = document.querySelector("#listadoSeries");
+    if (ARRAY_SERIES_FILTRADAS.length > 0) {
+        devolverSeriesAlHome(sectionPrincipalConSeries, ARRAY_SERIES_FILTRADAS);
+    } else {
+        let mensajeSeriesNoEncontradas = document.createElement("h3");
+        mensajeSeriesNoEncontradas.textContent = "No se encontraron series con ese criterio de búsqueda.";
+        sectionPrincipalConSeries.appendChild(mensajeSeriesNoEncontradas);
+    }
+ }
+
+
  let sectionPrincipalConSeries = document.querySelector("#listadoSeries");
 
  devolverSeriesAlHome(sectionPrincipalConSeries, ARRAY_SERIES);
  agregarCategorias();
- document.getElementById('buscador').addEventListener('input', filtrarSeries);    
+ document.getElementById('buscador').addEventListener('input', filtrarPorBuscador);    
+ document.getElementById('categorias').addEventListener('change',filtrarPorCategoria);
+ document.getElementById('temporadas').addEventListener('change',filtrarPorTemporada);
