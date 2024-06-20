@@ -43,7 +43,7 @@ localStorage.setItem("datosPeliculasStorage",JSON.stringify(PELICULAS)); // con 
         }
        
         // SERIES
-        const treceRazones = {nombreSerie: "trece razones", temporadas: [10, 8, 8], imagen: "../img/13razones.jpg", genero: "Drama",    iframe:"https://www.youtube.com/embed/OefhPVLcRVA?si=RaSwboaGxPw-Ioic", linkVideo: " https://www.youtube.com/watch?v=AsEK7-UwFwM", sinopsis: "Tony es homosexual. En algún tiempo mantuvo una relación con Ryan Shaver, la cual no le agradó porque el lo trataba como si fuera de su propiedad. Actualmente, tiene una relación estable con Brad." //COMPLETAR 
+        const treceRazones = {nombreSerie: "trece razones", temporadas: ["10", "8", "8"], imagen: "../img/13razones.jpg", genero: "Drama",    iframe:"https://www.youtube.com/embed/OefhPVLcRVA?si=RaSwboaGxPw-Ioic", linkVideo: " https://www.youtube.com/watch?v=AsEK7-UwFwM", sinopsis: "Tony es homosexual. En algún tiempo mantuvo una relación con Ryan Shaver, la cual no le agradó porque el lo trataba como si fuera de su propiedad. Actualmente, tiene una relación estable con Brad." //COMPLETAR 
         };
 
         const bebeReno = {nombreSerie: "Bebe Reno", temporadas: [10, 5, 8], imagen: "../img/bebereno.jpg", genero: "Drama", iframe:"https://www.youtube.com/embed/_OFS3FOhLiM?si=zJjRLBYx3u8hjrga", linkVideo: " https://www.youtube.com/watch?v=eMzejXYKT_Y", sinopsis: "Cuando un comediante en apuros le muestra un poco de amabilidad a una mujer vulnerable, se desata una obsesión enfermiza que amenaza con destruir las vidas de ambos. Ve todo lo que quieras. Escrita y protagonizada por el comediante Richard Gadd, con Jessica Gunning («The Outlaws») y Nava Mau («Waking Hour»)." //COMPLETAR 

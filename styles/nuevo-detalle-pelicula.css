@@ -78,6 +78,23 @@
     padding-left: 5%;
   }
 
-
+  select {
+    border: none; /* Elimina el borde predeterminado */
+    border-radius: 20px;
+    outline: none; /* Elimina el contorno predeterminado */
+    background: transparent; /* Fondo transparente */
+    background-color: rgba(25, 25, 25, 0.5);
+    color: rgb(211, 211, 20);
+    font-family: "Livvic";
+    font-weight: bolder;
+    padding: 1%;
+  }
+  
+  select option {
+    background-color: #0b0a43;
+    font-family: "Livvic";
+    font-weight: bolder;
+    border-radius: 10px;
+  }
 
   
