@@ -3,90 +3,91 @@ const regexSolonNumerosYLetras = /^[A-Za-z0-9]+$/;
 const regexSoloContraseniasValidad = /^(?=.*[A-Za-z].*[A-Za-z])(?=.*[0-9].*[0-9])(?=.*[!@#\$%\^&\*()_\+\-=\[\]{};':"\\|,.<>\/?].*[!@#\$%\^&\*()_\+\-=\[\]{};':"\\|,.<>\/?]).*$/;
 const regexMail = /^.*@.*\.com$/;
 
-const nombreDelUsuario = document.querySelector('#nombre');
+//INPUT
+//---------------------------------------------------------------------------------
+const nombreDelUsuario = document.querySelector('#nombre'); 
 const apellidoUsuario = document.querySelector('#apellido');
 const email = document.querySelector('#email');
 const nombreUsuario = document.querySelector('#nombre_usuario');
 const contraseña = document.querySelector('#contraseña');
 const contraseñaRepetida = document.querySelector('#contraseña_repetida');
-const radioButtomTarjetaCredito = document.querySelector('#tarjeta_credito');
-const campoNumeroTarjetaCredito = document.querySelector('#numero_tarjeta');
 const campoCodigoCVV = document.querySelector('#codigo_cvv');
+const campoNumeroTarjetaCredito = document.querySelector('#numero_tarjeta');
+//---------------------------------------------------------------------------------
+
+//RADIO BUTTON 
+//---------------------------------------------------------------------------------
+const radioButtomTarjetaCredito = document.querySelector('#tarjeta_credito');
 const radioButtomRapiPago = document.querySelector('#rapi_pago');
 const radioButtomPagoFacil = document.querySelector('#pago_facil');
 const radioButtomTransferenciaBancaria = document.querySelector('#Transferencia_bancaria');
+//---------------------------------------------------------------------------------
+
+//BOTON
 const botonDeConfirmacion = document.querySelector('#boton-confirmacion');
 
-function esUnaLetra(variableAValidar) {
-    return regexSoloLetras.test(variableAValidar);
-}
-
-function contieneNumerosYLetras(variableAValidar) {
-    return regexSolonNumerosYLetras.test(variableAValidar);
-}
-
-function contieneLoNecesarioParaSerUnaContrasenia(variableAValidar) {
-    return regexSoloContraseniasValidad.test(variableAValidar);
-}
-
-function contieneLoNecesarioParaSerUnMail(variableAValidar) {
-    return regexMail.test(variableAValidar);
-}
 
 function esUnNombreValido() {
+    let alerta = "";
     if (!esUnaLetra(nombreDelUsuario.value)) {
-        return "El nombre solo debe contener letras.";
+        alerta = "El nombre solo debe contener letras.";
     }
-    return "";
+    return alerta;
 }
 
 function esUnApellidoValido() {
+    let alerta = "";
     if (!esUnaLetra(apellidoUsuario.value)) {
-        return "El apellido solo debe contener letras.";
+        alerta = "El apellido solo debe contener letras.";
     }
-    return "";
+    return alerta;
 }
 
 function esUnEmail() {
+    let alerta = "";
     if (!contieneLoNecesarioParaSerUnMail(email.value)) {
-        return "El email no es válido.";
+        alerta = "El email no es válido.";
     }
-    return "";
+    return alerta;
 }
 
 function esUnNombreDeUsuarioValido() {
+    let alerta = "";
     if (!contieneNumerosYLetras(nombreUsuario.value)) {
-        return "El nombre de usuario solo debe contener letras y números.";
+        alerta = "El nombre de usuario solo debe contener letras y números.";
     }
-    return "";
+    return alerta;
 }
 
 function esUnaContraseniaValida() {
+    let alerta = "";
     if (!contieneLoNecesarioParaSerUnaContrasenia(contraseña.value)) {
-        return "La contraseña debe contener al menos dos letras, dos números y dos caracteres especiales.";
+        alerta = "La contraseña debe contener al menos dos letras, dos números y dos caracteres especiales.";
     }
-    return "";
+    return alerta;
 }
 
 function repetirContrasenia() {
+    let alerta = "";
     if (contraseña.value !== contraseñaRepetida.value) {
-        return "Las contraseñas no coinciden.";
+        alerta = "Las contraseñas no coinciden.";
     }
-    return "";
+    return alerta;
 }
 
 function validarCamposDePago() {
+    let alerta = "";
     if (radioButtomTarjetaCredito.checked) {
         if (campoNumeroTarjetaCredito.value.length < 16 || campoNumeroTarjetaCredito.value.length > 19) {
-            return "El número de tarjeta debe tener entre 16 y 19 dígitos.";
+            alerta = "El número de tarjeta debe tener entre 16 y 19 dígitos.";
         }
         if (campoCodigoCVV.value.length !== 3 || campoCodigoCVV.value === "000") {
-            return "El código CVV debe tener 3 dígitos y no puede ser '000'.";
+            alerta = "El código CVV debe tener 3 dígitos y no puede ser '000'.";
         }
     } else if (!radioButtomRapiPago.checked && !radioButtomPagoFacil.checked && !radioButtomTransferenciaBancaria.checked) {
-        return "Debe seleccionar un método de pago.";
+        alerta = "Debe seleccionar un método de pago.";
     }
-    return "";
+    return alerta;
 }
 
 function validacionFinal() {
@@ -113,12 +114,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const confirmPassword = document.getElementById('contraseña_repetida');
 
     // Inicializar el array de usuarios desde localStorage 
-    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || []; //inicializa un array con los datos. Si no tiene, crea uno vacio
 
     form.addEventListener('submit', function(event) {
         // Validar todos los campos
-        if (!validacionFinal()) {
-            event.preventDefault();
+        if (!validacionFinal()) { //Si devuelve false (hay algun dato mal ingresado)
+            event.preventDefault(); // previene el envio del formulario
             return;
         }
 
@@ -144,3 +145,20 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Usuario registrado exitosamente.');
     });
 });
+
+//FUNCIONES DE VALIDACIONES
+function esUnaLetra(variableAValidar) {
+    return regexSoloLetras.test(variableAValidar);
+}
+
+function contieneNumerosYLetras(variableAValidar) {
+    return regexSolonNumerosYLetras.test(variableAValidar);
+}
+
+function contieneLoNecesarioParaSerUnaContrasenia(variableAValidar) {
+    return regexSoloContraseniasValidad.test(variableAValidar);
+}
+
+function contieneLoNecesarioParaSerUnMail(variableAValidar) {
+    return regexMail.test(variableAValidar);
+}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Obtengo los nodos necesarios para utilizar
 const user = document.getElementById("user");
 const contraActual = document.querySelector(".contrasenia")
@@ -92,7 +91,6 @@ function unCheckSeleccionado() {
 
 
 //VALIDACION DE BOTON GUARDAR CAMBIOS , solo si esta lleno campo de contraseña o un metodo de pago seleccionado
-=======
 document.addEventListener('DOMContentLoaded', function() {
     // Obtengo los nodos necesarios para utilizar
     const user = document.getElementById("user");
@@ -191,32 +189,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> dcaa21bc83a265b35ca6ccc2a3ee9977e4ecd9dd
-
-
-
-
 
 
 

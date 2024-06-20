@@ -7,12 +7,12 @@ const alertas = document.querySelector("#alertas");
 function corroborarLogin(e) {
     e.preventDefault();
 
-    if (nombreUsuario.value.length < 3 && password.value.length < 3) {
-        alertas.textContent = "Los campos deben ser mayor a 3 caracteres";
-    } else if (nombreUsuario.value.length < 3) {
-        alertas.textContent = "Nombre de usuario debe ser mayor a 3 caracteres";
-    } else if (password.value.length < 3) {
-        alertas.textContent = "La contraseña debe ser mayor a 3 caracteres";
+    if (nombreUsuario.value.length < 8 && password.value.length < 8) {
+        alertas.textContent = "Los campos deben ser mayor a 8 caracteres";
+    } else if (nombreUsuario.value.length < 8) {
+        alertas.textContent = "Nombre de usuario debe ser mayor a 8 caracteres";
+    } else if (password.value.length < 8) {
+        alertas.textContent = "La contraseña debe ser mayor a 8 caracteres";
     } else {
         // Obtener usuarios desde localStorage
         let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
