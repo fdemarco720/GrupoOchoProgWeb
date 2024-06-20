@@ -39,7 +39,7 @@ function agregarCategoriasSeriesYPeliculas(){
 }
 
 //FUNCION PARA QUE EL BUSCADOR FILTRE PELICULAS
-function filtrarPeliculas() {
+function filtrarPorBuscador() {
 let textoBuscado = document.querySelector('#buscador').value.toLowerCase(); //Valor que le pase por el input
 let sectionPrincipalConPeliculas = document.querySelector("#listadoPeliculas");
 sectionPrincipalConPeliculas.innerHTML = ''; //Vacio el section con innerHTML = ""; que previamente lo cargue con todas las peliculas;
@@ -61,8 +61,40 @@ sectionPrincipalConPeliculas.appendChild(mensajePeliculasNoEncontradas);
      }
  }
 
+
+ function filtrarPorCategoria() {
+    let categoriaSeleccionada = document.querySelector('#categorias').selectedOptions[0].textContent;
+    console.log(categoriaSeleccionada);
+    
+    let ARRAY_PELICULAS_FILTRADAS = [];
+
+    for(pelis of ARRAY_PELICULAS){
+        if(categoriaSeleccionada == pelis.genero){
+            ARRAY_PELICULAS_FILTRADAS.push(pelis);
+        }
+    }
+
+    // Mostrar películas filtradas en el listado de películas
+    let sectionPrincipalConPeliculas = document.querySelector("#listadoPeliculas");
+    sectionPrincipalConPeliculas.innerHTML = '';
+    sectionPrincipalConPeliculas = document.querySelector("#listadoPeliculas");
+    if (ARRAY_PELICULAS_FILTRADAS.length > 0) {
+        devolverPeliculasAlHome(sectionPrincipalConPeliculas, ARRAY_PELICULAS_FILTRADAS);
+    } else {
+        let mensajePeliculasNoEncontradas = document.createElement("h3");
+        mensajePeliculasNoEncontradas.textContent = "No se encontraron películas con ese criterio de búsqueda.";
+        sectionPrincipalConPeliculas.appendChild(mensajePeliculasNoEncontradas);
+    }
+
+    if(categoriaSeleccionada == "Lo nuevo"){
+        sectionPrincipalConPeliculas.innerHTML = '';
+        devolverPeliculasAlHome(sectionPrincipalConPeliculas, ARRAY_PELICULAS);
+    }   
+ }
+
  let sectionPrincipalConPeliculas = document.querySelector("#listadoPeliculas");
  devolverPeliculasAlHome(sectionPrincipalConPeliculas, ARRAY_PELICULAS);
  
  agregarCategoriasSeriesYPeliculas();
- document.querySelector('#buscador').addEventListener('input', filtrarPeliculas);    
+ document.querySelector('#buscador').addEventListener('input', filtrarPorBuscador);    
+ document.getElementById('categorias').addEventListener('change', filtrarPorCategoria);

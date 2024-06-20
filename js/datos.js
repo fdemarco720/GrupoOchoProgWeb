@@ -78,7 +78,7 @@ const coco = {nombrePelicula: "Coco", duracion: 120, imagen: "../img/peliculas/c
         const treceRazones = {nombreSerie: "Trece razones", temporadas: [10, 5, 8], imagen: "../img/series/13razones.jpg", genero: "Drama",    iframe:"https://www.youtube.com/embed/OefhPVLcRVA?si=RaSwboaGxPw-Ioic", linkVideo: " https://www.youtube.com/watch?v=AsEK7-UwFwM", sinopsis: "Tony es homosexual. En algún tiempo mantuvo una relación con Ryan Shaver, la cual no le agradó porque el lo trataba como si fuera de su propiedad. Actualmente, tiene una relación estable con Brad." 
         };
 
-        const bebeReno = {nombreSerie: "Bebe Reno", temporadas: [10, 5, 8], imagen: "../img/series/bebereno.jpg", genero: "Drama", iframe:"https://www.youtube.com/embed/_OFS3FOhLiM?si=zJjRLBYx3u8hjrga", linkVideo: " https://www.youtube.com/watch?v=eMzejXYKT_Y", sinopsis: "Cuando un comediante en apuros le muestra un poco de amabilidad a una mujer vulnerable, se desata una obsesión enfermiza que amenaza con destruir las vidas de ambos. Escrita y protagonizada por el comediante Richard Gadd, con Jessica Gunning («The Outlaws») y Nava Mau («Waking Hour»)."
+        const bebeReno = {nombreSerie: "Bebe Reno", temporadas: [10], imagen: "../img/series/bebereno.jpg", genero: "Drama", iframe:"https://www.youtube.com/embed/_OFS3FOhLiM?si=zJjRLBYx3u8hjrga", linkVideo: " https://www.youtube.com/watch?v=eMzejXYKT_Y", sinopsis: "Cuando un comediante en apuros le muestra un poco de amabilidad a una mujer vulnerable, se desata una obsesión enfermiza que amenaza con destruir las vidas de ambos. Escrita y protagonizada por el comediante Richard Gadd, con Jessica Gunning («The Outlaws») y Nava Mau («Waking Hour»)."
         };
 
         const strangerThings = {nombreSerie: "Stranger Things", temporadas: [10, 8, 8, 5], imagen: "../img/series/stranger.jpg", genero: "Drama", iframe:"https://www.youtube.com/embed/GH1OU4as9QY?si=0gjXZzgll56XLr42", linkVideo: " https://www.youtube.com/watch?v=d0JYlUTbv1A", sinopsis: "Después de la extraña desaparición de un niño, un pueblo se encuentra ante un misterio que revela experimentos secretos, fuerzas sobrenaturales y a una niña muy especial. Este nostálgico tributo a los clásicos de los 80 logró muchas nominaciones al Emmy, y tres son a mejor serie dramática." 
@@ -117,7 +117,7 @@ const coco = {nombrePelicula: "Coco", duracion: 120, imagen: "../img/peliculas/c
         const PELICULAS = [badBoys, coco, toyStory4, wish, mulan, enredados, losIncreibles, valiente, toystory2, messi, laDamaYElVagaundo, shrek2, narnia, venom3, laHuerfana, cars, elExorcistaCreyente, laAbuela, terriefier, flip, insidious, bossLightYear, emociones2, exorcismoEnElVaticano, mama, comando, jhonWick1, elTrasportador1, rambo1];
 
         const SERIES = [losSimuladores, okupas,treceRazones, bebeReno, strangerThings, dark];
-        
+
 
 if(localStorage.getItem("datosPeliculasStorage")==null){ //hago una verificacion para cargar todos los datos en el localStorage una sola vez y no siempre que se actuliece con f5 el navegador
 
