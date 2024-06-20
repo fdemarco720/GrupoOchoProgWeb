@@ -98,7 +98,7 @@ function filtrarSeries() {
     
     const ARRAY_SERIES_FILTRADAS = [];
     for (let serie of ARRAY_SERIES) {
-    if (serie.nombrePelicula.toLowerCase().includes(textoBuscado.toLowerCase())) {
+    if (serie.nombreSerie.toLowerCase().includes(textoBuscado.toLowerCase())) {
     ARRAY_SERIES_FILTRADAS.push(serie);
        }
     }
@@ -118,5 +118,5 @@ function filtrarSeries() {
  devolverPeliculasAlHome(sectionPrincipalConPeliculas, ARRAY_PELICULAS);
  devolverSeriesAlHome(sectionPrincipalConSeries, ARRAY_SERIES);
  agregarCategorias();
- document.getElementById('buscador').addEventListener('input', filtrarPeliculas);    
  document.getElementById('buscador').addEventListener('input', filtrarSeries);
+ document.getElementById('buscador').addEventListener('input', filtrarPeliculas);    

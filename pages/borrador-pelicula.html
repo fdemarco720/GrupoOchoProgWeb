@@ -36,14 +36,16 @@
         <div class="peli-titulo">
           <h2>Peliculas</h2>
         </div>
+       
         <div class="peli-buscar">
-          <input type="text" placeholder="Buscar" />
-          <button type="submit">Buscar</button>
+          <input type="text" placeholder="Buscar" id="buscador">
+          <button type="submit"> Buscar </button>
         </div>
+
         <div>
           <form action="#" method="post">
             <label for="categorias">Categorias</label>
-            <select id="categorias" name="categorias">
+            <select name="categorias">
               <option value="1">Disney</option>
               <option value="2">Hechos reales</option>
               <option value="3">Terror</option>
@@ -86,11 +88,13 @@
         </div>
       </section>
 
-      <section class="grid-peliculas" id="listadoSeriesPeliculas">
+      <section class="grid-peliculas" id="listadoPeliculas">
+        <!-- SE COMPLETA CON JS -->
       </section>
     </main>
 
-    <script src="../js/peliculas.js"></script>
+    <script src="../js/datos.js"></script>
     <script src="../js/principal-series-peliculas.js"></script>
+
   </body>
 </html>
