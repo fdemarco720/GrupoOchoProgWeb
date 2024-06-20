@@ -72,32 +72,25 @@ const coco = {nombrePelicula: "Coco", duracion: 120, imagen: "../img/peliculas/c
     
     const rambo1 =  {nombrePelicula: "Rambo 1", duracion: 99, imagen: "../img/peliculas/rambo_1.jpg", genero: "Accion", iframe:"https://www.youtube.com/embed/B8_6FPY1HxA?si=c-TCJmEow2RZiiRe", linkVideo:"https://www.youtube.com/watch?v=yapW6p3hRJg", sinopsis:"John Rambo es un veterano boina verde que luchó en Vietnam. Un día va a visitar a un viejo amigo del ejército pero se entera de que ha muerto. Algunos días después, la policía lo detiene por vagabundo y se enseña con él. En ese momento, John recuerda los terrores y las torturas que sufrió durante la guerra de Vietnam y reacciona violentamente."};
     
-    
-const PELICULAS = [badBoys, coco, toyStory4, wish, mulan, enredados, losIncreibles, valiente, toystory2, messi, laDamaYElVagaundo, shrek2, narnia, venom3, laHuerfana, cars, elExorcistaCreyente, laAbuela, terriefier, flip, insidious, bossLightYear, emociones2, exorcismoEnElVaticano, mama, comando, jhonWick1, elTrasportador1, rambo1];
 
-if(localStorage.getItem("datosPeliculasStorage")==null){ //hago una verificacion para cargar todos los datos en el localStorage una sola vez y no siempre que se actuliece con f5 el navegador
-
-localStorage.setItem("datosPeliculasStorage",JSON.stringify(PELICULAS)); // con json.stringify guardo el objeto como string xq el local storage solo permite string
-
-        }
        
         // SERIES
-        const treceRazones = {nombreSerie: "trece razones", temporadas: ["10", "8", "8"], imagen: "../img/series/13razones.jpg", genero: "Drama",    iframe:"https://www.youtube.com/embed/OefhPVLcRVA?si=RaSwboaGxPw-Ioic", linkVideo: " https://www.youtube.com/watch?v=AsEK7-UwFwM", sinopsis: "Tony es homosexual. En algún tiempo mantuvo una relación con Ryan Shaver, la cual no le agradó porque el lo trataba como si fuera de su propiedad. Actualmente, tiene una relación estable con Brad." //COMPLETAR 
+        const treceRazones = {nombreSerie: "Trece razones", temporadas: [10, 5, 8], imagen: "../img/series/13razones.jpg", genero: "Drama",    iframe:"https://www.youtube.com/embed/OefhPVLcRVA?si=RaSwboaGxPw-Ioic", linkVideo: " https://www.youtube.com/watch?v=AsEK7-UwFwM", sinopsis: "Tony es homosexual. En algún tiempo mantuvo una relación con Ryan Shaver, la cual no le agradó porque el lo trataba como si fuera de su propiedad. Actualmente, tiene una relación estable con Brad." 
         };
 
-        const bebeReno = {nombreSerie: "Bebe Reno", temporadas: [10, 5, 8], imagen: "../img/series/bebereno.jpg", genero: "Drama", iframe:"https://www.youtube.com/embed/_OFS3FOhLiM?si=zJjRLBYx3u8hjrga", linkVideo: " https://www.youtube.com/watch?v=eMzejXYKT_Y", sinopsis: "Cuando un comediante en apuros le muestra un poco de amabilidad a una mujer vulnerable, se desata una obsesión enfermiza que amenaza con destruir las vidas de ambos. Ve todo lo que quieras. Escrita y protagonizada por el comediante Richard Gadd, con Jessica Gunning («The Outlaws») y Nava Mau («Waking Hour»)." //COMPLETAR 
+        const bebeReno = {nombreSerie: "Bebe Reno", temporadas: [10, 5, 8], imagen: "../img/series/bebereno.jpg", genero: "Drama", iframe:"https://www.youtube.com/embed/_OFS3FOhLiM?si=zJjRLBYx3u8hjrga", linkVideo: " https://www.youtube.com/watch?v=eMzejXYKT_Y", sinopsis: "Cuando un comediante en apuros le muestra un poco de amabilidad a una mujer vulnerable, se desata una obsesión enfermiza que amenaza con destruir las vidas de ambos. Escrita y protagonizada por el comediante Richard Gadd, con Jessica Gunning («The Outlaws») y Nava Mau («Waking Hour»)."
         };
 
-        const strangerThings = {nombreSerie: "Stranger Things", temporadas: [10, 8, 8, 5], imagen: "../img/series/stranger.jpg", genero: "Suspenso", iframe:"https://www.youtube.com/embed/GH1OU4as9QY?si=0gjXZzgll56XLr42", linkVideo: " https://www.youtube.com/watch?v=d0JYlUTbv1A", sinopsis: "Después de la extraña desaparición de un niño, un pueblo se encuentra ante un misterio que revela experimentos secretos, fuerzas sobrenaturales y a una niña muy especial. Ve todo lo que quieras. Este nostálgico tributo a los clásicos de los 80 logró muchas nominaciones al Emmy, y tres son a mejor serie dramática." //COMPLETAR 
+        const strangerThings = {nombreSerie: "Stranger Things", temporadas: [10, 8, 8, 5], imagen: "../img/series/stranger.jpg", genero: "Drama", iframe:"https://www.youtube.com/embed/GH1OU4as9QY?si=0gjXZzgll56XLr42", linkVideo: " https://www.youtube.com/watch?v=d0JYlUTbv1A", sinopsis: "Después de la extraña desaparición de un niño, un pueblo se encuentra ante un misterio que revela experimentos secretos, fuerzas sobrenaturales y a una niña muy especial. Este nostálgico tributo a los clásicos de los 80 logró muchas nominaciones al Emmy, y tres son a mejor serie dramática." 
         };
 
         const dark = {nombreSerie: "Dark", temporadas: [10, 7, 7, 8, 6], imagen: "../img/series/dark.jpg", genero: "Suspenso", iframe:"https://www.youtube.com/embed/6XXFGy9WDjU?si=MKBqVNWqI6V2jyr_", linkVideo: " https://www.youtube.com/watch?v=13a40lBM5ms", sinopsis: "​​​ Situada en la ficticia ciudad de Winden (Alemania), Dark sigue las secuelas de la desaparición de un niño que expone los secretos y las conexiones ocultas entre cuatro familias mientras desentrañan lentamente una siniestra conspiración de viaje en el tiempo que abarca tres generaciones." //COMPLETAR 
         };
 
-        const losSimuladores = {nombreSerie: "Los simuladores", temporadas: [10, 17], imagen: "../img/series/los_simuladores.jpg", genero: "Comedia", iframe:"https://www.youtube.com/embed/vdMXZC-e9oM?si=ixIu9IZn0IiaC2xn", linkVideo: "https://www.youtube.com/watch?v=aL5xmlJWjz0", sinopsis: "Cuatro socios constituyen un grupo especializado en la realización de operativos de simulación. Un equipo que busca la solución a los problemas que les plantean sus clientes. Para ello, organizan un sofisticado simulacro en el que crean una realidad falsa encarnando cada uno de ellos una función clara." //COMPLETAR 
+        const losSimuladores = {nombreSerie: "Los simuladores", temporadas: [10, 17], imagen: "../img/series/los_simuladores.jpg", genero: "Comedia", iframe:"https://www.youtube.com/embed/vdMXZC-e9oM?si=ixIu9IZn0IiaC2xn", linkVideo: "https://www.youtube.com/watch?v=aL5xmlJWjz0", sinopsis: "Cuatro socios constituyen un grupo especializado en la realización de operativos de simulación. Un equipo que busca la solución a los problemas que les plantean sus clientes. Para ello, organizan un sofisticado simulacro en el que crean una realidad falsa encarnando cada uno de ellos una función clara."
         };
         
-        const okupas = {nombreSerie: "Okupas", temporadas: [10, 12], imagen: "../img/series/okupas.jpg", genero: "Suspenso", iframe:"https://www.youtube.com/embed/OseXcTttPVE?si=Ji4DjK1rcm-73cM6", linkVideo: " https://www.youtube.com/watch?v=krNjzL2qFxo", sinopsis: "En el año 2000, un grupo de jóvenes ocupa ilegalmente una casa en Buenos Aires, al tiempo que lucha por la supervivencia en una ciudad cada vez más violenta y hostil. Ve todo lo que quieras. Esta serie, una de las más populares de Argentina, ganó cuatro premios Martín Fierro, incluido a mejor miniserie." //COMPLETAR 
+        const okupas = {nombreSerie: "Okupas", temporadas: [10, 12], imagen: "../img/series/okupas.jpg", genero: "Suspenso", iframe:"https://www.youtube.com/embed/OseXcTttPVE?si=Ji4DjK1rcm-73cM6", linkVideo: " https://www.youtube.com/watch?v=krNjzL2qFxo", sinopsis: "En el año 2000, un grupo de jóvenes ocupa ilegalmente una casa en Buenos Aires, al tiempo que lucha por la supervivencia en una ciudad cada vez más violenta y hostil. Esta serie, una de las más populares de Argentina, ganó cuatro premios Martín Fierro, incluido a mejor miniserie." 
         };
 
         const ag2 =  {nombrePelicula: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
@@ -120,7 +113,16 @@ localStorage.setItem("datosPeliculasStorage",JSON.stringify(PELICULAS)); // con 
     
         const ag11 =  {nombrePelicula: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
 
-const SERIES = [losSimuladores, okupas,treceRazones, bebeReno, strangerThings, dark];
+
+        const PELICULAS = [badBoys, coco, toyStory4, wish, mulan, enredados, losIncreibles, valiente, toystory2, messi, laDamaYElVagaundo, shrek2, narnia, venom3, laHuerfana, cars, elExorcistaCreyente, laAbuela, terriefier, flip, insidious, bossLightYear, emociones2, exorcismoEnElVaticano, mama, comando, jhonWick1, elTrasportador1, rambo1];
+
+        const SERIES = [losSimuladores, okupas,treceRazones, bebeReno, strangerThings, dark];
+        
+
+if(localStorage.getItem("datosPeliculasStorage")==null){ //hago una verificacion para cargar todos los datos en el localStorage una sola vez y no siempre que se actuliece con f5 el navegador
+
+localStorage.setItem("datosPeliculasStorage",JSON.stringify(PELICULAS)); // con json.stringify guardo el objeto como string xq el local storage solo permite string
+}
 
 if(localStorage.getItem("datosSeriesStorage")==null){
 

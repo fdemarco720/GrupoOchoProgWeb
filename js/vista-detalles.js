@@ -38,6 +38,7 @@ function buscarDatosParaDetallesPeliculas(){
     }
 }
 
+
 function buscarDatosParaDetallesSeries() {
     let titulo = document.querySelector("#titulo")
     let nodo_texto = document.createElement("h3");
@@ -48,6 +49,7 @@ function buscarDatosParaDetallesSeries() {
     
     let genero = document.querySelector("#genero");
     let nodo_genero = document.createElement("h3");
+   
     let sinopsis = document.querySelector("#sinopsis");
     let nodo_sinopsis = document.createElement("h3");
     
@@ -55,12 +57,11 @@ function buscarDatosParaDetallesSeries() {
     let temporadas_div = document.querySelector("#duracion");
     let nodo_temporada = document.createElement("h3");
     let select_temporada = document.createElement("select");
+
+    let capitulos_div = document.querySelector("#capitulos")
+    let nodo_capitulos = document.createElement("h3");
     
     let nodo_btn = document.querySelector("#btn_comenzar");
-    
-    
-
-
 
     for (let serie of ARRAY_SERIES_) {
         if (NOMBRE_SELECCIONADO == serie.nombreSerie) {
@@ -74,11 +75,30 @@ function buscarDatosParaDetallesSeries() {
             nodo_btn.href = serie.linkVideo;
             nodo_btn.target = "_blank";
 
-            nodo_temporada.textContent = `Temporadas:`;
+            nodo_temporada.textContent = `Temporada `;
             temporadas_div.appendChild(nodo_temporada);
 
-                temporadas_div.appendChild(select_temporada);
-                temporadas_div.appendChild(nodo_temporada);
+            function mostrarCapitulos() {
+                // Obtener el índice de la temporada seleccionada
+                let temporadaSeleccionada = select_temporada.value - 1; // Restamos 1 porque los índices en JavaScript comienzan en 0
+                
+                // Mostrar la cantidad de capítulos de la temporada seleccionada
+                let cantidadCapitulos = serie.temporadas[temporadaSeleccionada];
+                nodo_capitulos.textContent = `Capítulos [ ${cantidadCapitulos} ]`;
+                capitulos_div.appendChild(nodo_capitulos);
+            }
+
+            for(let i=1; i<= serie.temporadas.length;i++){
+                nodo_option = document.createElement("option");
+                nodo_option.value= i;
+                nodo_option.textContent = i;
+                select_temporada.appendChild(nodo_option);
+            }
+            temporadas_div.appendChild(select_temporada);
+           
+            select_temporada.addEventListener('change', mostrarCapitulos);
+            mostrarCapitulos();
+                
             }
         }
         }

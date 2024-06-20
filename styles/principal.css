@@ -197,6 +197,15 @@ section h3 {
   border-image-slice: 1; /* Define cómo se corta el gradiente */
 }
 
+section h3 a{
+  text-decoration: none;
+  color: #ffffff; 
+}
+
+section h3 a:hover{
+  text-shadow: 2px 2px 5px rgb(247, 231, 1);
+}
+
 .grid-img {
   border-radius: 5px;
   grid-gap: 10px;
