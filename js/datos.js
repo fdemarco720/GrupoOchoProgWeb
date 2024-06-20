@@ -1,4 +1,4 @@
-const coco = {nombrePelicula: "Coco", duracion: 120, imagen: "../img/peliculas/coco.jpeg", genero: "Dibujos animados", iframe: "https://www.youtube.com/embed/BrJ5smJr_2k?si=sTxAYd7YHPs4rNSo", linkVideo: "https://www.youtube.com/embed/Fq_x-gGimtQ?si=hcY09gTFvWDC5HYk",
+const coco = {nombrePelicula: "Coco", duracion: 120, imagen: "../img/peliculas/coco.jpeg", genero: "Dibujos animados", iframe: "https://www.youtube.com/embed/Ga6RYejo6Hk?si=5XGTrtBLH7Gh6ki4", linkVideo: "https://www.youtube.com/watch?v=BrJ5smJr_2k",
         sinopsis: "Coco es una película animada de Pixar lanzada en 2017 que cuenta la historia un niño mexicano de 12 años con el sueño de convertirse en músico. En el Día de los Muertos, se encuentra en la Tierra de los Muertos, donde se conoce a sus ancestros y descubre secretos familiares. Con la ayuda de un encantador y travieso, se embarca en un viaje para desbloquear historia familiar y ganar la bendición de su familia para seguir su pasión por la música."
     };
         
@@ -40,7 +40,7 @@ const coco = {nombrePelicula: "Coco", duracion: 120, imagen: "../img/peliculas/c
 
     const badBoys =  {nombrePelicula: "Bad Boys", duracion: 126, imagen: "../img/peliculas/bad_boys.jpg", genero: "Accion", iframe:"https://www.youtube.com/embed/8KXy_GZZKLA?si=jMtihfbqKF8NvHbz", linkVideo:"https://www.youtube.com/embed/iCKEUlu7Tkc?si=TZY3sSp43oNwXtwP", sinopsis:"Dos policías de Miami sólo tienen 72 horas para encontrar cien millones de dólares en heroína robados del almacén de pruebas de su propia comisaría."};
     
-    const venom3 =  {nombrePelicula: "Venom 3", duracion: 97, imagen: "../img/peliculas/venom_3.webp", genero: "Accion", iframe:"https://www.youtube.com/embed/ncOH8-d4BYQ?si=POzFV-EH9wuSZrQt", linkVideo:"https://www.youtube.com/watch?v=q8WqyyHwjCM", sinopsis:"En el corte final, Peter Parker logra sacar a Eddie Brock del cuerpo de Venom durante la última pelea. Acto seguido, Parker le arroja un explosivo a Venom para así acabarlo, pero Eddie abraza al simbionte a último minuto, muriendo junto a él al explotar la granada."};
+    const venom3 =  {nombrePelicula: "Venom 3", duracion: 97, imagen: "../img/peliculas/venom_3.webp", genero: "Accion", iframe:"https://www.youtube.com/embed/R8hO48KD548?si=PjjwwQww-U_ztiDL", linkVideo:"https://www.youtube.com/watch?v=q8WqyyHwjCM", sinopsis:"En el corte final, Peter Parker logra sacar a Eddie Brock del cuerpo de Venom durante la última pelea. Acto seguido, Parker le arroja un explosivo a Venom para así acabarlo, pero Eddie abraza al simbionte a último minuto, muriendo junto a él al explotar la granada."};
 
     const laHuerfana =  {nombrePelicula: "La huerfana", duracion: 107, imagen: "../img/peliculas/laHuerfana.jpg", genero: "Terror", iframe:"https://www.youtube.com/embed/F7TfCfebWcc?si=ifr_wOymzRw7qDDq", linkVideo:"https://www.youtube.com/watch?v=xHEl0BzItYA", sinopsis:"Devastada por la perdida del bebé que estaban esperando, Kate y su marido deciden adoptar a una niña en el orfanato local. Sin embargo, al poco tiempo de tener a la pequeña en casa, la niña no parece ser tan inocente como Kate cree."};
 
@@ -54,9 +54,9 @@ const coco = {nombrePelicula: "Coco", duracion: 120, imagen: "../img/peliculas/c
 
     const flip =  {nombrePelicula: "Flip", duracion: 96, imagen: "../img/peliculas/flip.jpg", genero: "Accion", iframe:"https://www.youtube.com/embed/MGNfRhkWji8?si=8p49TfiAFQDZjCgs", linkVideo:"https://www.youtube.com/watch?v=z0BzoWM1rR0", sinopsis:"Juli y Bryce son dos niños de siete años, compañeros de clase y vecinos. Aparentemente sus personalidades son muy distintas, pero eso no evita que Juli se enamore perdidamente de Bryce. En cambio, el jovencito no comparte esta afinidad y evita a Juli por más de seis años."};
 
-    const insidious =  {nombrePelicula: "Insidious", duracion: 96, imagen: "../img/peliculas/insidious.jpeg", genero: "Terror", iframe:"https://www.youtube.com/watch?v=LajEoAAW8LQ", linkVideo:"https://www.youtube.com/embed/lUwaosQZkHU?si=Tx9OPtQe7ODUlmkG", sinopsis:""};
+    const insidious =  {nombrePelicula: "Insidious", duracion: 96, imagen: "../img/peliculas/insidious.jpeg", genero: "Terror", iframe:"https://www.youtube.com/embed/FRW3K0LlsD0?si=fZWBx4tzCO3t4Js7", linkVideo:"https://www.youtube.com/embed/lUwaosQZkHU?si=Tx9OPtQe7ODUlmkG", sinopsis:"Josh (Patrick Wilson), su esposa Renai (Rose Byrne) y sus tres hijos acaban de mudarse a una vieja casa. Pero, tras un desgraciado accidente, uno de los niños entra en coma y, al mismo tiempo, empiezan a producirse en la casa extraños fenómenos que aterrorizan a la familia."};
 
-    const bossLightYear =  {nombrePelicula: "Boss Light Year", duracion: 89, imagen: "../img/peliculas/bossLightYear.jpeg", genero: "Dibujos animados", iframe:"https://www.youtube.com/embed/lKLqrpYNfnA?si=a2ipvcNRwnlkHuwA", linkVideo:"https://www.youtube.com/watch?v=AjhBathUhOo", sinopsis:"Buzz Lightyear se embarca en una aventura intergaláctica con un grupo de reclutas ambiciosos y su compañero robot."};
+    const bossLightYear =  {nombrePelicula: "Boss Light Year", duracion: 89, imagen: "../img/peliculas/bossLightYear.jpeg", genero: "Dibujos animados", iframe:"https://www.youtube.com/embed/UgQbPITUGD0?si=rWS4MDGlrVsvRjHA", linkVideo:"https://www.youtube.com/watch?v=AjhBathUhOo", sinopsis:"Buzz Lightyear se embarca en una aventura intergaláctica con un grupo de reclutas ambiciosos y su compañero robot."};
 
     const emociones2 =  {nombrePelicula: "Emociones 2", duracion: 96, imagen: "../img/peliculas/emociones.jpeg", genero: "Dibujos animados", iframe:"https://www.youtube.com/embed/cB2CUdv_aHQ?si=wOWAPoQzLQLxtCgC", linkVideo:"https://www.youtube.com/watch?v=pJYkcRtUMzw", sinopsis:"Riley acaba de nacer y en el centro de control de su pequeña mente sólo hay sitio para Alegría. Poco después aparece Tristeza y, más tarde, Ira, Miedo y Asco. Las cinco emociones tendrán que ayudar a la niña cuando, ya con 11 años, su familia se mude desde su idílico pueblo del Medio Oeste estadounidense a la enorme e intimidante ciudad de San Francisco. Tras una serie de acontecimientos, Alegría y Tristeza tendrán que trabajar juntas para salvar a Riley."};
 
@@ -70,12 +70,12 @@ const coco = {nombrePelicula: "Coco", duracion: 120, imagen: "../img/peliculas/c
     
     const elTrasportador1 =  {nombrePelicula: "El Transportador 1", duracion: 97, imagen: "../img/peliculas/el_Transportador_1.jpg", genero: "Accion", iframe:"https://www.youtube.com/embed/104ZiS5K_a4?si=x0SRayPAUSijxYeG", linkVideo:"https://www.youtube.com/watch?v=67er74rf710", sinopsis:"El ex militar Frank Martin vive lo que parece ser una vida tranquila prestando sus servicios como transportador, un mercenario que traslada bienes de un lugar a otro."};
     
-    const rambo1 =  {nombrePelicula: "Rambo 1", duracion: 99, imagen: "../img/peliculas/rambo_1.jpg", genero: "Accion", iframe:"https://www.youtube.com/embed/B8_6FPY1HxA?si=c-TCJmEow2RZiiRe", linkVideo:"https://www.youtube.com/watch?v=yapW6p3hRJg", sinopsis:"John Rambo es un veterano boina verde que luchó en Vietnam. Un día va a visitar a un viejo amigo del ejército pero se entera de que ha muerto. Algunos días después, la policía lo detiene por vagabundo y se enseña con él. En ese momento, John recuerda los terrores y las torturas que sufrió durante la guerra de Vietnam y reacciona violentamente."};
+    const rambo1 =  {nombrePelicula: "Rambo 1", duracion: 99, imagen: "../img/peliculas/rambo_1.jpg", genero: "Accion", iframe:"https://www.youtube.com/embed/-dzmAS_B1Qw?si=Y2XaW-f_tz6srkOw", linkVideo:"https://www.youtube.com/watch?v=yapW6p3hRJg", sinopsis:"John Rambo es un veterano boina verde que luchó en Vietnam. Un día va a visitar a un viejo amigo del ejército pero se entera de que ha muerto. Algunos días después, la policía lo detiene por vagabundo y se enseña con él. En ese momento, John recuerda los terrores y las torturas que sufrió durante la guerra de Vietnam y reacciona violentamente."};
     
 
        
         // SERIES
-        const treceRazones = {nombreSerie: "Trece razones", temporadas: [10, 5, 8], imagen: "../img/series/13razones.jpg", genero: "Drama",    iframe:"https://www.youtube.com/embed/OefhPVLcRVA?si=RaSwboaGxPw-Ioic", linkVideo: " https://www.youtube.com/watch?v=AsEK7-UwFwM", sinopsis: "Tony es homosexual. En algún tiempo mantuvo una relación con Ryan Shaver, la cual no le agradó porque el lo trataba como si fuera de su propiedad. Actualmente, tiene una relación estable con Brad." 
+        const treceRazones = {nombreSerie: "Trece razones", temporadas: [10, 5, 8], imagen: "../img/series/13razones.jpg", genero: "Drama",    iframe:"https://www.youtube.com/embed/AsEK7-UwFwM?si=dYSxHZnsIJwSNos1", linkVideo: " https://www.youtube.com/watch?v=AsEK7-UwFwM", sinopsis: "Tony es homosexual. En algún tiempo mantuvo una relación con Ryan Shaver, la cual no le agradó porque el lo trataba como si fuera de su propiedad. Actualmente, tiene una relación estable con Brad." 
         };
 
         const bebeReno = {nombreSerie: "Bebe Reno", temporadas: [10, 5, 8], imagen: "../img/series/bebereno.jpg", genero: "Drama", iframe:"https://www.youtube.com/embed/_OFS3FOhLiM?si=zJjRLBYx3u8hjrga", linkVideo: " https://www.youtube.com/watch?v=eMzejXYKT_Y", sinopsis: "Cuando un comediante en apuros le muestra un poco de amabilidad a una mujer vulnerable, se desata una obsesión enfermiza que amenaza con destruir las vidas de ambos. Escrita y protagonizada por el comediante Richard Gadd, con Jessica Gunning («The Outlaws») y Nava Mau («Waking Hour»)."
@@ -84,34 +84,34 @@ const coco = {nombrePelicula: "Coco", duracion: 120, imagen: "../img/peliculas/c
         const strangerThings = {nombreSerie: "Stranger Things", temporadas: [10, 8, 8, 5], imagen: "../img/series/stranger.jpg", genero: "Drama", iframe:"https://www.youtube.com/embed/GH1OU4as9QY?si=0gjXZzgll56XLr42", linkVideo: " https://www.youtube.com/watch?v=d0JYlUTbv1A", sinopsis: "Después de la extraña desaparición de un niño, un pueblo se encuentra ante un misterio que revela experimentos secretos, fuerzas sobrenaturales y a una niña muy especial. Este nostálgico tributo a los clásicos de los 80 logró muchas nominaciones al Emmy, y tres son a mejor serie dramática." 
         };
 
-        const dark = {nombreSerie: "Dark", temporadas: [10, 7, 7, 8, 6], imagen: "../img/series/dark.jpg", genero: "Suspenso", iframe:"https://www.youtube.com/embed/6XXFGy9WDjU?si=MKBqVNWqI6V2jyr_", linkVideo: " https://www.youtube.com/watch?v=13a40lBM5ms", sinopsis: "​​​ Situada en la ficticia ciudad de Winden (Alemania), Dark sigue las secuelas de la desaparición de un niño que expone los secretos y las conexiones ocultas entre cuatro familias mientras desentrañan lentamente una siniestra conspiración de viaje en el tiempo que abarca tres generaciones." //COMPLETAR 
+        const dark = {nombreSerie: "Dark", temporadas: [10, 7, 7, 8, 6], imagen: "../img/series/dark.jpg", genero: "Suspenso", iframe:"https://www.youtube.com/embed/14FGjkrrXFk?si=0st9kxp6RS3x0AXY", linkVideo: " https://www.youtube.com/watch?v=13a40lBM5ms", sinopsis: "​​​ Situada en la ficticia ciudad de Winden (Alemania), Dark sigue las secuelas de la desaparición de un niño que expone los secretos y las conexiones ocultas entre cuatro familias mientras desentrañan lentamente una siniestra conspiración de viaje en el tiempo que abarca tres generaciones." //COMPLETAR 
         };
 
-        const losSimuladores = {nombreSerie: "Los simuladores", temporadas: [10, 17], imagen: "../img/series/los_simuladores.jpg", genero: "Comedia", iframe:"https://www.youtube.com/embed/vdMXZC-e9oM?si=ixIu9IZn0IiaC2xn", linkVideo: "https://www.youtube.com/watch?v=aL5xmlJWjz0", sinopsis: "Cuatro socios constituyen un grupo especializado en la realización de operativos de simulación. Un equipo que busca la solución a los problemas que les plantean sus clientes. Para ello, organizan un sofisticado simulacro en el que crean una realidad falsa encarnando cada uno de ellos una función clara."
+        const losSimuladores = {nombreSerie: "Los simuladores", temporadas: [10, 17], imagen: "../img/series/los_simuladores.jpg", genero: "Comedia", iframe:"https://www.youtube.com/embed/lckmVDEtnlQ?si=ahDBQCKK5v3PPE5z", linkVideo: "https://www.youtube.com/watch?v=aL5xmlJWjz0", sinopsis: "Cuatro socios constituyen un grupo especializado en la realización de operativos de simulación. Un equipo que busca la solución a los problemas que les plantean sus clientes. Para ello, organizan un sofisticado simulacro en el que crean una realidad falsa encarnando cada uno de ellos una función clara."
         };
         
-        const okupas = {nombreSerie: "Okupas", temporadas: [10, 12], imagen: "../img/series/okupas.jpg", genero: "Suspenso", iframe:"https://www.youtube.com/embed/OseXcTttPVE?si=Ji4DjK1rcm-73cM6", linkVideo: " https://www.youtube.com/watch?v=krNjzL2qFxo", sinopsis: "En el año 2000, un grupo de jóvenes ocupa ilegalmente una casa en Buenos Aires, al tiempo que lucha por la supervivencia en una ciudad cada vez más violenta y hostil. Esta serie, una de las más populares de Argentina, ganó cuatro premios Martín Fierro, incluido a mejor miniserie." 
+        const okupas = {nombreSerie: "Okupas", temporadas: [10, 12], imagen: "../img/series/okupas.jpg", genero: "Suspenso", iframe:"https://www.youtube.com/embed/uHOR21i16j4?si=z340CWZGHOpJm8Dh", linkVideo: " https://www.youtube.com/watch?v=krNjzL2qFxo", sinopsis: "En el año 2000, un grupo de jóvenes ocupa ilegalmente una casa en Buenos Aires, al tiempo que lucha por la supervivencia en una ciudad cada vez más violenta y hostil. Esta serie, una de las más populares de Argentina, ganó cuatro premios Martín Fierro, incluido a mejor miniserie." 
         };
 
-        const ag2 =  {nombrePelicula: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
+        const elPuntero =  {nombreSerie: "El puntero", temporadas: [15, 17, 10], imagen: "../img/", genero: "Comedia", iframe:"https://www.youtube.com/embed/Ce7nlqW3zHM?si=72WJHdveNVAskhZW", linkVideo:"https://www.youtube.com/watch?v=S6KQkxnvglw", sinopsis:"El Puntero cuenta la historia de un operador de la política. Un hombre que expresa sus sueños de una manera particular a través del trabajo político y social de un barrio."};
 
-        const ag3 =  {nombrePelicula: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
+        const breakingBad =  {nombreSerie: "Breaking Bad", temporadas: [15, 17], imagen: "../img/", genero: "Suspenso", iframe:"https://www.youtube.com/embed/mXd1zTwcQ18?si=M3JxinCsmMMhv1kE", linkVideo:"https://www.youtube.com/watch?v=Xmcp0isSAWg", sinopsis:"Un profesor de Química de secundaria con cáncer terminal se asocia a un exestudiante para asegurar el futuro de su familia al fabricar y vender metanfetamina"};
     
-        const ag4 =  {nombrePelicula: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
+        const elPatronDelMal =  {nombreSerie: "Pablo Escobar 'El Patron del mal'", temporadas: [10, 12, 14], imagen: "../img/", genero: "Suspenso", iframe:"https://www.youtube.com/embed/QKSlDz_PkeM?si=8hfIf4q7EoLaOOgQ", linkVideo:"https://www.youtube.com/watch?v=Fa9yL01LbUk", sinopsis:"Esta fascinante serie narra la vida del infame Pablo Escobar, desde sus días como ratero hasta convertirse en el jefe de un imperio del narcotráfico. Ve todo lo que quieras."};
     
-        const ag5 =  {nombrePelicula: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
+        const ag5 =  {nombreSerie: "", temporadas: [], imagen: "../img/", genero: "", iframe:"https://www.youtube.com/embed/YgHc99YPNxY?si=Qv1PMX0gUEdlKxty", linkVideo:"https://www.youtube.com/watch?v=TCtrLCcGTVw", sinopsis:"Un viajero estadounidense que anda mal de dinero se apunta a ser tester de un nuevo sistema de videojuegos. Pronto descubrirá que la ficción a veces es demasiado real."};
     
-        const ag6 =  {nombrePelicula: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
+        const ag6 =  {nombreSerie: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
     
-        const ag7 =  {nombrePelicula: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
+        const ag7 =  {nombreSerie: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
     
-        const ag8 =  {nombrePelicula: "", duracion: 0, imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
+        const ag8 =  {nombreSerie: "", duracion: 0, imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
     
-        const ag9 =  {nombrePelicula: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
+        const ag9 =  {nombreSerie: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
     
-        const ag10 =  {nombrePelicula: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
+        const ag10 =  {nombreSerie: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
     
-        const ag11 =  {nombrePelicula: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
+        const ag11 =  {nombreSerie: "", temporadas: [], imagen: "../img/", genero: "", iframe:"", linkVideo:"", sinopsis:""};
 
 
         const PELICULAS = [badBoys, coco, toyStory4, wish, mulan, enredados, losIncreibles, valiente, toystory2, messi, laDamaYElVagaundo, shrek2, narnia, venom3, laHuerfana, cars, elExorcistaCreyente, laAbuela, terriefier, flip, insidious, bossLightYear, emociones2, exorcismoEnElVaticano, mama, comando, jhonWick1, elTrasportador1, rambo1];
