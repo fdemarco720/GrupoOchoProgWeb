@@ -11,6 +11,7 @@ const checkPagoFacil = document.getElementById("pago_facil");
 const checkTransferencia = document.getElementById("Transferencia_bancaria");
 const botonGuardar = document.querySelector(".guardar-cambios");
 
+const carcateresTotalesDeContraseña = document.querySelector('#contrasenia');
 
 
 
@@ -32,6 +33,9 @@ const objetoUsuario = buscarUsuario(usuarioActual);
 user.textContent = objetoUsuario.nombreUsuario;
 
 
+let campoDeContraseniaDinamico = document.createElement('p');
+carcateresTotalesDeContraseña.appendChild(campoDeContraseniaDinamico);
+campoDeContraseniaDinamico.textContent = devolverContraseñaComoAsterisco();
 
 
 
@@ -83,10 +87,11 @@ function camposContraseniaCompletos(){
 
 //VALIDACION DE CHECKBOX
 function unCheckSeleccionado() {
+    let hayUnRadioButonSeleccionado = false;
     if (checkTarjetaCredito.checked || checkRapiPago.checked || checkPagoFacil.checked || checkTransferencia.checked) {
-        return true;
+        hayUnRadioButonSeleccionado = true;
     }
-    return false;
+    return hayUnRadioButonSeleccionado;
 }
 
 
@@ -190,7 +195,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
-
+function devolverContraseñaComoAsterisco(){
+    let asteriscos = "";
+    let totalDeCaracteres = usuarios[0].contraseña;
+    for(let i=0; i<totalDeCaracteres.length; i++){
+        if(totalDeCaracteres.charAt[i] != ""){
+            asteriscos += '*';
+        }
+    }
+    return asteriscos; 
+}
 
 
 
