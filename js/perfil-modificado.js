@@ -1,5 +1,5 @@
 //Regex
-const regexSolonNumerosYLetras = /^[A-Za-z0-9]$/;
+const regexSolonNumerosYLetras = /^[A-Za-z0-9]+$/;
 const regexSoloContraseniasValidas =/^(?=(.*[A-Za-z]){2})(?=(.*[0-9]){2})(?=(.*[!@#\$%\^&\*()_\+\-=\[\]]){2}).{8,}$/;
 
 const usuarios = JSON.parse(localStorage.getItem("usuarios"));
@@ -30,6 +30,7 @@ const radioButtonPagoFacil = document.querySelector('#rapi_pago');
 const radioButtonRapiPago = document.querySelector('#pago_facil');
 const radioButtonTransferenciaBancaria = document.querySelector('#Transferencia_bancaria');
 
+
 const botonGuardarCambios = document.querySelector('#guardar-cambios');
 const botonCancelarSubscripcion = document.querySelector('#cancelar-subscripcion');
 
@@ -46,6 +47,36 @@ function buscarUsuario(usuarioActual) {
     }
 }
 
+console.log("El usuario seleccionó: " + usuarioEncontrado.metodoPago);
+
+function queRadioButtonEstaSeleccionado(){ 
+    if(usuarioEncontrado.metodoPago == "pago_facil"){
+        radioButtonTarjetaDeCredito.checked = true;
+    }else if(usuarioEncontrado.metodoPago == "rapi_pago"){
+        radioButtonPagoFacil.checked = true;
+    }else if(usuarioEncontrado.metodoPago == "Transferencia_bancaria"){
+        radioButtonRapiPago.checked = true;
+    }else if(usuarioEncontrado.metodoPago == "tarjeta_credito"){
+        radioButtonTransferenciaBancaria.checked = true;
+    }
+}
+
+function queRadioButtonSeleccionoElUsuario(){
+    let radioButtonSeleccionado; 
+    if( radioButtonTarjetaDeCredito.checked == true){
+       radioButtonSeleccionado = radioButtonTarjetaDeCredito;
+    }else if(radioButtonPagoFacil.checked == true){
+        radioButtonSeleccionado = radioButtonPagoFacil;
+    }else if(radioButtonRapiPago.checked == true){
+        radioButtonSeleccionado = radioButtonRapiPago;
+    }else if(radioButtonTransferenciaBancaria.checked == true){
+        radioButtonSeleccionado = radioButtonTransferenciaBancaria;
+    }
+    return radioButtonSeleccionado;
+}
+
+queRadioButtonEstaSeleccionado();
+
 function validacionDeFormulario(evento){
     evento.preventDefault();
 
@@ -61,8 +92,10 @@ function validacionDeFormulario(evento){
                 if(validacionDeContrasenia(campoNuevaContrasenia.value) && campoNuevaContrasenia.value == campoRepetirContrasenia.value){
                     sonIguales = true;
                     campoContraseniaActual.value = campoNuevaContrasenia.value; //Actualizo contraseña
+                }else if(campoNuevaContrasenia.value.length < 8 || campoRepetirContrasenia.value.length < 8 ){
+                    errores += "- Las contraseñas no cumplen con los requerimientos minimos\n";
                 }else{
-                    errores += "- Las contraseñas no coinciden\n";
+                    errores += "- Las contraseñas no son iguales\n";   
                 }
         }
         return sonIguales;
@@ -113,13 +146,14 @@ function validacionDeFormulario(evento){
         let esValido = false;
         if((ingresoNumeroTarjeta.value.length == 0 && ingresoCodigoCVV.value.length == 0 && seDeseaCambiarElMetodoDePago() || (esCorrectoElIngresoDeTarjetaDeCredito() && !seDeseaCambiarElMetodoDePago()))){ 
             esValido = true;    //Solo devuelve true si numero de tarjeta y codigo cvv estan vacios y esté seleccionado otro radio buton que no sea tarjeta de credito
+            
         }
         return esValido;
     }
     
     function camposMalCompletados(){
         estanMalCompletados = false;
-        if(esValidoElCambioDeMetodoDePago() && !validacionDeContraseniasIguales()){
+        if(esValidoElCambioDeMetodoDePago() && ((!validacionDeContraseniasIguales()) && campoNuevaContrasenia.value.length != 0 && campoRepetirContrasenia.value.length != 0) ){
             estanMalCompletados = true;
             errores += "El metodo de pago es valido, pero las contrasenias son erroneas!";
         }else if(validacionDeContraseniasIguales() && !esValidoElCambioDeMetodoDePago){
@@ -132,6 +166,7 @@ function validacionDeFormulario(evento){
 
     function sePuedeGuardarLosCambios(){
         let sePuede = false;
+        
         if( ((validacionDeContraseniasIguales() && esValidoElCambioDeMetodoDePago() ) || (validacionDeContraseniasIguales() || esValidoElCambioDeMetodoDePago()) ) && errores == "" && !camposMalCompletados() ){ //Se analiza que cambios quiere realizar el usuario
             sePuede = true;
             alert("Datos guardados exitosamente!")
@@ -145,10 +180,11 @@ function validacionDeFormulario(evento){
         return sePuede;
     }
 
+    errores = ""; //Reinicio los errores
     sePuedeGuardarLosCambios();
 };
 
-botonGuardarCambios.addEventListener('click', validacionDeFormulario);
+botonGuardarCambios.addEventListener('submit', validacionDeFormulario());
 
 function contraseñaDinamica(){
     let contenido = "";
@@ -167,13 +203,3 @@ function contraseñaDinamica(){
  * F0 || F3 Se puede guardar cambios
  * 
  */
-
-
-/*
-console.log( "contraseñas iguales" + validacionDeContraseniasIguales());
-console.log("codigo cvv" + elCodigoCVVEsCorrecto());
-console.log("largo de tarjeta" + elLargoDeLaTarjetaDeCreditoEsCorrecto());
-console.log("Se quiere cambiar el metodo de pago" + seDeseaCambiarElMetodoDePago());
-console.log("Se puede" + sePuedeCambiarElMetodoDePago());
-console.log("\n");
-*/
