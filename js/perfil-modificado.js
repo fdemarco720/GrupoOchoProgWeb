@@ -1,28 +1,25 @@
 //Regex
 const regexSolonNumerosYLetras = /^[A-Za-z0-9]$/;
-//.*[A-Za-z] $ / * + 
 const regexSoloContraseniasValidas =/^(?=(.*[A-Za-z]){2})(?=(.*[0-9]){2})(?=(.*[!@#\$%\^&\*()_\+\-=\[\]]){2}).{8,}$/;
 
 const usuarios = JSON.parse(localStorage.getItem("usuarios"));
 const usuarioActual = JSON.parse(localStorage.getItem('usuarioActual')) || [];
-const usuarioEncontrado = buscarUsuario(usuarioActual);
+let usuarioEncontrado = buscarUsuario(usuarioActual);
 
 const campoNombreUsuario = document.querySelector('#user');
 const campoMail = document.querySelector('#mailDinamico');
 
 campoNombreUsuario.textContent = usuarioEncontrado.nombreUsuario;
-camp
+campoMail.textContent = usuarioEncontrado.email;
 
 console.log(usuarioEncontrado);
 
 const campoContraseniaActual = document.querySelector('#contrasenia');
 //agrego un <P> que se modifique cada vez que el usuario cambie su contraseña  
 let campoContraseniaActualDinamico = document.createElement('p');
-//campoContraseniaActualDinamico = usuarios.JSON.parse('usuarioActual');
-//let contraseniaaa = campoContraseniaActualDinamico.nombre;
-//campoContraseniaActualDinamico.textContent = contraseñaDinamica();
+campoContraseniaActualDinamico.textContent = contraseñaDinamica();
 campoContraseniaActual.appendChild(campoContraseniaActualDinamico);
-//
+
 const campoNuevaContrasenia = document.querySelector('#NC');
 const campoRepetirContrasenia = document.querySelector('#RC');
 const ingresoNumeroTarjeta = document.querySelector('#numero_tarjeta');
@@ -41,14 +38,12 @@ let errorFinal = "";
 
 console.log(usuarios)
 
-function buscarUsuario(usuarioActual){
-    let usuarioEncontrado = null;
-    for(let usuario of usuarios){
-        if(usuario.nombre === usuarioActual.nombre){
-            usuarioEncontrado = usuario;
+function buscarUsuario(usuarioActual) {
+    for (let usuario of usuarios) {
+        if (usuario.nombreUsuario === usuarioActual) {
+            return usuario
         }
     }
-    return usuarioEncontrado;
 }
 
 function validacionDeFormulario(evento){
@@ -62,12 +57,14 @@ function validacionDeFormulario(evento){
     //F0
     function validacionDeContraseniasIguales(){ //Este metodo solo se debe llamar en caso de que el usuario quiera guardar cambios y los campos de contraseñas esten completos
         let sonIguales = false;
-            if(validacionDeContrasenia(campoNuevaContrasenia.value) && campoNuevaContrasenia.value == campoRepetirContrasenia.value){
-                sonIguales = true;
-                campoContraseniaActual.value = campoNuevaContrasenia.value; //Actualizo contraseña
-            }else{
-                errores += "- Las contraseñas no coinciden\n";
-            }
+        if(campoNuevaContrasenia.value.length != 0 && campoRepetirContrasenia.value.length != 0){
+                if(validacionDeContrasenia(campoNuevaContrasenia.value) && campoNuevaContrasenia.value == campoRepetirContrasenia.value){
+                    sonIguales = true;
+                    campoContraseniaActual.value = campoNuevaContrasenia.value; //Actualizo contraseña
+                }else{
+                    errores += "- Las contraseñas no coinciden\n";
+                }
+        }
         return sonIguales;
     }
     //F1
@@ -95,6 +92,8 @@ function validacionDeFormulario(evento){
         let esCorrecto = false;
         if(radioButtonTarjetaDeCredito.checked && elCodigoCVVEsCorrecto() && elLargoDeLaTarjetaDeCreditoEsCorrecto()){ //Condiciones para tarjeta de credito
                 esCorrecto = true;
+        }else{
+            errores += "- Los datos de la tarjeta de credito son erroneos";
         }
         return esCorrecto;
     }
@@ -118,33 +117,47 @@ function validacionDeFormulario(evento){
         return esValido;
     }
     
+    function camposMalCompletados(){
+        estanMalCompletados = false;
+        if(esValidoElCambioDeMetodoDePago() && !validacionDeContraseniasIguales()){
+            estanMalCompletados = true;
+            errores += "El metodo de pago es valido, pero las contrasenias son erroneas!";
+        }else if(validacionDeContraseniasIguales() && !esValidoElCambioDeMetodoDePago){
+            estanMalCompletados = true;
+            errores += "Las contrasenias son validas, pero el metodo de pago es erroneo!";
+        }
+        return estanMalCompletados;
+    }
+
+
     function sePuedeGuardarLosCambios(){
         let sePuede = false;
-        if( ((validacionDeContraseniasIguales() && esValidoElCambioDeMetodoDePago() ) || (validacionDeContraseniasIguales() || esValidoElCambioDeMetodoDePago()) ) && errores == ""  ){ //Se analiza que cambios quiere realizar el usuario
+        if( ((validacionDeContraseniasIguales() && esValidoElCambioDeMetodoDePago() ) || (validacionDeContraseniasIguales() || esValidoElCambioDeMetodoDePago()) ) && errores == "" && !camposMalCompletados() ){ //Se analiza que cambios quiere realizar el usuario
             sePuede = true;
             alert("Datos guardados exitosamente!")
             evento.target.submit();
+            errores = "";
         }else{
            errorFinal = "No se puede realizar los cambios requeridos. Datos erroneos";
            alert(errorFinal + ". Las razones son: \n" + errores );
+           errores = "";
         }
         return sePuede;
     }
 
+    sePuedeGuardarLosCambios();
 };
 
 botonGuardarCambios.addEventListener('click', validacionDeFormulario);
-/*
+
 function contraseñaDinamica(){
     let contenido = "";
-    for(let i = 0; i<campoContraseniaActual.value.length; i++){
-        if(contraseniaaa.charAt(i) != ""){
+    for(let i = 0; i<usuarioEncontrado.contraseña.length; i++){
             contenido += "*";
-        }
     }
     return contenido;
 }
-*/
+
 /**
  * contraseñas validas  --------
  * contraseñas iguales F0  ----------
