@@ -14,31 +14,6 @@ campoMail.textContent = usuarioEncontrado.email;
 
 console.log(usuarioEncontrado);
 
-const campoContraseniaActual = document.querySelector('#contrasenia');
-//agrego un <P> que se modifique cada vez que el usuario cambie su contraseña  
-let campoContraseniaActualDinamico = document.createElement('p');
-campoContraseniaActualDinamico.textContent = contraseñaDinamica();
-campoContraseniaActual.appendChild(campoContraseniaActualDinamico);
-
-const campoNuevaContrasenia = document.querySelector('#NC');
-const campoRepetirContrasenia = document.querySelector('#RC');
-const ingresoNumeroTarjeta = document.querySelector('#numero_tarjeta');
-const ingresoCodigoCVV = document.querySelector('#codigo_cvv');
-
-const radioButtonTarjetaDeCredito = document.querySelector('#tarjeta_credito');
-const radioButtonPagoFacil = document.querySelector('#rapi_pago');
-const radioButtonRapiPago = document.querySelector('#pago_facil');
-const radioButtonTransferenciaBancaria = document.querySelector('#Transferencia_bancaria');
-
-
-const botonGuardarCambios = document.querySelector('#guardar-cambios');
-const botonCancelarSubscripcion = document.querySelector('#cancelar-subscripcion');
-
-let errores = "";
-let errorFinal = "";
-
-console.log(usuarios)
-
 function buscarUsuario(usuarioActual) {
     for (let usuario of usuarios) {
         if (usuario.nombreUsuario === usuarioActual) {
@@ -75,16 +50,74 @@ function queRadioButtonSeleccionoElUsuario(){
     return radioButtonSeleccionado;
 }
 
+function botonSeleccionado(){
+    let botonSeleccionado;
+    if(queRadioButtonSeleccionoElUsuario().value = "pago_facil"){
+        botonSeleccionado = queRadioButtonSeleccionoElUsuario().value;
+    }else if(queRadioButtonSeleccionoElUsuario().value = "rapi_pago"){
+        botonSeleccionado = queRadioButtonSeleccionoElUsuario().value;
+    }else if(queRadioButtonSeleccionoElUsuario().value = "tarjeta_credito"){
+        botonSeleccionado = queRadioButtonSeleccionoElUsuario().value;
+    }else if(queRadioButtonSeleccionoElUsuario().value = "Transferencia_bancaria"){
+        botonSeleccionado = queRadioButtonSeleccionoElUsuario().value;
+    }
+    return botonSeleccionado;
+}
+
+function validacionDeContrasenia(variableAValidar){
+    let sePudoValidar = false;
+    sePudoValidar = regexSoloContraseniasValidas.test(variableAValidar);
+    return sePudoValidar;
+}
+
+function contraseñaDinamica(){
+    let contenido = "";
+    for(let i = 0; i<usuarioEncontrado.contraseña.length; i++){
+            contenido += "*";
+    }
+    return contenido;
+}
+
+
+const campoContraseniaActual = document.querySelector('#contrasenia');
+//agrego un <P> que se modifique cada vez que el usuario cambie su contraseña  
+let campoContraseniaActualDinamico = document.createElement('p');
+campoContraseniaActualDinamico.textContent = contraseñaDinamica();
+campoContraseniaActual.appendChild(campoContraseniaActualDinamico);
+
+const campoNuevaContrasenia = document.querySelector('#NC');
+const campoRepetirContrasenia = document.querySelector('#RC');
+const ingresoNumeroTarjeta = document.querySelector('#numero_tarjeta');
+const ingresoCodigoCVV = document.querySelector('#codigo_cvv');
+
+const radioButtonTarjetaDeCredito = document.querySelector('#tarjeta_credito');
+const radioButtonPagoFacil = document.querySelector('#rapi_pago');
+const radioButtonRapiPago = document.querySelector('#pago_facil');
+const radioButtonTransferenciaBancaria = document.querySelector('#Transferencia_bancaria');
+
+
+const botonGuardarCambios = document.querySelector('#guardar-cambios');
+const botonCancelarSubscripcion = document.querySelector('#cancelar-subscripcion');
+
+let errores = "";
+let errorFinal = "";
+
+console.log(usuarios)
+
+
 queRadioButtonEstaSeleccionado();
 
 function validacionDeFormulario(evento){
     evento.preventDefault();
 
-    function validacionDeContrasenia(variableAValidar){
-        let sePudoValidar = false;
-        sePudoValidar = regexSoloContraseniasValidas.test(variableAValidar);
-        return sePudoValidar;
+    function seRealizaronCambios(){
+        let seRealizaronCambios = true;
+        if((campoNuevaContrasenia.value.length == 0 && campoRepetirContrasenia.value.length == 0) && queRadioButtonSeleccionoElUsuario().value == botonSeleccionado().value){
+            seRealizaronCambios = false
+        }
+        return seRealizaronCambios;
     }
+
     //F0
     function validacionDeContraseniasIguales(){ //Este metodo solo se debe llamar en caso de que el usuario quiera guardar cambios y los campos de contraseñas esten completos
         let sonIguales = false;
@@ -166,11 +199,13 @@ function validacionDeFormulario(evento){
 
     function sePuedeGuardarLosCambios(){
         let sePuede = false;
-        
-        if( ((validacionDeContraseniasIguales() && esValidoElCambioDeMetodoDePago() ) || (validacionDeContraseniasIguales() || esValidoElCambioDeMetodoDePago()) ) && errores == "" && !camposMalCompletados() ){ //Se analiza que cambios quiere realizar el usuario
+
+        if(!seRealizaronCambios()){
+            alert("Para guardar los cambios se debe querer cambiar la contraseña o el metodo de pago");
+        }else if( ((validacionDeContraseniasIguales() && esValidoElCambioDeMetodoDePago() ) || (validacionDeContraseniasIguales() || esValidoElCambioDeMetodoDePago()) ) && errores == "" && !camposMalCompletados() ){ //Se analiza que cambios quiere realizar el usuario
             sePuede = true;
             alert("Datos guardados exitosamente!")
-            evento.target.submit();
+            window.location.href = "./pages/principal.html";
             errores = "";
         }else{
            errorFinal = "No se puede realizar los cambios requeridos. Datos erroneos";
@@ -184,15 +219,8 @@ function validacionDeFormulario(evento){
     sePuedeGuardarLosCambios();
 };
 
-botonGuardarCambios.addEventListener('submit', validacionDeFormulario());
+botonGuardarCambios.addEventListener('click', validacionDeFormulario);
 
-function contraseñaDinamica(){
-    let contenido = "";
-    for(let i = 0; i<usuarioEncontrado.contraseña.length; i++){
-            contenido += "*";
-    }
-    return contenido;
-}
 
 /**
  * contraseñas validas  --------
