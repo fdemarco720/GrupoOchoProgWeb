@@ -109,6 +109,41 @@ function buscarDatosParaDetallesSeries() {
     
     if(TIPO_SELECCIONADO == "pelicula"){
         buscarDatosParaDetallesPeliculas();
+        let array_random = obtenerElementosAleatorios(ARRAY_PELICULAS_);
+        div_similares = document.querySelector(".carrousel");
+
+         devolverPeliculasAlHome(div_similares,array_random);
         }
+
+        function devolverPeliculasAlHome(div, arrayParametro){
+            for (let pelicula of arrayParametro) {
+                let div_create = document.createElement("div");
+               div_create.className = "carrousel-cell";
+                let nodo_img = document.createElement("img");
+                nodo_img.src = pelicula.imagen;
+                let nodo_a = document.createElement("a");
+                nodo_a.href = `../pages/vista-detalles.html?nombre=${pelicula.nombrePelicula}&tipo=pelicula`;
+                nodo_a.target ="_blank";
+                
+                nodo_a.appendChild(nodo_img);
+                div_create.appendChild(nodo_a);
+                div_similares.appendChild(div_create);
+            }
+        }
+
+        function obtenerElementosAleatorios(array) {
+
+            let elementosAleatorios = [];
+
+            while (elementosAleatorios.length < 5) {
+
+                let indiceAleatorio = Math.floor(Math.random() * array.length);
+
+                elementosAleatorios.push(array[indiceAleatorio]);
+            }
+
+            return elementosAleatorios;
+        }
+
 
     

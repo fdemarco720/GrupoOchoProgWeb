@@ -1,6 +1,6 @@
 .carrousel-cell {
     width: 20%; /* Ajusta el ancho del contenedor según tus necesidades */
-    max-width: 20%; /* Ejemplo: máximo ancho permitido para el contenedor */
+    max-width: 30%; /* Ejemplo: máximo ancho permitido para el contenedor */
     position: relative; /* Importante para alinear correctamente la imagen */
     overflow: hidden; /* Evita que la imagen sobresalga del contenedor */
     height: 15em; /* Altura específica del contenedor */

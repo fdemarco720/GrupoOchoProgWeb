@@ -2,6 +2,7 @@ const JSON_DATOSSERIES = localStorage.getItem("datosSeriesStorage");
 const ARRAY_SERIES = JSON.parse(JSON_DATOSSERIES); 
 
 function devolverSeriesAlHome(sectionParametro, arrayParametro){
+   
     for (let serie of arrayParametro) {
         let nodo_div = document.createElement("div");
         let nodo_img = document.createElement("img");
@@ -60,34 +61,23 @@ function filtrarPorBuscador() {
 
  function filtrarPorCategoria() {
     let categoriaSeleccionada = document.querySelector('#categorias').selectedOptions[0].textContent;
-    console.log(categoriaSeleccionada);
-
-    let ARRAY_SERIES_FILTRADAS = [];
-
-    for(series of ARRAY_SERIES){
-        if(categoriaSeleccionada == series.genero){
-            ARRAY_SERIES_FILTRADAS.push(series);
-        }
-    }
-
-    // Mostrar series filtradas en el listado de series
     let sectionPrincipalConSeries = document.querySelector("#listadoSeries");
     sectionPrincipalConSeries.innerHTML = '';
-    sectionPrincipalConSeries = document.querySelector("#listadoSeries");
-    if (ARRAY_SERIES_FILTRADAS.length > 0) {
-        devolverSeriesAlHome(sectionPrincipalConSeries, ARRAY_SERIES_FILTRADAS);
-    } else {
-        let mensajeSeriesNoEncontradas = document.createElement("h3");
-        mensajeSeriesNoEncontradas.textContent = "No se encontraron series con ese criterio de búsqueda.";
-        sectionPrincipalConSeries.appendChild(mensajeSeriesNoEncontradas);
-    }
+    console.log(categoriaSeleccionada);
 
-    if(categoriaSeleccionada == "Lo nuevo"){
-        sectionPrincipalConSeries.innerHTML = '';
+    //CONSIGO EL ARRAY CON LAS SERIES FILTRADAS POR CATEGORIA
+    let ARRAY_SERIES_FILTRADAS = [];
+    if(categoriaSeleccionada == "De todo"){
         devolverSeriesAlHome(sectionPrincipalConSeries, ARRAY_SERIES);
-    }
-
+    }else{
+        for(series of ARRAY_SERIES){
+            if(categoriaSeleccionada == series.genero){
+            ARRAY_SERIES_FILTRADAS.push(series);
+        }
+        }
+    devolverSeriesAlHome(sectionPrincipalConSeries, ARRAY_SERIES_FILTRADAS);  
 }
+ }
 
 function filtrarPorTemporada(){
     let cantidadSeleccionada = document.querySelector('#temporadas').selectedOptions[0].textContent;
