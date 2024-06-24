@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función para actualizar los datos del usuario
     function actualizarUsuario() {
+        
         const nuevaContrasenia = nuevaContra ? nuevaContra.value : null;
         const repetirContrasenia = repetirContra ? repetirContra.value : null;
 
@@ -96,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Guardar los cambios en localStorage
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
         alert('Datos actualizados correctamente.');
+        window.location.href = "./principal.html";
     }
 
     botonGuardar.addEventListener('click', function(event) {
