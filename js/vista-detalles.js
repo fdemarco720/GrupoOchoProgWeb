@@ -103,35 +103,22 @@ function buscarDatosParaDetallesSeries() {
         }
         }
 
-    if (TIPO_SELECCIONADO == "serie") {
-        buscarDatosParaDetallesSeries();
+function agregarPeliculasAlCarrousel(divParametro, arrayParametro){
+    for (pelicula of arrayParametro) {
+        let nodo_div = document.createElement("div");
+        nodo_div.classList.add("carrousel-cell");
+        let nodo_img = document.createElement("img");
+        nodo_img.src = pelicula.imagen;
+        let nodo_a = document.createElement("a");
+        nodo_a.href = `../pages/vista-detalles.html?nombre=${pelicula.nombrePelicula}&tipo=pelicula`;
+        nodo_a.target ="_blank"; 
+        nodo_a.appendChild(nodo_img);
+        nodo_div.appendChild(nodo_a)
+        divParametro.appendChild(nodo_div);
+        }
     }
-    
-    if(TIPO_SELECCIONADO == "pelicula"){
-        buscarDatosParaDetallesPeliculas();
-        let array_random = obtenerElementosAleatorios(ARRAY_PELICULAS_);
-        div_similares = document.querySelector(".carrousel");
 
-         devolverPeliculasAlHome(div_similares,array_random);
-        }
-
-        function devolverPeliculasAlHome(div, arrayParametro){
-            for (let pelicula of arrayParametro) {
-                let div_create = document.createElement("div");
-               div_create.className = "carrousel-cell";
-                let nodo_img = document.createElement("img");
-                nodo_img.src = pelicula.imagen;
-                let nodo_a = document.createElement("a");
-                nodo_a.href = `../pages/vista-detalles.html?nombre=${pelicula.nombrePelicula}&tipo=pelicula`;
-                nodo_a.target ="_blank";
-                
-                nodo_a.appendChild(nodo_img);
-                div_create.appendChild(nodo_a);
-                div_similares.appendChild(div_create);
-            }
-        }
-
-        function obtenerElementosAleatorios(array) {
+        function obtenerPeliculasPorCategoria(array) {
 
             let elementosAleatorios = [];
 
@@ -145,5 +132,16 @@ function buscarDatosParaDetallesSeries() {
             return elementosAleatorios;
         }
 
+        function elegirDetalles (){
+        if (TIPO_SELECCIONADO == "serie") {
+            buscarDatosParaDetallesSeries();
+        }else if(TIPO_SELECCIONADO == "pelicula"){
+            buscarDatosParaDetallesPeliculas();
+            let div_carrousel = document.querySelector("#carrousel-pelicula");  
+            let array_pelicula_categoria = obtenerPeliculasPorCategoria(ARRAY_PELICULAS_);
+             agregarPeliculasAlCarrousel(div_carrousel, array_pelicula_categoria);
+            }
+        }
 
+        elegirDetalles();
     
