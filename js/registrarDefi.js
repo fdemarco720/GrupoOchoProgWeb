@@ -1,9 +1,10 @@
 const regexSoloLetras = /^[A-Za-z]+$/;
 const regexSolonNumerosYLetras = /^[A-Za-z0-9]+$/;
+const regexNombreUsuario = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z0-9]+$/;
 const regexSoloContraseniasValidad = /^(?=.*[A-Za-z].*[A-Za-z])(?=.*[0-9].*[0-9])(?=.*[!@#\$%\^&\*()_\+\-=\[\]{};':"\\|,.<>\/?].*[!@#\$%\^&\*()_\+\-=\[\]{};':"\\|,.<>\/?]).*$/;
 const regexMail = /^.*@.*\.com$/;
 
-//INPUT
+// INPUT
 //---------------------------------------------------------------------------------
 const nombreDelUsuario = document.querySelector('#nombre'); 
 const apellidoUsuario = document.querySelector('#apellido');
@@ -15,7 +16,7 @@ const campoCodigoCVV = document.querySelector('#codigo_cvv');
 const campoNumeroTarjetaCredito = document.querySelector('#numero_tarjeta');
 //---------------------------------------------------------------------------------
 
-//RADIO BUTTON 
+// RADIO BUTTON 
 //---------------------------------------------------------------------------------
 const radioButtomTarjetaCredito = document.querySelector('#tarjeta_credito');
 const radioButtomRapiPago = document.querySelector('#rapi_pago');
@@ -23,14 +24,13 @@ const radioButtomPagoFacil = document.querySelector('#pago_facil');
 const radioButtomTransferenciaBancaria = document.querySelector('#Transferencia_bancaria');
 //---------------------------------------------------------------------------------
 
-//BOTON
+// BOTON
 const botonDeConfirmacion = document.querySelector('#boton-confirmacion');
-
 
 function esUnNombreValido() {
     let alerta = "";
     if (!esUnaLetra(nombreDelUsuario.value)) {
-        alerta = "El nombre solo debe contener letras.";
+        alerta = "El nombre solo debe contener letras.\n";
     }
     return alerta;
 }
@@ -38,7 +38,7 @@ function esUnNombreValido() {
 function esUnApellidoValido() {
     let alerta = "";
     if (!esUnaLetra(apellidoUsuario.value)) {
-        alerta = "El apellido solo debe contener letras.";
+        alerta = "El apellido solo debe contener letras.\n";
     }
     return alerta;
 }
@@ -46,23 +46,27 @@ function esUnApellidoValido() {
 function esUnEmail() {
     let alerta = "";
     if (!contieneLoNecesarioParaSerUnMail(email.value)) {
-        alerta = "El email no es válido.";
+        alerta = "El email no es válido.\n";
     }
     return alerta;
 }
 
 function esUnNombreDeUsuarioValido() {
     let alerta = "";
-    if (!contieneNumerosYLetras(nombreUsuario.value)) {
-        alerta = "El nombre de usuario solo debe contener letras y números.";
+    if (nombreUsuario.value.length < 8) {
+        alerta = "El nombre de usuario debe tener al menos 8 caracteres.\n";
+    } else if (!contieneLetrasYAlMenosUnNumero(nombreUsuario.value)) {
+        alerta = "El nombre de usuario debe contener letras y al menos un número.\n";
     }
     return alerta;
 }
 
 function esUnaContraseniaValida() {
     let alerta = "";
-    if (!contieneLoNecesarioParaSerUnaContrasenia(contraseña.value)) {
-        alerta = "La contraseña debe contener al menos dos letras, dos números y dos caracteres especiales.";
+    if (contraseña.value.length < 8) {
+        alerta = "La contraseña debe tener al menos 8 caracteres.\n";
+    } else if (!contieneLoNecesarioParaSerUnaContrasenia(contraseña.value)) {
+        alerta = "La contraseña debe contener al menos dos letras, dos números y dos caracteres especiales.\n";
     }
     return alerta;
 }
@@ -70,7 +74,7 @@ function esUnaContraseniaValida() {
 function repetirContrasenia() {
     let alerta = "";
     if (contraseña.value !== contraseñaRepetida.value) {
-        alerta = "Las contraseñas no coinciden.";
+        alerta = "Las contraseñas no coinciden.\n";
     }
     return alerta;
 }
@@ -79,13 +83,13 @@ function validarCamposDePago() {
     let alerta = "";
     if (radioButtomTarjetaCredito.checked) {
         if (campoNumeroTarjetaCredito.value.length < 16 || campoNumeroTarjetaCredito.value.length > 19) {
-            alerta = "El número de tarjeta debe tener entre 16 y 19 dígitos.";
+            alerta = "El número de tarjeta debe tener entre 16 y 19 dígitos.\n";
         }
         if (campoCodigoCVV.value.length !== 3 || campoCodigoCVV.value === "000") {
-            alerta = "El código CVV debe tener 3 dígitos y no puede ser '000'.";
+            alerta = "El código CVV debe tener 3 dígitos y no puede ser '000'.\n";
         }
     } else if (!radioButtomRapiPago.checked && !radioButtomPagoFacil.checked && !radioButtomTransferenciaBancaria.checked) {
-        alerta = "Debe seleccionar un método de pago.";
+        alerta = "Debe seleccionar un método de pago.\n";
     }
     return alerta;
 }
@@ -146,13 +150,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//FUNCIONES DE VALIDACIONES
+// FUNCIONES DE VALIDACIONES
 function esUnaLetra(variableAValidar) {
     return regexSoloLetras.test(variableAValidar);
 }
 
-function contieneNumerosYLetras(variableAValidar) {
-    return regexSolonNumerosYLetras.test(variableAValidar);
+function contieneLetrasYAlMenosUnNumero(variableAValidar) {
+    return regexNombreUsuario.test(variableAValidar);
 }
 
 function contieneLoNecesarioParaSerUnaContrasenia(variableAValidar) {

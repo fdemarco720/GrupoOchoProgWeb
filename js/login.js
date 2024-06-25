@@ -11,7 +11,7 @@ function corroborarLogin(e) {
         alertas.textContent = "Los campos deben ser mayor a 8 caracteres";
     } else if (nombreUsuario.value.length < 8) {
         alertas.textContent = "Nombre de usuario debe ser mayor a 8 caracteres";
-    } else if (password.value.length < 6) {
+    } else if (password.value.length <= 8) {
         alertas.textContent = "La contraseña debe ser mayor a 6 caracteres";
     } else {
         // Obtener usuarios desde localStorage
