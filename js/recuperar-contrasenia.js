@@ -1,47 +1,42 @@
-let elBotonEstaDeshabilitado = false;
-const nombreDeUsuario = document.querySelector('#nombre_De_usuario');
-const email = document.querySelector('#email');
-const formulario = document.querySelector('#formulario');
-const boton = document.getElementById("boton-confirmar");
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtener elementos del DOM
+    const nombreDeUsuario = document.querySelector('#nombre_De_usuario');
+    const email = document.querySelector('#email');
+    const botonConfirmar = document.querySelector('#boton-confirmar');
+    const form = document.querySelector('#formulario');
 
-//console.log(boton);  MUESTRA BOTON DESHABILITADO
-const VALOR_MINIMO_DE_CARACTERES_PARA_CAMPOS = 4;
-
-let valorDeNombreDeUsuario = nombreDeUsuario.value ;
-
-//console.log(typeof(valorDeNombreDeUsuario));
-
-function validacionDeCampos(e){
-    //botonConfirmar.disabled = true;
-    if(nombreDeUsuario.value.length >= VALOR_MINIMO_DE_CARACTERES_PARA_CAMPOS && (email.value.includes("@")
-    && email.value.includes(".com"))){
-        alert("RECUPERACION EXITOSA");
-        elBotonEstaDeshabilitado = true;
-        validacionDeBoton();
+    // Función para habilitar/deshabilitar el botón de confirmación
+    function verificarCampos() {
+        if (nombreDeUsuario.value && email.value) {
+            botonConfirmar.disabled = false;
+        } else {
+            botonConfirmar.disabled = true;
+        }
     }
-    else if((nombreDeUsuario.value.length < VALOR_MINIMO_DE_CARACTERES_PARA_CAMPOS) && (!email.value.includes("@")
-    && email.value.includes(".com"))){
-        e.preventDefault();
-        alert("El nombre debe contener 4 caracteres como minimo y el mail debe tener un formato correcto");      
+
+    // Añadir event listeners para verificar campos en tiempo real
+    nombreDeUsuario.addEventListener('input', verificarCampos);
+    email.addEventListener('input', verificarCampos);
+
+    // Función para validar si los datos coinciden con algún usuario en localStorage
+    function validarUsuario() {
+        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+        let usuarioEncontrado = usuarios.find(user => user.nombreUsuario === nombreDeUsuario.value && user.email === email.value);
+        
+        if (!usuarioEncontrado) {
+            alert('Los datos ingresados no coinciden con ningún usuario registrado.');
+            return false;
+        }
+        return true;
     }
-    else if(nombreDeUsuario.value.length < VALOR_MINIMO_DE_CARACTERES_PARA_CAMPOS){
-        alert("El nombre de usuario debe contenter 4 caracteres como minimo");
-        e.preventDefault();
-    }
-    else if((!email.value.includes("@") || (!email.value.includes(".com")))){
-        alert("El mail debe ser valido");
-        e.preventDefault();
-    } 
-}
 
-function validacionDeBoton(){
-    if(elBotonEstaDeshabilitado == true){
-        boton.disabled = false;
-    }
-}
+    // Añadir event listener al formulario para la validación final
+    form.addEventListener('submit', function(event) {
+        if (!validarUsuario()) {
+            event.preventDefault();
+        } else {
+            alert('Formulario enviado');
+        }
+    });
+});
 
-
-boton.addEventListener('click', validacionDeCampos);
-
-//5. Validar que ambos campos estén completos para enviar el email (tuki)
-//6. El botón enviar email debe estar deshabilitado si los campos no están completos. (tuki)
