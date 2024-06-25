@@ -101,14 +101,13 @@ body {
   background-color: rgb(211, 211, 20);
   border: none;
   border-radius: 5px;
+  color: #0b0a43;
+  font-family: "Livvic";
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.button-confirmar a {
-  font-family: "Livvic";
-  color: #0b0a43;
-  text-decoration: none;
-  font-weight: bold;
-}
+
 
 .button-confirmar:hover {
   background-color: rgba(211, 211, 20, 0.7);
