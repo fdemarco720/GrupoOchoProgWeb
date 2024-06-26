@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const user = document.getElementById("user");
     const emailElement = document.querySelector(".datos-usuario-email + p");
     const contraActual = document.querySelector(".contrasenia");
-    const nuevaContra = document.querySelector("#NC")
+    const nuevaContra = document.querySelector("#NC");
     const repetirContra = document.getElementById("RC");
     const checkTarjetaCredito = document.getElementById("tarjeta_credito");
     const checkRapiPago = document.getElementById("rapi_pago");
@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("emailElement:", emailElement);
     console.log("nuevaContra:", nuevaContra);
     console.log("repetirContra:", repetirContra);
-   
 
     // Regex para validación de contraseña
     const regexSoloContraseniasValidad = /^(?=.*[A-Za-z].*[A-Za-z])(?=.*[0-9].*[0-9])(?=.*[!@#\$%\^&\*()_\+\-=\[\]{};':"\\|,.<>\/?].*[!@#\$%\^&\*()_\+\-=\[\]{};':"\\|,.<>\/?]).*$/;
@@ -43,9 +42,24 @@ document.addEventListener('DOMContentLoaded', function() {
         return usuarios.find(usuario => usuario.nombreUsuario === nombreUsuario);
     }
 
+    // Función para validar tarjeta de crédito
+    function esTarjetaValida(numeroTarjeta) {
+        let suma = 0;
+        for (let i = 0; i < numeroTarjeta.length - 1; i++) {
+            suma += parseInt(numeroTarjeta.charAt(i), 10);
+        }
+        const ultimoDigito = parseInt(numeroTarjeta.charAt(numeroTarjeta.length - 1), 10);
+        if (suma % 2 === 0 && ultimoDigito % 2 !== 0) {
+            return true;
+        }
+        if (suma % 2 !== 0 && ultimoDigito % 2 === 0) {
+            return true;
+        }
+        return false;
+    }
+
     // Función para actualizar los datos del usuario
     function actualizarUsuario() {
-        
         const nuevaContrasenia = nuevaContra ? nuevaContra.value : null;
         const repetirContrasenia = repetirContra ? repetirContra.value : null;
 
@@ -78,6 +92,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             if (!codigoCVV || codigoCVV.value.length !== 3 || codigoCVV.value === "000") {
                 alert("El código CVV debe tener 3 dígitos y no puede ser '000'.");
+                return;
+            }
+            if (!esTarjetaValida(numeroTarjeta.value)) {
+                alert("La tarjeta de crédito no es válida.");
                 return;
             }
             objetoUsuario.metodoPago = "tarjeta_credito";
@@ -121,6 +139,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return asteriscos; 
     }
-
-    // Otros métodos y validaciones aquí...
 });

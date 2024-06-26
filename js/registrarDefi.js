@@ -88,10 +88,28 @@ function validarCamposDePago() {
         if (campoCodigoCVV.value.length !== 3 || campoCodigoCVV.value === "000") {
             alerta = "El código CVV debe tener 3 dígitos y no puede ser '000'.\n";
         }
+        if (!esTarjetaValida(campoNumeroTarjetaCredito.value)) {
+            alerta = "La tarjeta de crédito no es válida.\n";
+        }
     } else if (!radioButtomRapiPago.checked && !radioButtomPagoFacil.checked && !radioButtomTransferenciaBancaria.checked) {
         alerta = "Debe seleccionar un método de pago.\n";
     }
     return alerta;
+}
+
+function esTarjetaValida(numeroTarjeta) {
+    let suma = 0;
+    for (let i = 0; i < numeroTarjeta.length - 1; i++) {
+        suma += parseInt(numeroTarjeta.charAt(i), 10);
+    }
+    const ultimoDigito = parseInt(numeroTarjeta.charAt(numeroTarjeta.length - 1), 10);
+    if (suma % 2 === 0 && ultimoDigito % 2 !== 0) {
+        return true;
+    }
+    if (suma % 2 !== 0 && ultimoDigito % 2 === 0) {
+        return true;
+    }
+    return false;
 }
 
 function validacionFinal() {
