@@ -31,7 +31,7 @@ header{
     text-align: center;
     font-weight: bolder;
     font-size: 1em;
-    margin-bottom: 5em;
+    margin-bottom: 5%;
 }
 
 ul{
@@ -60,8 +60,8 @@ main{
     margin: 0 auto;
     background-color: rgba(25, 25, 25, 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombreado al borde */
-    max-width: 70em;
-    margin-bottom: 12.25em;
+    max-width: 80%;
+    margin-bottom: 3%;
 }
 
 section{
@@ -262,7 +262,7 @@ form input{
     margin-bottom: 0.5em;
 }
 
-footer{
+/* footer{
     background: linear-gradient(1500deg, #0b0a43, #0f2b6b, rgb(9, 45, 65));
     display: flex;
     flex-direction: column;
@@ -276,7 +276,7 @@ footer p{
 
 footer a{
     margin: 0.5em;
-}
+} */
 
 #guardar-cambios a{
     color: black;
@@ -288,6 +288,10 @@ footer a{
         flex-direction: column;
         align-items: center;
     }
+
+    header{
+        margin-bottom: 0;
+    }
     .titulo {
         margin-bottom: 1em;
     }
@@ -298,7 +302,8 @@ footer a{
         margin-top: 1em;
     }
     main {
-        max-width: 90%;
+        max-width: 100%;
+        margin-bottom: 0;
     }
     section {
         grid-template-columns: 1fr;
@@ -316,11 +321,12 @@ footer a{
     .guardar-cambios, .cancelar-suscripcion {
         margin: 1em auto;
     }
+    
 }
 
 @media screen and (min-width: 641px) and (max-width: 912px) {
     main {
-        max-width: 90%;
+        max-width: 100%;
         
     }
     .guardar-cambios, .cancelar-suscripcion {
@@ -337,7 +343,8 @@ footer a{
 
 @media screen and (min-width: 913px) and (max-width: 1025px) {
     main {
-        max-width: 70%;
+        max-width: 100%;
+        
     }
     .guardar-cambios, .cancelar-suscripcion {
         margin: 1em auto;

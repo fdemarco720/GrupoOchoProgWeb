@@ -225,7 +225,7 @@ section h3 a:hover{
 
 /* FOOTER */
 
-footer{
+.footer-home{
   background:linear-gradient(50deg, rgb(69, 68, 88), rgb(38, 38, 57), rgb(74, 75, 80));
   font-family: "Acme", sans-serif;
   color: #fff;
@@ -345,7 +345,7 @@ footer{
     margin: 0 1em;
   }
 
-  footer{
+  .footer-home{
     grid-area: footer;
     flex-direction: column;
     justify-content: center;
