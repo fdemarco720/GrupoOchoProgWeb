@@ -8,11 +8,11 @@ function corroborarLogin(e) {
     e.preventDefault();
 
     if (nombreUsuario.value.length < 8 && password.value.length < 8) {
-        alertas.textContent = "Los campos deben ser mayor a 8 caracteres";
+        alertas.textContent = "Los campos deben ser mayor a 7 caracteres";
     } else if (nombreUsuario.value.length < 8) {
-        alertas.textContent = "Nombre de usuario debe ser mayor a 8 caracteres";
-    } else if (password.value.length <= 8) {
-        alertas.textContent = "La contraseña debe ser mayor a 6 caracteres";
+        alertas.textContent = "Nombre de usuario debe ser mayor a 7 caracteres";
+    } else if (password.value.length < 8) {
+        alertas.textContent = "La contraseña debe ser mayor a 7 caracteres";
     } else {
         // Obtener usuarios desde localStorage
         let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
