@@ -28,11 +28,8 @@ header{
   width: 100%;
   height: 100%;
   background:linear-gradient(50deg, rgb(4, 2, 36), rgb(11, 11, 99), rgb(0, 1, 11));
-  /* background-color: rgba(25, 25, 25, 0.5); */
   align-items: center;
   justify-content: space-between;
-  /* position: relative;
-  height: fit-content; */
 }
 
 .titulo {
@@ -226,6 +223,22 @@ section h3 a:hover{
   box-shadow: 1px 1px 15px #ffffff;
 }
 
+/* FOOTER */
+
+footer{
+  background:linear-gradient(50deg, rgb(69, 68, 88), rgb(38, 38, 57), rgb(74, 75, 80));
+  font-family: "Acme", sans-serif;
+  color: #fff;
+  font-size: large;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2% 5%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-top: 3%;
+}
+
 @media screen and (max-width: 640px) {
   /* _________NAV_____________________ */
   body{
@@ -237,7 +250,8 @@ section h3 a:hover{
     grid-template-columns: 50% 50%;
     grid-template-areas:
       "titulo miCuenta"
-      "barra barra";
+      "barra barra"
+      "footer footer";
     width: 100%;
     height: 100%;
     position: relative;
@@ -329,6 +343,16 @@ section h3 a:hover{
 
   .miCuenta a{
     margin: 0 1em;
+  }
+
+  footer{
+    grid-area: footer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
 }

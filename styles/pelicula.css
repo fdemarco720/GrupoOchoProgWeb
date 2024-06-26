@@ -121,6 +121,21 @@ main h2 {
   box-shadow: 1px 1px 15px #ffffff;
 }
 
+  /* FOOTER */
+
+  footer{
+    background:linear-gradient(50deg, rgb(69, 68, 88), rgb(38, 38, 57), rgb(74, 75, 80));
+    font-family: "Acme", sans-serif;
+    color: #fff;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2% 5%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
 
 @media screen and (max-width: 640px) {
   
@@ -198,5 +213,12 @@ main h2 {
     grid-template-columns: repeat(3,auto);
   }
 
+  
+  footer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
   
 }
