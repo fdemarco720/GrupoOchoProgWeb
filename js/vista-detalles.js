@@ -118,30 +118,24 @@ function agregarPeliculasAlCarrousel(divParametro, arrayParametro){
         }
     }
 
-        function obtenerPeliculasPorCategoria(array) {
+    function obtenerPeliculasPorCategoria(array) {
 
-            let elementosAleatorios = [];
+        let elementosAleatorios = [];
 
-            while (elementosAleatorios.length < 5) {
+        while (elementosAleatorios.length < 5) {
 
-                let indiceAleatorio = Math.floor(Math.random() * array.length);
+            let indiceAleatorio = Math.floor(Math.random() * array.length);
 
-                elementosAleatorios.push(array[indiceAleatorio]);
-            }
-
-            return elementosAleatorios;
+            elementosAleatorios.push(array[indiceAleatorio]);
         }
 
-        function elegirDetalles (){
+        return elementosAleatorios;
+    }       
+ 
         if (TIPO_SELECCIONADO == "serie") {
             buscarDatosParaDetallesSeries();
         }else if(TIPO_SELECCIONADO == "pelicula"){
             buscarDatosParaDetallesPeliculas();
-            let div_carrousel = document.querySelector("#carrousel-pelicula");  
-            let array_pelicula_categoria = obtenerPeliculasPorCategoria(ARRAY_PELICULAS_);
-             agregarPeliculasAlCarrousel(div_carrousel, array_pelicula_categoria);
             }
-        }
 
-        elegirDetalles();
     
