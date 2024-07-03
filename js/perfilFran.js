@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (objetoUsuario) {
         user.textContent = objetoUsuario.nombreUsuario;
         emailElement.textContent = objetoUsuario.email;
+        cargarMetodoPago(objetoUsuario);  // Cargar el método de pago
     } else {
         alert('Usuario no encontrado');
         return;
@@ -41,6 +42,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para buscar el usuario en el array de usuarios
     function buscarUsuario(nombreUsuario) {
         return usuarios.find(usuario => usuario.nombreUsuario === nombreUsuario);
+    }
+
+    // Función para cargar el método de pago
+    function cargarMetodoPago(usuario) {
+        switch (usuario.metodoPago) {
+            case "tarjeta_credito":
+                checkTarjetaCredito.checked = true;
+                numeroTarjeta.value = usuario.numeroTarjeta || "";
+                codigoCVV.value = usuario.codigoCVV || "";
+                break;
+            case "rapi_pago":
+                checkRapiPago.checked = true;
+                break;
+            case "pago_facil":
+                checkPagoFacil.checked = true;
+                break;
+            case "transferencia_bancaria":
+                checkTransferencia.checked = true;
+                break;
+            default:
+                break;
+        }
     }
 
     // Función para validar tarjeta de crédito
@@ -140,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return asteriscos; 
     }
+    
     function cancelarSubscripcion() {
         let usuarios = JSON.parse(localStorage.getItem("usuarios"));
         let usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
@@ -154,8 +178,5 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = "../index.html";
     }
     
-    
     botonCancelarSubscripcion.addEventListener('click', cancelarSubscripcion);
 });
-
-
