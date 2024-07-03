@@ -21,7 +21,7 @@ const campoNumeroTarjetaCredito = document.querySelector('#numero_tarjeta');
 const radioButtomTarjetaCredito = document.querySelector('#tarjeta_credito');
 const radioButtomRapiPago = document.querySelector('#rapi_pago');
 const radioButtomPagoFacil = document.querySelector('#pago_facil');
-const radioButtomTransferenciaBancaria = document.querySelector('#transferencia_bancaria');
+const radioButtomTransferenciaBancaria = document.querySelector('#Transferencia_bancaria');
 //---------------------------------------------------------------------------------
 
 // BOTON
