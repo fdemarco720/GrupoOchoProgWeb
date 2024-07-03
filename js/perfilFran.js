@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             case "pago_facil":
                 checkPagoFacil.checked = true;
                 break;
-            case "transferencia_bancaria":
+            case "Transferencia_bancaria":
                 checkTransferencia.checked = true;
                 break;
             default:
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (checkPagoFacil.checked) {
             objetoUsuario.metodoPago = "pago_facil";
         } else if (checkTransferencia.checked) {
-            objetoUsuario.metodoPago = "transferencia_bancaria";
+            objetoUsuario.metodoPago = "Transferencia_bancaria";
         } else {
             alert("Debe seleccionar un método de pago.");
             return;
