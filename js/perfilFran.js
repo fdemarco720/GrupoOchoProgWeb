@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const numeroTarjeta = document.getElementById("numero_tarjeta");
     const codigoCVV = document.getElementById("codigo_cvv");
     const botonGuardar = document.querySelector(".guardar-cambios");
+    const botonCancelarSubscripcion = document.querySelector('#cancelar-suscripcion');
 
     // Verificar que los elementos existen en el DOM
     console.log("user:", user);
@@ -140,3 +141,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return asteriscos; 
     }
 });
+
+function cancelarSubscripcion(){
+    usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
+    localStorage.removeItem(usuarioActual);
+}
+
+botonCancelarSubscripcion.addEventListener('click', cancelarSubscripcion);
