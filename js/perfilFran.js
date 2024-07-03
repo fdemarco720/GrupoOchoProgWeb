@@ -140,11 +140,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return asteriscos; 
     }
+    function cancelarSubscripcion() {
+        let usuarios = JSON.parse(localStorage.getItem("usuarios"));
+        let usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
+        usuarios = usuarios.filter(usuario => usuario.nombreUsuario !== usuarioActual);
+
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+        localStorage.removeItem('usuarioActual');
+    
+        alert('Suscripción cancelada. El usuario ha sido eliminado.');
+    
+        // Redirijo a la página principal o de inicio de sesión
+        window.location.href = "../index.html";
+    }
+    
+    
+    botonCancelarSubscripcion.addEventListener('click', cancelarSubscripcion);
 });
 
-function cancelarSubscripcion(){
-    usuarioActual = JSON.parse(localStorage.getItem("usuarioActual"));
-    localStorage.removeItem(usuarioActual);
-}
 
-botonCancelarSubscripcion.addEventListener('click', cancelarSubscripcion);
