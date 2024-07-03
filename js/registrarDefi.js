@@ -112,6 +112,11 @@ function esTarjetaValida(numeroTarjeta) {
     return false;
 }
 
+function usuarioExiste(email, nombreUsuario) {
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    return usuarios.some(usuario => usuario.email === email || usuario.nombreUsuario === nombreUsuario);
+}
+
 function validacionFinal() {
     let mensajesDeError = "";
 
@@ -122,6 +127,10 @@ function validacionFinal() {
     mensajesDeError += esUnaContraseniaValida();
     mensajesDeError += repetirContrasenia();
     mensajesDeError += validarCamposDePago();
+
+    if (usuarioExiste(email.value, nombreUsuario.value)) {
+        mensajesDeError += "El email o nombre de usuario ya existe.\n";
+    }
 
     if (mensajesDeError) {
         alert(mensajesDeError);
